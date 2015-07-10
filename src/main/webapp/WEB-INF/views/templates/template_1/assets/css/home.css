@@ -1,0 +1,238 @@
+@CHARSET "ISO-8859-1";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+html {
+   height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Open Sans';
+}
+
+@media (min-width: 768px){
+
+}
+
+@media (max-width: 768px) {
+	.container {
+		margin-top: 0px !important;
+		padding-top: 10px;
+	}
+	
+	#content {
+	  width: 100%;
+	  padding: 5px !important;
+	}
+	
+	#header {
+		padding: 5px !important;
+	}
+	
+	#main-content {
+	    top: -45px !important;
+		padding-top: 60px !important;
+		padding-right: 0;
+	}
+	
+	.logo img {
+		margin: 0 auto;
+	}
+	
+	.control-label {
+		text-align: left !important;
+		padding-top: 5px;
+	}
+	
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 20px;	
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+.container {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 12px 16px 19px -11px rgba(0,0,0,0.75);
+  -moz-box-shadow: 12px 16px 19px -11px rgba(0,0,0,0.75);
+  box-shadow: 12px 16px 19px -11px rgba(0,0,0,0.75);
+}
+
+#footer{
+  height: 50px;
+  background: rgb(212, 2, 29);
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#footer p{
+	color: white;
+	text-align: center;
+}
+
+#content {
+  width: 100%;
+  padding: 0px 50px 30px 50px;
+  text-align: center;
+  overflow: auto;
+}
+
+#content h3{
+	color: #242424;
+}
+
+#content p{
+	text-align: justify;
+	color: #242424;
+}
+
+#content img {
+	margin: 0 auto;
+}
+
+#header{
+  height: 150px;
+}
+
+.survey-name {
+	padding-bottom: 25px;
+}
+
+.survey-name a{
+  font-family: arial;
+  font-size: 17px;
+  color: rgb(44, 41, 41);
+  margin-top: 10px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu-item {
+	color: rgb(212, 2, 29);
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+.menu-item a:hover {
+	text-decoration: none;
+}
+
+.menu-item a {
+	color: rgb(212, 2, 29);
+}
+
+#header {
+	font-size: 20px;
+	padding: 50px;
+}
+
+.main-menu {
+	padding-top: 45px;
+	padding-bottom: 30px;
+}
+
+.quote-text {
+	text-align: center !important;
+	font-size: 17px;
+	font-weight: bold;
+	font-style: italic;
+	padding: 15px;
+}
+
+.service-logo {
+	padding: 15px !important;
+	text-align: center;
+}
+
+.service-logo img {
+	margin: 0 auto;
+}
+
+.logo {
+	height: 100px;
+}
+
+.company-symbol {
+	height: 200px;
+	background: url("../images/content-management.png") no-repeat right top;
+}
+
+#join-survey img {
+	margin: 15px auto;
+}
+
+.separator {
+	height: 25px;
+	background: url("../images/separator.jpg") no-repeat center bottom;
+}
+
+.right-float-buttons {
+	float: right;
+	padding: 5px;
+}
+
+.red-button {
+	background-color: rgb(212, 2, 29);
+    border-color: rgb(212, 2, 29);
+}
+
+.red-white-button {
+	background-color: rgb(212, 2, 29);
+    border-color: rgb(212, 2, 29);
+    color: white;
+    font-weight: bold !important;
+}
+
+.red-white-button:hover, .red-white-button:focus {
+	color: white !important;
+}
+
+#logined-top-name {
+	text-align: right;
+	color: white;
+	text-shadow: none;
+    background: #333;
+    color: #fff;
+    background: none;
+}
+
+.customer-image{
+	background-color: #e7e6e6;
+}
+.customer-image:HOVER{
+	background-color: #ffc000;
+}
+
+.customer-name{
+	margin-top: -55px;
+	padding-bottom: 50px;
+	font-size: x-large;
+  	font-family: sans-serif;
+}
+.proposal{
+	color: #000000;
+}
+.txtName{
+	  color: rgb(212, 2, 29);
+	  font-weight: bolder;
+}

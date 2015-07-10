@@ -1,0 +1,215 @@
+@CHARSET "ISO-8859-1";
+fieldset.sectionwrap{ /*fieldset that wraps around each form "page" */
+	border-width:0;
+	padding:5px;
+	width: 100%;
+}
+
+legend{ /*title shown at top of each form page */
+	font:bold 16px Arial;
+	color: darkred;
+}
+
+div.stepsguide{ /*div that contains all the "steps" text located at top of form */ 
+	width: 100%; /*width of "steps" container*/
+	overflow:hidden;
+	margin-bottom:15px;
+	cursor:pointer;
+	display: none;
+}
+
+div.stepsguide .step{ /*div that wraps around each "steps" text */
+	width:106px; /*width of each "steps" text*/
+	font: bold 24px Arial;
+	float:left;
+}
+
+div.stepsguide .disabledstep{ /*div that wraps around each "steps" text */
+	color:#C4C4C4;
+}
+
+div.stepsguide .step .smalltext{ /*small footer text inside "steps" text */
+	font-size: 13px;
+	font-weight: normal;
+}
+
+div.formpaginate{ /* CSS for pagination DIV container */
+	width: 100%;
+	overflow:hidden;
+	font-weight:bold;
+	text-align:center;
+	margin-top:1em;
+}
+
+div.formpaginate .prev, div.formpaginate .next{ /*CSS for "prev" and "next" SPAN elements within paginate container */
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	padding:2px 5px;
+	background:#c00000;
+	color:#ffffff;
+	cursor:hand;
+	cursor:pointer;
+	height: 34px;
+  	padding-top: 7px;
+  	width: 64px;
+}
+#surveyForm > div > div > div{
+	width: 100%;
+}
+p{
+	text-align: left;
+}
+input{
+	width: 99%;
+}
+input[type=checkbox], input[type=radio]{
+	width: auto;
+}
+label{
+	margin-left: 15px;
+	color: #FD0000;
+}
+ul li{
+	text-align: left;
+}
+.question{
+	font-weight: bold;
+	font-size: 15px;
+}
+table, th, td{
+	border: 1px solid black;
+  	border-collapse: collapse;
+  	width: auto;
+}
+.stepsguide>div>div{
+	width: 100% !important;
+}
+
+.currencyinput {
+    border: 1px solid #A9A9A9;
+  	padding: 4px;
+}
+
+.currencyinput input {
+    border: 0;
+}
+
+ @media (min-width:1200px){
+ 	.currencyinput input {
+		width: 92%;
+	  	margin: -1px;
+	}
+ }
+@media (min-width:992px) and (max-width:1199px){
+	.currencyinput {
+	  	border: 1px solid #A9A9A9;
+  	  	padding: 5px;
+	}
+	.currencyinput input {
+		width: 80%;
+	  	margin: 0;
+	}
+	.currency {
+		padding: 1px;
+	}
+}
+@media (min-width: 768px)and (max-width:991px){
+	.currencyinput input {
+		width: 89%;
+	  	margin: -1px;
+	}
+}
+@media (max-width: 768px) {
+	.currencyinput input {
+		width: 82%;
+	}
+}
+
+.currencyinput1 {
+    border: 1px solid #A9A9A9;
+  	padding: 4px;
+}
+
+.currencyinput1 input {
+    border: 0;
+}
+
+ @media (min-width:1200px){
+ 	.currencyinput1 input {
+		width: 94%;
+	  	margin: -1px;
+	}
+ }
+@media (min-width:992px) and (max-width:1199px){
+	.currencyinput1 {
+	  	border: 1px solid #A9A9A9;
+  	  	padding: 5px;
+	}
+	.currencyinput1 input {
+		width: 84%;
+	  	margin: -1px;
+	}
+	.currency1 {
+		padding: 4px;
+	}
+	input {
+  		width: 91%;
+  	}
+}
+@media (min-width: 768px)and (max-width:991px){
+	.currencyinput1 input {
+		width: 89%;
+	  	margin: -1px;
+	}
+}
+@media (max-width: 768px) {
+	.currencyinput1 input {
+		width: 83%;
+	  	margin: -1px;
+	}
+}
+
+.currencyinput2 {
+    border: 1px solid #A9A9A9;
+  	padding: 4px;
+}
+
+.currencyinput2 input {
+    border: 0;
+}
+
+ @media (min-width:1200px){
+ 	.currencyinput2 input {
+		width: 89%;
+	  	margin: -1px;
+	}
+ }
+@media (min-width:992px) and (max-width:1199px){
+	.currencyinput2 {
+	  	border: 1px solid #A9A9A9;
+  	  	padding: 5px;
+	}
+	.currencyinput2 input {
+		width: 84%;
+	  	margin: -1px;
+	}
+	.currency2 {
+		padding: 4px;
+	}
+	input {
+  		width: 91%;
+  	}
+}
+@media (min-width: 768px)and (max-width:991px){
+	.currencyinput2 input {
+		width: 89%;
+	  	margin: -1px;
+	}
+}
+@media (max-width: 400px) {
+	.currencyinput2 input {
+		width: 70%;
+	  	margin: -1px;
+	}
+}

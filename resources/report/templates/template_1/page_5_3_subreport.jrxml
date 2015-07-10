@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_5_3_subreport" language="groovy" pageWidth="595" pageHeight="230" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fda105dd-3be1-4445-bc8f-800fe31e2aed">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="sections" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="230" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="82" width="569" height="99" uuid="1aefebe4-e193-47bd-a852-89a0b8d40fe1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="10" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[1.
+
+2. 50% payment shall be made upon sign confirmation date and the balance 50% payment shall be made within 60 days after sign confirmation date. 
+3.                                                            
+4. Key Phrases or Classifications selected for guaranteed positions are based on a First Come First Serve basis upon receiving complete job sheet.
+5. This proposal is based on the estimation of your advertising goal(s) and objective(s) to achieve your intended revenue increase.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="63" width="569" height="19" uuid="f437d704-e15f-4b32-b080-4141b56ab2c0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="10" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Terms & Conditions:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="21" y="82" width="560" height="30" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="7d2e2225-0786-48cb-8c77-623f030ee6e2"/>
+				<box rightPadding="0">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="10" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" The above mentioned proposal would be due on "+ new SimpleDateFormat("dd MMM yyyy").format(org.apache.commons.lang.time.DateUtils.addMonths(new Date(), 1))+" (PanPages Online Sdn Bhd reserved the right on the rate changes after promotion due date)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="21" y="136" width="558" height="14" backcolor="#FFFF99" uuid="2770fd34-6de2-44e3-b911-69d7ce1f9f86"/>
+				<box rightPadding="0">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="10" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("advertiser-company-name", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-2",$P{sections})).getFields())).getValue()+" listing page will be activated within 30 working days upon receiving complete product materials and minimum of 50% payment."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="202" y="9" width="252" height="50" isPrintWhenDetailOverflows="true" uuid="a9222c57-68b0-4006-a8e6-b50ff4bce824"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="25"/>
+				</textElement>
+				<text><![CDATA[Advertising Planner]]></text>
+			</staticText>
+			<image>
+				<reportElement x="12" y="9" width="190" height="50" uuid="8917001a-2336-40e1-afc4-80747e6d1d9a"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_5/TMPanPanpages.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement mode="Opaque" x="521" y="9" width="74" height="50" forecolor="#FFFFFF" backcolor="#CC0033" uuid="9e3e572e-b160-4a1a-9e88-8f293d3b7ce5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="32"/>
+				</textElement>
+				<textFieldExpression><![CDATA[6]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

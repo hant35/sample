@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="people" language="groovy" pageWidth="497" pageHeight="842" columnWidth="497" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b6d744f2-3d0f-449f-8813-29d5503181ba">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="fields" class="java.util.List">
+		<fieldDescription><![CDATA[fields]]></fieldDescription>
+	</field>
+	<field name="_THIS" class="com.panpages.bow.model.SurveyBean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="35">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="497" height="35" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="62021c64-df4c-4469-958a-edebb5acc7cb"/>
+				<textElement>
+					<font fontName="Open Sans" size="12" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{_THIS}.joinFields(",")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

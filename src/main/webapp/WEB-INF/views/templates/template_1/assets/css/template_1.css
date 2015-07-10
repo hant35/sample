@@ -1,0 +1,286 @@
+@CHARSET "ISO-8859-1";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+.row {
+	margin: 0 !important;
+}
+
+.clear-shadow {
+	clear: both;
+}
+
+.content {
+    background: #fff;
+	position: relative;
+    width: 100%;
+	/*height: 370px;*/
+	z-index: 5;
+    box-shadow: 0 -2px 3px -2px rgba(0,0,0,0.2), 0 2px 2px rgba(0,0,0,0.1);
+    border-radius: 0 3px 3px 3px;
+}
+
+.content>div {
+    position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 40px;
+	z-index: 1;
+    opacity: 0;
+
+    -webkit-transition: opacity linear 0.1s;
+    -moz-transition: opacity linear 0.1s;
+    -o-transition: opacity linear 0.1s;
+    -ms-transition: opacity linear 0.1s;
+    transition: opacity linear 0.1s;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    /*width: 100%;*/
+}
+
+th,td {
+    padding: 14px;
+}
+
+.geographical-covegare{
+	background:url() repeat-x;	
+}
+
+h1 {
+	font-size: 24px;
+  	font-weight: bold;
+  	color: #D4021D;
+  	text-align: center;
+  	padding: 0 15 30 15;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/background_template_1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Open Sans';
+}
+
+.step1 {
+  background: url("../images/step1.png") left top no-repeat;
+  background-size: 100%;
+}
+
+.step2 {
+  background: url("../images/step2.png") left top no-repeat;
+  background-size: 100%;
+}
+
+.step3 {
+  background: url("../images/step3.png") left top no-repeat;
+  background-size: 100%;
+}
+
+.step4 {
+  background: url("../images/step4.png") left top no-repeat;
+  background-size: 100%;
+}
+
+.step5 {
+  background: url("../images/step5.png") left top no-repeat;
+  background-size: 100%;
+}
+
+.step6 {
+  background: url("../images/step6.png") left top no-repeat;
+  background-size: 100%;
+}
+
+.step7 {
+  background: url("../images/step7.png") left top no-repeat;
+  background-size: 100%;
+  padding-bottom: 25px;
+}
+
+.step8 {
+  background: url("../images/step8.png") left top no-repeat;
+  background-size: 100%;
+}
+
+.step9 {
+  background: url("../images/step9.png") left top no-repeat;
+  background-size: 100%;
+}
+
+.step10 {
+  background: url("../images/step10.png") left top no-repeat;
+  background-size: 100%;
+}
+
+.question-img{
+  background: url("../images/question-mark-gray-round.gif");
+}
+
+@media (min-width: 768px){
+
+}
+
+.container {
+
+}
+
+#footer{
+  height: 50px;
+  background: rgb(212, 2, 29);
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#footer p{
+	color: white;
+	text-align: center;
+}
+
+#content {
+  width: 100%;
+  padding: 10px 50px 50px 10px;
+  text-align: center;
+  overflow: auto;
+}
+
+#content p{
+	text-align: left !important;
+}
+
+@media (max-width: 768px) {
+	#content {
+	  width: 100%;
+	  padding: 5px;
+
+	}
+	#content img{
+		width: 100%;
+	}
+	
+	#main-content {
+	    top: -45px !important;
+		padding-top: 60px !important;
+		padding-right: 0;
+	}
+	
+	.logo img {
+		margin: 0 auto;
+	}
+}
+
+#header img{
+		  
+}
+
+#survey-name a{
+  font-family: arial;
+  font-size: 17px;
+  color: rgb(44, 41, 41);
+  margin-top: 10px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#form-sections {
+	padding-top: 50px;
+}
+
+.tab-section {
+	text-align: left;
+}
+
+#submit-div {
+	float: right;
+	padding: 15 5 15 0;
+	text-transform: uppercase;
+	font-size: 17px;
+}
+
+#surveyForm {
+	
+}
+
+.ui-tabs-anchor {
+	text-transform: uppercase;
+}
+
+.summary {
+	font-weight: bold;
+	padding: 25 0 5 0;
+	text-decoration: underline;
+}
+
+#add-new {
+	font-weight: bold;
+}
+
+p[id*="error"] {
+    color:red !important;
+    height: 15px;
+}
+
+input[type="submit"] {
+	background-color: rgb(212, 2, 29);
+	color: white;
+}
+
+.ui-tabs-anchor {
+	background-color: rgb(212, 2, 29);
+	color: white;
+}
+
+ul[role*="tablist"] {
+	background-color: white;
+	border: 0;
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+  color: white !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-item {
+	color: rgb(212, 2, 29);
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+.menu-item a:hover {
+	text-decoration: none;
+	color: rgb(212, 2, 29);
+}
+
+.menu-item a:active {
+	text-decoration: none;
+	color: rgb(212, 2, 29);
+}
+
+#main-menu {
+	font-size: 19px;
+}
+
+.survey-tip {
+	/*background: #C00000;*/
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+#progress {
+	margin-top: 3px;
+}
+
+.file-section {
+	text-align: left;
+}

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="purchased_ads" language="groovy" pageWidth="555" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d23f8a39-5e84-461c-9fbf-1ea2469d0457">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="fields" class="java.util.List">
+		<fieldDescription><![CDATA[fields]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="216">
+			<image onErrorType="Blank">
+				<reportElement positionType="Float" x="22" y="5" width="100" height="100" isRemoveLineWhenBlank="true" uuid="391d3211-0d7a-4d93-a86d-7f6d05246651">
+					<printWhenExpression><![CDATA[$F{fields}.size() >=1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$F{fields}.size() >= 1 ?(
+$F{fields}.get(0).value == "panpages"? $P{SUBREPORT_DIR} + "/images/page_1/panpages.png":
+$F{fields}.get(0).value == "google-adWords-search-mobile"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.jpg":
+$F{fields}.get(0).value == "google-display-network"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.png":
+$F{fields}.get(0).value == "yahoo-search"? $P{SUBREPORT_DIR} + "/images/page_1/yahooSearch.jpg":
+$F{fields}.get(0).value == "yahoo-display"? $P{SUBREPORT_DIR} + "/images/page_1/yahooAds.png":
+$F{fields}.get(0).value == "youtube-ads"? $P{SUBREPORT_DIR} + "/images/page_1/YoutubeAds.jpg":
+$F{fields}.get(0).value == "facebook-ads"? $P{SUBREPORT_DIR} + "/images/page_1/facebookAds.png":
+$F{fields}.get(0).value == "pan-360"? $P{SUBREPORT_DIR} + "/images/page_1/panpages360.png":
+$F{fields}.get(0).value == "alibaba-com"? $P{SUBREPORT_DIR} + "/images/page_1/alibaba.png":
+$F{fields}.get(0).value == "super-pages"? $P{SUBREPORT_DIR} + "/images/page_1/superPages.jpg":""):""]]></imageExpression>
+			</image>
+			<image onErrorType="Blank">
+				<reportElement positionType="Float" x="124" y="5" width="100" height="100" isRemoveLineWhenBlank="true" uuid="11bc810d-5540-4f6e-95c6-300ac6e0cf44">
+					<printWhenExpression><![CDATA[$F{fields}.size() >= 2]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$F{fields}.size() >= 2 ?(
+$F{fields}.get(1).value == "panpages"? $P{SUBREPORT_DIR} + "/images/page_1/panpages.png":
+$F{fields}.get(1).value == "google-adWords-search-mobile"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.jpg":
+$F{fields}.get(1).value == "google-display-network"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.png":
+$F{fields}.get(1).value == "yahoo-search"? $P{SUBREPORT_DIR} + "/images/page_1/yahooSearch.jpg":
+$F{fields}.get(1).value == "yahoo-display"? $P{SUBREPORT_DIR} + "/images/page_1/yahooAds.png":
+$F{fields}.get(1).value == "youtube-ads"? $P{SUBREPORT_DIR} + "/images/page_1/YoutubeAds.jpg":
+$F{fields}.get(1).value == "facebook-ads"? $P{SUBREPORT_DIR} + "/images/page_1/facebookAds.png":
+$F{fields}.get(1).value == "pan-360"? $P{SUBREPORT_DIR} + "/images/page_1/panpages360.png":
+$F{fields}.get(1).value == "alibaba-com"? $P{SUBREPORT_DIR} + "/images/page_1/alibaba.png":
+$F{fields}.get(1).value == "super-pages"? $P{SUBREPORT_DIR} + "/images/page_1/superPages.jpg":""):""]]></imageExpression>
+			</image>
+			<image onErrorType="Blank">
+				<reportElement positionType="Float" x="226" y="5" width="100" height="100" isRemoveLineWhenBlank="true" uuid="8f9d040f-0533-4b17-b7b7-164ca774adc5">
+					<printWhenExpression><![CDATA[$F{fields}.size() >= 3]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$F{fields}.size() >= 3 ?(
+$F{fields}.get(2).value == "panpages"? $P{SUBREPORT_DIR} + "/images/page_1/panpages.png":
+$F{fields}.get(2).value == "google-adWords-search-mobile"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.jpg":
+$F{fields}.get(2).value == "google-display-network"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.png":
+$F{fields}.get(2).value == "yahoo-search"? $P{SUBREPORT_DIR} + "/images/page_1/yahooSearch.jpg":
+$F{fields}.get(2).value == "yahoo-display"? $P{SUBREPORT_DIR} + "/images/page_1/yahooAds.png":
+$F{fields}.get(2).value == "youtube-ads"? $P{SUBREPORT_DIR} + "/images/page_1/YoutubeAds.jpg":
+$F{fields}.get(2).value == "facebook-ads"? $P{SUBREPORT_DIR} + "/images/page_1/facebookAds.png":
+$F{fields}.get(2).value == "pan-360"? $P{SUBREPORT_DIR} + "/images/page_1/panpages360.png":
+$F{fields}.get(2).value == "alibaba-com"? $P{SUBREPORT_DIR} + "/images/page_1/alibaba.png":
+$F{fields}.get(2).value == "super-pages"? $P{SUBREPORT_DIR} + "/images/page_1/superPages.jpg":""):""]]></imageExpression>
+			</image>
+			<image onErrorType="Blank">
+				<reportElement positionType="Float" x="328" y="5" width="100" height="100" isRemoveLineWhenBlank="true" uuid="96cec751-2ed5-47d2-aaed-dad1c753819e">
+					<printWhenExpression><![CDATA[$F{fields}.size() >= 4]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$F{fields}.size() >= 4 ?(
+$F{fields}.get(3).value == "panpages"? $P{SUBREPORT_DIR} + "/images/page_1/panpages.png":
+$F{fields}.get(3).value == "google-adWords-search-mobile"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.jpg":
+$F{fields}.get(3).value == "google-display-network"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.png":
+$F{fields}.get(3).value == "yahoo-search"? $P{SUBREPORT_DIR} + "/images/page_1/yahooSearch.jpg":
+$F{fields}.get(3).value == "yahoo-display"? $P{SUBREPORT_DIR} + "/images/page_1/yahooAds.png":
+$F{fields}.get(3).value == "youtube-ads"? $P{SUBREPORT_DIR} + "/images/page_1/YoutubeAds.jpg":
+$F{fields}.get(3).value == "facebook-ads"? $P{SUBREPORT_DIR} + "/images/page_1/facebookAds.png":
+$F{fields}.get(3).value == "pan-360"? $P{SUBREPORT_DIR} + "/images/page_1/panpages360.png":
+$F{fields}.get(3).value == "alibaba-com"? $P{SUBREPORT_DIR} + "/images/page_1/alibaba.png":
+$F{fields}.get(3).value == "super-pages"? $P{SUBREPORT_DIR} + "/images/page_1/superPages.jpg":""):""]]></imageExpression>
+			</image>
+			<image onErrorType="Blank">
+				<reportElement positionType="Float" x="430" y="5" width="100" height="100" isRemoveLineWhenBlank="true" uuid="13dca00d-fe52-45ed-a61e-956e7cc6e2b7">
+					<printWhenExpression><![CDATA[$F{fields}.size() >= 5]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$F{fields}.size() >= 5 ?(
+$F{fields}.get(4).value == "panpages"? $P{SUBREPORT_DIR} + "/images/page_1/panpages.png":
+$F{fields}.get(4).value == "google-adWords-search-mobile"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.jpg":
+$F{fields}.get(4).value == "google-display-network"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.png":
+$F{fields}.get(4).value == "yahoo-search"? $P{SUBREPORT_DIR} + "/images/page_1/yahooSearch.jpg":
+$F{fields}.get(4).value == "yahoo-display"? $P{SUBREPORT_DIR} + "/images/page_1/yahooAds.png":
+$F{fields}.get(4).value == "youtube-ads"? $P{SUBREPORT_DIR} + "/images/page_1/YoutubeAds.jpg":
+$F{fields}.get(4).value == "facebook-ads"? $P{SUBREPORT_DIR} + "/images/page_1/facebookAds.png":
+$F{fields}.get(4).value == "pan-360"? $P{SUBREPORT_DIR} + "/images/page_1/panpages360.png":
+$F{fields}.get(4).value == "alibaba-com"? $P{SUBREPORT_DIR} + "/images/page_1/alibaba.png":
+$F{fields}.get(4).value == "super-pages"? $P{SUBREPORT_DIR} + "/images/page_1/superPages.jpg":""):""]]></imageExpression>
+			</image>
+			<image onErrorType="Blank">
+				<reportElement positionType="Float" x="328" y="114" width="100" height="100" isRemoveLineWhenBlank="true" uuid="997ef249-20e7-4dd9-a8b3-5c62ec4f2801">
+					<printWhenExpression><![CDATA[$F{fields}.size() >= 9]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$F{fields}.size() >= 9 ?(
+$F{fields}.get(8).value == "panpages"? $P{SUBREPORT_DIR} + "/images/page_1/panpages.png":
+$F{fields}.get(8).value == "google-adWords-search-mobile"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.jpg":
+$F{fields}.get(8).value == "google-display-network"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.png":
+$F{fields}.get(8).value == "yahoo-search"? $P{SUBREPORT_DIR} + "/images/page_1/yahooSearch.jpg":
+$F{fields}.get(8).value == "yahoo-display"? $P{SUBREPORT_DIR} + "/images/page_1/yahooAds.png":
+$F{fields}.get(8).value == "youtube-ads"? $P{SUBREPORT_DIR} + "/images/page_1/YoutubeAds.jpg":
+$F{fields}.get(8).value == "facebook-ads"? $P{SUBREPORT_DIR} + "/images/page_1/facebookAds.png":
+$F{fields}.get(8).value == "pan-360"? $P{SUBREPORT_DIR} + "/images/page_1/panpages360.png":
+$F{fields}.get(8).value == "alibaba-com"? $P{SUBREPORT_DIR} + "/images/page_1/alibaba.png":
+$F{fields}.get(8).value == "super-pages"? $P{SUBREPORT_DIR} + "/images/page_1/superPages.jpg":""):""]]></imageExpression>
+			</image>
+			<image onErrorType="Blank">
+				<reportElement positionType="Float" x="430" y="114" width="100" height="100" isRemoveLineWhenBlank="true" uuid="b308f16b-e148-4580-a158-069e46245a59">
+					<printWhenExpression><![CDATA[$F{fields}.size() >= 10]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$F{fields}.size() >= 10 ?(
+$F{fields}.get(9).value == "panpages"? $P{SUBREPORT_DIR} + "/images/page_1/panpages.png":
+$F{fields}.get(9).value == "google-adWords-search-mobile"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.jpg":
+$F{fields}.get(9).value == "google-display-network"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.png":
+$F{fields}.get(9).value == "yahoo-search"? $P{SUBREPORT_DIR} + "/images/page_1/yahooSearch.jpg":
+$F{fields}.get(9).value == "yahoo-display"? $P{SUBREPORT_DIR} + "/images/page_1/yahooAds.png":
+$F{fields}.get(9).value == "youtube-ads"? $P{SUBREPORT_DIR} + "/images/page_1/YoutubeAds.jpg":
+$F{fields}.get(9).value == "facebook-ads"? $P{SUBREPORT_DIR} + "/images/page_1/facebookAds.png":
+$F{fields}.get(9).value == "pan-360"? $P{SUBREPORT_DIR} + "/images/page_1/panpages360.png":
+$F{fields}.get(9).value == "alibaba-com"? $P{SUBREPORT_DIR} + "/images/page_1/alibaba.png":
+$F{fields}.get(9).value == "super-pages"? $P{SUBREPORT_DIR} + "/images/page_1/superPages.jpg":""):""]]></imageExpression>
+			</image>
+			<image onErrorType="Blank">
+				<reportElement positionType="Float" x="226" y="114" width="100" height="100" isRemoveLineWhenBlank="true" uuid="957c2f19-9fba-43ca-820d-90e83053e86c">
+					<printWhenExpression><![CDATA[$F{fields}.size() >= 8]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$F{fields}.size() >= 8 ?(
+$F{fields}.get(7).value == "panpages"? $P{SUBREPORT_DIR} + "/images/page_1/panpages.png":
+$F{fields}.get(7).value == "google-adWords-search-mobile"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.jpg":
+$F{fields}.get(7).value == "google-display-network"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.png":
+$F{fields}.get(7).value == "yahoo-search"? $P{SUBREPORT_DIR} + "/images/page_1/yahooSearch.jpg":
+$F{fields}.get(7).value == "yahoo-display"? $P{SUBREPORT_DIR} + "/images/page_1/yahooAds.png":
+$F{fields}.get(7).value == "youtube-ads"? $P{SUBREPORT_DIR} + "/images/page_1/YoutubeAds.jpg":
+$F{fields}.get(7).value == "facebook-ads"? $P{SUBREPORT_DIR} + "/images/page_1/facebookAds.png":
+$F{fields}.get(7).value == "pan-360"? $P{SUBREPORT_DIR} + "/images/page_1/panpages360.png":
+$F{fields}.get(7).value == "alibaba-com"? $P{SUBREPORT_DIR} + "/images/page_1/alibaba.png":
+$F{fields}.get(7).value == "super-pages"? $P{SUBREPORT_DIR} + "/images/page_1/superPages.jpg":""):""]]></imageExpression>
+			</image>
+			<image onErrorType="Blank">
+				<reportElement positionType="Float" x="22" y="114" width="100" height="100" isRemoveLineWhenBlank="true" uuid="e22961e0-3898-4aa6-8fea-a1b56dedd1b7">
+					<printWhenExpression><![CDATA[$F{fields}.size() >= 6]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$F{fields}.size() >= 6 ?(
+$F{fields}.get(5).value == "panpages"? $P{SUBREPORT_DIR} + "/images/page_1/panpages.png":
+$F{fields}.get(5).value == "google-adWords-search-mobile"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.jpg":
+$F{fields}.get(5).value == "google-display-network"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.png":
+$F{fields}.get(5).value == "yahoo-search"? $P{SUBREPORT_DIR} + "/images/page_1/yahooSearch.jpg":
+$F{fields}.get(5).value == "yahoo-display"? $P{SUBREPORT_DIR} + "/images/page_1/yahooAds.png":
+$F{fields}.get(5).value == "youtube-ads"? $P{SUBREPORT_DIR} + "/images/page_1/YoutubeAds.jpg":
+$F{fields}.get(5).value == "facebook-ads"? $P{SUBREPORT_DIR} + "/images/page_1/facebookAds.png":
+$F{fields}.get(5).value == "pan-360"? $P{SUBREPORT_DIR} + "/images/page_1/panpages360.png":
+$F{fields}.get(5).value == "alibaba-com"? $P{SUBREPORT_DIR} + "/images/page_1/alibaba.png":
+$F{fields}.get(5).value == "super-pages"? $P{SUBREPORT_DIR} + "/images/page_1/superPages.jpg":""):""]]></imageExpression>
+			</image>
+			<image onErrorType="Blank">
+				<reportElement positionType="Float" x="124" y="114" width="100" height="100" isRemoveLineWhenBlank="true" uuid="c3d5aa03-cc33-4cee-8c09-887974744357">
+					<printWhenExpression><![CDATA[$F{fields}.size() >= 7]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$F{fields}.size() >= 7 ?(
+$F{fields}.get(6).value == "panpages"? $P{SUBREPORT_DIR} + "/images/page_1/panpages.png":
+$F{fields}.get(6).value == "google-adWords-search-mobile"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.jpg":
+$F{fields}.get(6).value == "google-display-network"? $P{SUBREPORT_DIR} + "/images/page_1/googleAds.png":
+$F{fields}.get(6).value == "yahoo-search"? $P{SUBREPORT_DIR} + "/images/page_1/yahooSearch.jpg":
+$F{fields}.get(6).value == "yahoo-display"? $P{SUBREPORT_DIR} + "/images/page_1/yahooAds.png":
+$F{fields}.get(6).value == "youtube-ads"? $P{SUBREPORT_DIR} + "/images/page_1/YoutubeAds.jpg":
+$F{fields}.get(6).value == "facebook-ads"? $P{SUBREPORT_DIR} + "/images/page_1/facebookAds.png":
+$F{fields}.get(6).value == "pan-360"? $P{SUBREPORT_DIR} + "/images/page_1/panpages360.png":
+$F{fields}.get(6).value == "alibaba-com"? $P{SUBREPORT_DIR} + "/images/page_1/alibaba.png":
+$F{fields}.get(6).value == "super-pages"? $P{SUBREPORT_DIR} + "/images/page_1/superPages.jpg":""):""]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>
