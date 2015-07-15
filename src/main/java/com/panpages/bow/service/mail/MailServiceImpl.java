@@ -11,6 +11,7 @@ import javax.mail.internet.MimeMessage;
 import org.apache.log4j.Logger;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
+import org.apache.velocity.app.Velocity;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -145,8 +146,8 @@ public class MailServiceImpl implements MailService {
 			FileSystemResource file = new FileSystemResource(filePath);
 			helper.addAttachment(file.getFilename(), file);
 
-			Template template = velocityEngine.getTemplate(mail
-					.getTemplateName());
+			String mailTemp = mail.getTemplateName();
+			Template template = velocityEngine.getTemplate(mailTemp);
 
 			VelocityContext velocityContext = new VelocityContext();
 			Set<String> fieldKeys = mail.getFields().keySet();
