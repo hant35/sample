@@ -72,7 +72,8 @@ public class SurveyController {
 
 	@RequestMapping(value = { "/", "/index.html" }, method = RequestMethod.GET)
 	public String home(ModelMap model) {
-		return "index";
+		//return "index";
+		return "allsurveys";
 	}
 	
 	@RequestMapping(value = { "/templates.html" }, method = RequestMethod.GET)
