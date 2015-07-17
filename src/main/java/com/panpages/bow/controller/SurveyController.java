@@ -156,13 +156,15 @@ public class SurveyController {
 		// Send notification email
 		String baseUrl = ctx.getEnvironment().getProperty(ConfigConstant.BASE_URL.getName());
 		String reportBasePath = ctx.getEnvironment().getProperty(ConfigConstant.REPORT_OUTPUT_BASE_URL.getName());
+		String reportOutputPath = ctx.getEnvironment().getProperty(ConfigConstant.REPORT_OUTPUT_PATH.getName());
 		String reportPath = String.format("%1$s%2$s%3$s%4$s%5$s.%6$s", reportBasePath, File.separator, ReportType.PDF.getName(), File.separator, reportName, ReportType.PDF.getName());
+		String reportFilePath = String.format("%1$s%2$s%3$s%4$s%5$s.%6$s", reportOutputPath, File.separator, ReportType.PDF.getName(), File.separator, reportName, ReportType.PDF.getName());
 		String reportUrl = String.format("%1$s%2$s", baseUrl, reportPath);
 		
 		Map<String, String> params = new HashMap<String, String>();
 		params.put(ConfigConstant.SURVEY_PDF_URL.getName(), reportUrl);
 		
-		emailSvc.sendMail(survey, params, reportUrl);
+		emailSvc.sendMail(survey, params, reportFilePath);
 		logger.info("Send email for the survey " + survey.getId());
 		
 		return "redirect:" + reportViewPath;
@@ -225,13 +227,15 @@ public class SurveyController {
 		// Send notification email
 		String baseUrl = ctx.getEnvironment().getProperty(ConfigConstant.BASE_URL.getName());
 		String reportBasePath = ctx.getEnvironment().getProperty(ConfigConstant.REPORT_OUTPUT_BASE_URL.getName());
+		String reportOutputPath = ctx.getEnvironment().getProperty(ConfigConstant.REPORT_OUTPUT_PATH.getName());
 		String reportPath = String.format("%1$s%2$s%3$s%4$s%5$s.%6$s", reportBasePath, File.separator, ReportType.PDF.getName(), File.separator, reportName, ReportType.PDF.getName());
+		String reportFilePath = String.format("%1$s%2$s%3$s%4$s%5$s.%6$s", reportOutputPath, File.separator, ReportType.PDF.getName(), File.separator, reportName, ReportType.PDF.getName());
 		String reportUrl = String.format("%1$s%2$s", baseUrl, reportPath);
 		
 		Map<String, String> params = new HashMap<String, String>();
 		params.put(ConfigConstant.SURVEY_PDF_URL.getName(), reportUrl);
 		
-		emailSvc.sendMail(survey, params, reportUrl);
+		emailSvc.sendMail(survey, params, reportFilePath);
 		logger.info("Send email for the survey " + survey.getId());
 		
 		return "redirect:" + reportViewPath;
@@ -253,11 +257,13 @@ public class SurveyController {
 		// Send notification email
 		String baseUrl = ctx.getEnvironment().getProperty(ConfigConstant.BASE_URL.getName());
 		String reportBasePath = ctx.getEnvironment().getProperty(ConfigConstant.REPORT_OUTPUT_BASE_URL.getName());
+		String reportOutputPath = ctx.getEnvironment().getProperty(ConfigConstant.REPORT_OUTPUT_PATH.getName());
 		String reportPath = String.format("%1$s%2$s%3$s%4$s%5$s.%6$s", reportBasePath, File.separator, ReportType.PDF.getName(), File.separator, survey.getStorageName(), ReportType.PDF.getName());
+		String reportFilePath = String.format("%1$s%2$s%3$s%4$s%5$s.%6$s", reportOutputPath, File.separator, ReportType.PDF.getName(), File.separator, survey.getStorageName(), ReportType.PDF.getName());
 		String reportUrl = String.format("%1$s%2$s", baseUrl, reportPath);
 		
 		Map<String, String> params = new HashMap<String, String>();
-		params.put(ConfigConstant.SURVEY_PDF_URL.getName(), reportUrl);
+		params.put(ConfigConstant.SURVEY_PDF_URL.getName(), reportFilePath);
 		
 		emailSvc.sendMail(survey, params, reportUrl);
 		logger.info("Send email for the survey " + survey.getId());

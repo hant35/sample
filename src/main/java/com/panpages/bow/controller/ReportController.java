@@ -99,7 +99,7 @@ public class ReportController {
 	             response.getOutputStream().write(arr, 0, numRead);
 	         }
 	         fileInputStream.close();
-	         fileTemp.delete();
+	         //fileTemp.delete();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
