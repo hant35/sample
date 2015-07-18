@@ -1,26 +1,7 @@
 package com.panpages.bow.controller;
 
-import com.panpages.bow.configuration.ConfigConstant;
-import com.panpages.bow.model.Customer;
-import com.panpages.bow.model.CustomerSurveys;
-import com.panpages.bow.model.Survey;
-import com.panpages.bow.model.SurveyForm;
-import com.panpages.bow.model.SurveyTemplate;
-import com.panpages.bow.service.mail.MailService;
-import com.panpages.bow.service.report.ReportService;
-import com.panpages.bow.service.report.ReportType;
-import com.panpages.bow.service.survey.CustomerService;
-import com.panpages.bow.service.survey.SurveyCalculate;
-import com.panpages.bow.service.survey.SurveyCalculateFactory;
-import com.panpages.bow.service.survey.SurveyFieldName;
-import com.panpages.bow.service.survey.SurveyService;
-import com.panpages.bow.service.survey.SurveyStatus;
-import com.panpages.bow.service.utils.OfficeFileUtils;
-
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -28,7 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import javax.servlet.ServletContext;
 import javax.validation.Valid;
 
 import org.apache.commons.io.FileUtils;
@@ -46,6 +26,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+
+import com.panpages.bow.configuration.ConfigConstant;
+import com.panpages.bow.model.Customer;
+import com.panpages.bow.model.CustomerSurveys;
+import com.panpages.bow.model.Survey;
+import com.panpages.bow.model.SurveyForm;
+import com.panpages.bow.model.SurveyTemplate;
+import com.panpages.bow.service.mail.MailService;
+import com.panpages.bow.service.report.ReportService;
+import com.panpages.bow.service.report.ReportType;
+import com.panpages.bow.service.survey.CustomerService;
+import com.panpages.bow.service.survey.SurveyCalculate;
+import com.panpages.bow.service.survey.SurveyCalculateFactory;
+import com.panpages.bow.service.survey.SurveyFieldName;
+import com.panpages.bow.service.survey.SurveyService;
+import com.panpages.bow.service.survey.SurveyStatus;
+import com.panpages.bow.service.utils.OfficeFileUtils;
 
 @Controller
 @RequestMapping("/")
@@ -120,7 +117,12 @@ public class SurveyController {
 							 @RequestParam(value = "submit", required = false) String submit,
 							 BindingResult result, 
 							 ModelMap model) {
+        	 
+        	 CustomerSurveys customerSurvey  = customerSvc.findSurveyByCusSurId(customerSurveyId);
+        	
         	 customerSurveyId = 1;
+        	 
+        	 
 		int surveyId = surveySvc.saveSurveyForm(customerSurveyId, form);		
 		
 		// Redirect to error page with surveyId -1
@@ -136,7 +138,12 @@ public class SurveyController {
 		survey = surveySvc.findSurveyWithId(surveyId);
 		// Set fulfilled date
 		survey.setFulfilledDate();
-		String reportName = reportSvc.exportReport(survey, ReportType.PDF.getName());
+		String reportName =  "";
+		if(customerSurvey != null && customerSurvey.getTemplate() != null) {
+			reportName = reportSvc.exportReportWithTemplate(survey, ReportType.PDF.getName(),customerSurvey.getTemplate());
+		} else {
+			reportName = reportSvc.exportReport(survey, ReportType.PDF.getName());
+		}
 		String reportViewPath = String.format("%1$s/%2$s/%3$s_%4$s.html", "/view", survey.getId(), reportName, ReportType.PDF.getName());
 		String previewPath = String.format("%1$s/%2$s/%3$s_%4$s.html", "/preview", survey.getId(), reportName, ReportType.PDF.getName());
 		

@@ -2,9 +2,10 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_5_2_subreport" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aa4e2863-04cb-41de-9474-a2e60ad6511e">
 	<property name="ireport.zoom" value="1.3310000000000004"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="609"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<parameter name="sections" class="java.util.List"/>
+	<parameter name="pageSubNumber" class="java.lang.Integer"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -79,7 +80,7 @@ We have given you all the reasons why you should advertise now! I have taken the
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Open Sans" size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[5]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{pageSubNumber} + 1]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="15" y="736" width="569" height="16" uuid="5f02e3de-453a-442c-a75d-644de9ded6aa"/>

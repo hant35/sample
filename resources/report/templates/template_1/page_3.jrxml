@@ -2,11 +2,12 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_3" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty" uuid="77f76044-2c3b-433f-aff5-55ed88ca1c06">
 	<property name="ireport.zoom" value="0.9982500000000003"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="192"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<parameter name="sections" class="java.util.List"/>
+	<parameter name="pageNumber" class="java.lang.Integer"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -98,7 +99,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Open Sans" size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[2]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{pageNumber}]]></textFieldExpression>
 			</textField>
 			<subreport>
 				<reportElement x="85" y="110" width="497" height="50" isRemoveLineWhenBlank="true" uuid="8fdf9158-912b-4e52-a80c-fee34e1cf689"/>

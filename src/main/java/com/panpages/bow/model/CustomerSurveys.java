@@ -25,6 +25,9 @@ public class CustomerSurveys {
 	@Column(name = "SURVEY_LIST")
 	private String surveyList;
 
+	@Column(name = "TEMPLATE")
+	private String template;
+	
 	public int getCustomerSurveyId() {
 		return customerSurveyId;
 	}
@@ -55,6 +58,14 @@ public class CustomerSurveys {
 
 	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
+	}
+
+	public String getTemplate() {
+		return template;
+	}
+
+	public void setTemplate(String template) {
+		this.template = template;
 	}
 	
 	

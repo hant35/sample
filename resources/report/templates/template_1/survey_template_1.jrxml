@@ -51,6 +51,9 @@
 				<subreportParameter name="sections">
 					<subreportParameterExpression><![CDATA[$F{sections}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="pageNumber">
+					<subreportParameterExpression><![CDATA[1]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_2.jasper"]]></subreportExpression>
 			</subreport>
@@ -64,6 +67,9 @@
 				</subreportParameter>
 				<subreportParameter name="sections">
 					<subreportParameterExpression><![CDATA[$F{sections}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="pageNumber">
+					<subreportParameterExpression><![CDATA[2]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_3.jasper"]]></subreportExpression>
@@ -79,6 +85,9 @@
 				<subreportParameter name="sections">
 					<subreportParameterExpression><![CDATA[$F{sections}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="pageNumber">
+					<subreportParameterExpression><![CDATA[3]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_4.jasper"]]></subreportExpression>
 			</subreport>
@@ -92,6 +101,9 @@
 				</subreportParameter>
 				<subreportParameter name="sections">
 					<subreportParameterExpression><![CDATA[$F{sections}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="pageNumber">
+					<subreportParameterExpression><![CDATA[4]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_5.jasper"]]></subreportExpression>

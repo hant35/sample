@@ -2,11 +2,12 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90167ed5-0c7a-4203-aa33-cf24b0c47bbb">
 	<property name="ireport.zoom" value="1.1000000000000012"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="386"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["H:\\workspace\\BOW\\report\\templates\\template_3\\"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="sections" class="java.util.List"/>
+	<parameter name="pageNumber" class="java.lang.Integer"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -147,7 +148,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Open Sans" size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[3]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{pageNumber}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="68" y="505" width="104" height="20" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" forecolor="#0000CC" uuid="5139d434-e465-484b-9295-981afead0e77"/>

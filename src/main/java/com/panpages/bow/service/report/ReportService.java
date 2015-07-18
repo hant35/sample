@@ -6,6 +6,7 @@ public interface ReportService {
 	
 	String exportReport(Survey survey, String name);
 	String exportReport(int surveyId, String name);
+	String exportReportWithTemplate(Survey survey, String name, String template);
 
 }
 

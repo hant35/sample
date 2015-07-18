@@ -32,13 +32,16 @@ public class ReportServiceImpl implements ReportService {
 			return null;
 		}
 		
-		return exportPDFFile(survey);
+		return exportPDFFile(survey, null);
 	}
 	
-	public String exportPDFFile(Survey survey) {
+	public String exportPDFFile(Survey survey, String template) {
 		String reportTemplateFolderPath = ctx.getEnvironment().getRequiredProperty(ConfigConstant.REPORT_TEMPLATE_PATH.getName());
 		
 		String prefixName = ctx.getEnvironment().getProperty(ConfigConstant.PREFIX_TEMPLATE_NAME.getName());
+		if(template != null) {
+			prefixName = template;
+		}
 		String prefixReportDirName = ctx.getEnvironment().getProperty(ConfigConstant.TEMPLATE_FOLDER_NAME_PREFIX.getName());
 		String reportDirName = String.format("%1$s%2$s", prefixReportDirName, survey.getSurveyTemplateId());
 		String reportTemplateName = String.format("%1$s%2$s.%3$s", prefixName, survey.getSurveyTemplateId(), "jrxml");
@@ -75,6 +78,15 @@ public class ReportServiceImpl implements ReportService {
 	public String exportReport(int surveyId, String name) {
 		//throw new UnsupportedOperationException();
 		return null;
+	}
+
+	@Override
+	public String exportReportWithTemplate(Survey survey, String format, String template) {
+		if (survey == null) {
+			return null;
+		}
+		
+		return exportPDFFile(survey, template);
 	}
 
 }

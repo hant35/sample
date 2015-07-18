@@ -2,9 +2,10 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_5" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d678d0b9-ab96-4489-adb0-502e4744b263">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="72"/>
+	<property name="ireport.y" value="328"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<parameter name="sections" class="java.util.List"/>
+	<parameter name="pageNumber" class="java.lang.Integer"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -41,6 +42,9 @@
 				<subreportParameter name="sections">
 					<subreportParameterExpression><![CDATA[$P{sections}]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="pageSubNumber">
+					<subreportParameterExpression><![CDATA[$P{pageNumber}]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_5_2_subreport.jasper"]]></subreportExpression>
 			</subreport>
@@ -60,7 +64,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Open Sans" size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[4]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{pageNumber}]]></textFieldExpression>
 			</textField>
 			<subreport>
 				<reportElement x="15" y="105" width="565" height="204" uuid="575f0dae-c003-4738-beef-3132854e7995"/>
