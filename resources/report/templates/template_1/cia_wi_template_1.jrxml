@@ -92,10 +92,10 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_4.jasper"]]></subreportExpression>
 			</subreport>
 			<break>
-				<reportElement x="0" y="521" width="595" height="1" uuid="3c97a4dc-eba3-4f34-8e26-6aee39830954"/>
+				<reportElement x="0" y="213" width="595" height="1" uuid="7847c0ce-ab39-494e-9d52-c85d6f77710a"/>
 			</break>
 			<subreport>
-				<reportElement positionType="Float" x="0" y="536" width="595" height="89" uuid="aa957cfc-ee24-46c6-bece-1daf523b7e09"/>
+				<reportElement positionType="Float" x="0" y="536" width="595" height="89" isRemoveLineWhenBlank="true" uuid="f728d384-ded5-45b0-95af-2f569c745eab"/>
 				<subreportParameter name="SUBREPORT_DIR">
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_5_2_subreport" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aa4e2863-04cb-41de-9474-a2e60ad6511e">
 	<property name="ireport.zoom" value="1.3310000000000004"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.x" value="78"/>
+	<property name="ireport.y" value="630"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<parameter name="sections" class="java.util.List"/>
 	<parameter name="pageSubNumber" class="java.lang.Integer"/>
@@ -83,14 +83,14 @@ We have given you all the reasons why you should advertise now! I have taken the
 				<textFieldExpression><![CDATA[$P{pageSubNumber} + 1]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="15" y="736" width="569" height="16" uuid="5f02e3de-453a-442c-a75d-644de9ded6aa"/>
+				<reportElement x="15" y="728" width="569" height="16" uuid="5f02e3de-453a-442c-a75d-644de9ded6aa"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="7" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Terms & Conditions:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="15" y="743" width="569" height="83" uuid="f1257051-20fa-449e-bae9-43b87bc450fc"/>
+				<reportElement x="15" y="735" width="569" height="83" uuid="f1257051-20fa-449e-bae9-43b87bc450fc"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="8" isBold="false" isItalic="false"/>
 				</textElement>
@@ -123,35 +123,35 @@ We have given you all the reasons why you should advertise now! I have taken the
 				<text><![CDATA[Digital Campaign Specialist]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="198" y="755" width="91" height="12" uuid="711d4240-2418-4a3e-b7c2-be927d0ea698"/>
+				<reportElement x="198" y="747" width="91" height="12" uuid="711d4240-2418-4a3e-b7c2-be927d0ea698"/>
 				<textElement>
 					<font fontName="Open Sans" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new SimpleDateFormat("dd MMM yyyy").format(org.apache.commons.lang.time.DateUtils.addMonths(new Date(), 1))]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="25" y="765" width="45" height="12" uuid="4e6520b8-1617-4a76-9450-b14f3342b433"/>
+				<reportElement x="25" y="757" width="45" height="12" uuid="4e6520b8-1617-4a76-9450-b14f3342b433"/>
 				<textElement>
 					<font fontName="Open Sans" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["50% payment"]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="24" y="774" width="100" height="12" uuid="ba86d30d-8975-416d-b16a-dc3fcb1fe749"/>
+				<reportElement x="24" y="766" width="100" height="12" uuid="ba86d30d-8975-416d-b16a-dc3fcb1fe749"/>
 				<textElement>
 					<font fontName="Open Sans" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("advertiser-company-name", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-2",$P{sections})).getFields())).getValue()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="447" y="776" width="56" height="10" uuid="a16ad77f-4ba8-4e9f-9cc8-f7ddd81aec07"/>
+				<reportElement x="447" y="768" width="56" height="10" uuid="a16ad77f-4ba8-4e9f-9cc8-f7ddd81aec07"/>
 				<textElement>
 					<font fontName="Open Sans" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["50% payment."]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="309" y="785" width="100" height="12" uuid="e49880ff-0c83-46c7-884b-47d8be18bdb4"/>
+				<reportElement x="309" y="777" width="100" height="12" uuid="e49880ff-0c83-46c7-884b-47d8be18bdb4"/>
 				<textElement>
 					<font fontName="Open Sans" size="8" isBold="true"/>
 				</textElement>
