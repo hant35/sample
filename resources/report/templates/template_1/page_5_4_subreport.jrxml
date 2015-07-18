@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_5_2_subreport" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aa4e2863-04cb-41de-9474-a2e60ad6511e">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="613"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="sections" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="842" splitType="Stretch">
+			<image>
+				<reportElement x="220" y="199" width="150" height="90" uuid="95b31202-8f9d-415d-852b-86d9646dc077"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_6/Picture5.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="220" y="103" width="172" height="90" uuid="6f7a2b94-ceeb-4db0-b16a-1ac55ac19c69"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_6/Picture2.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="20" y="199" width="150" height="90" uuid="1ba9f0bc-03c5-4548-b459-470b156cb271"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_6/Picture4.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="20" y="103" width="150" height="90" uuid="3a8705c3-40ff-4eaa-a5c0-700fa10f8219"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_6/Picture1.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="15" y="71" width="551" height="24" uuid="ed9f24ad-21b0-46d5-8da3-069585e83090"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="11"/>
+				</textElement>
+				<text><![CDATA[Traditional advertising plan(s) is good, however, the cost is expensive and have limited exposure.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="14" y="542" width="567" height="188" uuid="182cde56-0093-41fa-8d0d-f4a364035a4b"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_6/Picture7.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="15" y="291" width="569" height="250" uuid="f1ccfba2-632e-49aa-b516-41170bc9e2e2"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Open Sans" size="11"/>
+				</textElement>
+				<text><![CDATA[PanPages aim is to provide a multi-channel advertising plan for our advertisers.
+
+After 26 years in the business of connecting Buyers to Sellers, there are few crucial elements that are needed to ensure success:
+ 
+                                                      – Professional Online Business Advisors to analyze, monitor, consult & market your business.
+
+                                                     – You will be given a personalized access to upload and update your online PanPage anywhere and anytime you want with a simple internet connection.
+  
+                                                     – We have a team of professionals to setup, manage, monitor and optimize your digital campaigns base on your advertising objective(s).
+ 
+We have given you all the reasons why you should advertise now! I have taken the liberty to put together an adverting planner  which I believe will definitely assist you in generating further awareness and business leads for your product(s) and company.
+]]></text>
+			</staticText>
+			<image>
+				<reportElement x="416" y="199" width="150" height="90" uuid="439d2229-6335-4252-bf48-b28f6376a6e6"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_6/Picture6.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="416" y="103" width="150" height="90" uuid="9945c5af-befe-4f52-8d2a-8e594bad3583"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_6/Picture3.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="204" y="15" width="252" height="50" isPrintWhenDetailOverflows="true" uuid="1671ff10-d2a1-409c-a399-a546b35d27fe"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Advertising Planner]]></text>
+			</staticText>
+			<image>
+				<reportElement x="15" y="15" width="160" height="39" uuid="8f0f536d-6567-4e9c-84ea-ab607b58e906"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_5/TMPanPanpages.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="15" y="736" width="569" height="16" uuid="5f02e3de-453a-442c-a75d-644de9ded6aa"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="7" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Terms & Conditions:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="743" width="569" height="83" uuid="f1257051-20fa-449e-bae9-43b87bc450fc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[1. The above mentioned proposal would be due on                         (PanPages Online Sdn Bhd reserved the right on the rate changes after promotion due date)
+2.                         shall be made upon sign confirmation date and the balance 50% payment shall be made within 60 days after sign confirmation date. 
+3.                                 listing page will be activated within 30 working days upon receiving complete product materials and minimum of
+4. Key Phrases or Classifications selected for guaranteed positions are based on a                                         basis upon receiving complete job sheet.
+5. This proposal is based on the estimation of your advertising goal(s) and objective(s) to achieve your intended revenue increase.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="360" width="155" height="20" uuid="28e99357-b07b-4969-bbdd-49222daf81ec"/>
+				<textElement>
+					<font fontName="Open Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Business Associates Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="401" width="156" height="20" uuid="e175d6a8-7d26-4bdd-a8fc-93113f8f423f"/>
+				<textElement>
+					<font fontName="Open Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[User Friendly Personal Log In]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="444" width="163" height="20" uuid="487ab496-0f67-4736-95ff-ed735a3858d6"/>
+				<textElement>
+					<font fontName="Open Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Digital Campaign Specialist]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="198" y="755" width="91" height="12" uuid="711d4240-2418-4a3e-b7c2-be927d0ea698"/>
+				<textElement>
+					<font fontName="Open Sans" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd MMM yyyy").format(org.apache.commons.lang.time.DateUtils.addMonths(new Date(), 1))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="25" y="765" width="45" height="12" uuid="4e6520b8-1617-4a76-9450-b14f3342b433"/>
+				<textElement>
+					<font fontName="Open Sans" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["50% payment"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="774" width="100" height="12" uuid="ba86d30d-8975-416d-b16a-dc3fcb1fe749"/>
+				<textElement>
+					<font fontName="Open Sans" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("advertiser-company-name", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-2",$P{sections})).getFields())).getValue()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="776" width="56" height="10" uuid="a16ad77f-4ba8-4e9f-9cc8-f7ddd81aec07"/>
+				<textElement>
+					<font fontName="Open Sans" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["50% payment."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="309" y="785" width="100" height="12" uuid="e49880ff-0c83-46c7-884b-47d8be18bdb4"/>
+				<textElement>
+					<font fontName="Open Sans" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[First Come First Serve]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

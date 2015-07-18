@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SURVEY TEMPLATE 1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="89cc2169-c366-460f-a825-86120bde60b5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="111"/>
+	<subDataset name="dataset1" uuid="b0d91e67-b305-47fa-a3d5-74c1fdba1b72"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Panpages\\Documents\\BOW project\\Source\\BOW\\report\\templates\\template_1"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sections" class="java.util.List"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="sections" class="java.util.List">
+		<fieldDescription><![CDATA[sections]]></fieldDescription>
+	</field>
+	<field name="fulfilledDate" class="java.lang.String">
+		<fieldDescription><![CDATA[fulfilledDate]]></fieldDescription>
+	</field>
+	<variable name="set_country" class="java.lang.String"/>
+	<group name="survey_id">
+		<groupExpression><![CDATA[]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="625">
+			<subreport>
+				<reportElement x="0" y="0" width="595" height="84" uuid="460b92a2-bf2d-44cf-9040-96d34a26443e"/>
+				<subreportParameter name="fulfillDate">
+					<subreportParameterExpression><![CDATA[$F{fulfilledDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sections">
+					<subreportParameterExpression><![CDATA[$F{sections}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_1.jasper"]]></subreportExpression>
+			</subreport>
+			<break>
+				<reportElement x="0" y="99" width="595" height="1" uuid="daaad4ad-a03f-4071-a718-c6399ec5e30c"/>
+			</break>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="117" width="595" height="77" uuid="dc1e8a62-3b37-4d8c-8cb5-cfaddcf33348"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sections">
+					<subreportParameterExpression><![CDATA[$F{sections}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="pageNumber">
+					<subreportParameterExpression><![CDATA[1]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_2.jasper"]]></subreportExpression>
+			</subreport>
+			<break>
+				<reportElement x="0" y="213" width="595" height="1" uuid="7847c0ce-ab39-494e-9d52-c85d6f77710a"/>
+			</break>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="229" width="595" height="76" uuid="0f595c75-8dee-44b0-9d8b-1e4ad3dd025e"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sections">
+					<subreportParameterExpression><![CDATA[$F{sections}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="pageNumber">
+					<subreportParameterExpression><![CDATA[2]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_3.jasper"]]></subreportExpression>
+			</subreport>
+			<break>
+				<reportElement x="0" y="321" width="595" height="1" uuid="5203a487-457f-4461-b43c-9e1e57d7305a"/>
+			</break>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="334" width="595" height="78" uuid="15432e27-357d-4808-9cad-bc1db14d434f"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sections">
+					<subreportParameterExpression><![CDATA[$F{sections}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="pageNumber">
+					<subreportParameterExpression><![CDATA[3]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_4.jasper"]]></subreportExpression>
+			</subreport>
+			<break>
+				<reportElement x="0" y="521" width="595" height="1" uuid="3c97a4dc-eba3-4f34-8e26-6aee39830954"/>
+			</break>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="536" width="595" height="89" uuid="aa957cfc-ee24-46c6-bece-1daf523b7e09"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sections">
+					<subreportParameterExpression><![CDATA[$F{sections}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="pageNumber">
+					<subreportParameterExpression><![CDATA[4]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_5.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="412" width="595" height="100" uuid="f728d384-ded5-45b0-95af-2f569c745eab"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sections">
+					<subreportParameterExpression><![CDATA[$F{sections}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/keyword.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>
