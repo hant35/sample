@@ -43,7 +43,7 @@
 		<br/><br/><br/>			
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<p style="font-size: 20pt; text-align: justify;">
-					This survey tool will help you to generate proposal for new and existing customers. In this survey, the system will collect your advertiser’s information, goals, objectives and your propose keywords. Once the data is collected, the system will tabulate based on a sophisticated algorithm to suggest a suitable budget for your advertisers.
+					This survey tool will help you to generate proposal for new and existing customers. In this survey, the system will collect your advertiser's information, goals, objectives and your propose keywords. Once the data is collected, the system will tabulate based on a sophisticated algorithm to suggest a suitable budget for your advertisers.
 				</p>
 		<br/><br/><br/>		
 			</div>
