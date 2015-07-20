@@ -37,11 +37,11 @@
 				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_2/target.png"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="15" y="330" width="70" height="70" uuid="09d5d1ea-6274-4eb3-939e-fb1e667c8fa9"/>
+				<reportElement x="15" y="333" width="70" height="70" uuid="09d5d1ea-6274-4eb3-939e-fb1e667c8fa9"/>
 				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_2/ages.png"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="15" y="410" width="70" height="70" uuid="5b69528a-4561-43ec-bbd4-eb9b401d43b8"/>
+				<reportElement x="15" y="413" width="70" height="70" uuid="5b69528a-4561-43ec-bbd4-eb9b401d43b8"/>
 				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_2/gender.png"]]></imageExpression>
 			</image>
 			<staticText>
@@ -81,14 +81,14 @@
 				<text><![CDATA[You would like to advertise in:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="84" y="330" width="498" height="20" uuid="cac5f144-9cc1-4e93-baab-50e1ada1ca6c"/>
+				<reportElement x="84" y="333" width="498" height="20" uuid="cac5f144-9cc1-4e93-baab-50e1ada1ca6c"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
 				<text><![CDATA[You would like to target people who aged between:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="85" y="410" width="497" height="20" uuid="b462d032-44d2-48fc-b7f3-70a505b7958d"/>
+				<reportElement x="85" y="413" width="497" height="20" uuid="b462d032-44d2-48fc-b7f3-70a505b7958d"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
@@ -153,7 +153,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/people.jasper"]]></subreportExpression>
 			</subreport>
 			<subreport>
-				<reportElement x="85" y="350" width="497" height="50" isRemoveLineWhenBlank="true" uuid="098bf1f1-f5a4-4c4e-9309-e4019037a0fc"/>
+				<reportElement x="85" y="353" width="497" height="50" isRemoveLineWhenBlank="true" uuid="098bf1f1-f5a4-4c4e-9309-e4019037a0fc"/>
 				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource(
 	com.panpages.bow.model.utils.SurveyUtils.createSurveyBeans(
 		com.panpages.bow.model.utils.SurveyUtils.createSurveyBean
@@ -169,7 +169,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/ages.jasper"]]></subreportExpression>
 			</subreport>
 			<subreport>
-				<reportElement x="85" y="430" width="497" height="50" isRemoveLineWhenBlank="true" uuid="b189d3fd-cacb-4f73-9c36-2921de6a85e6"/>
+				<reportElement x="85" y="433" width="497" height="50" isRemoveLineWhenBlank="true" uuid="b189d3fd-cacb-4f73-9c36-2921de6a85e6"/>
 				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource(
 	com.panpages.bow.model.utils.SurveyUtils.createSurveyBeans(
 		com.panpages.bow.model.utils.SurveyUtils.createSurveyBean

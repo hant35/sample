@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_5_2_subreport" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aa4e2863-04cb-41de-9474-a2e60ad6511e">
 	<property name="ireport.zoom" value="1.3310000000000004"/>
-	<property name="ireport.x" value="78"/>
-	<property name="ireport.y" value="630"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="374"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<parameter name="sections" class="java.util.List"/>
 	<parameter name="pageSubNumber" class="java.lang.Integer"/>
@@ -90,18 +90,6 @@ We have given you all the reasons why you should advertise now! I have taken the
 				<text><![CDATA[Terms & Conditions:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="15" y="735" width="569" height="83" uuid="f1257051-20fa-449e-bae9-43b87bc450fc"/>
-				<textElement verticalAlignment="Middle">
-					<font fontName="Open Sans" size="8" isBold="false" isItalic="false"/>
-				</textElement>
-				<text><![CDATA[1. The above mentioned proposal would be due on                         (PanPages Online Sdn Bhd reserved the right on the rate changes after promotion due date)
-2.                         shall be made upon sign confirmation date and the balance 50% payment shall be made within 60 days after sign confirmation date. 
-3.                                 listing page will be activated within 30 working days upon receiving complete product materials and minimum of
-4. Key Phrases or Classifications selected for guaranteed positions are based on a                                         basis upon receiving complete job sheet.
-5. This proposal is based on the estimation of your advertising goal(s) and objective(s) to achieve your intended revenue increase.
-]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="15" y="360" width="155" height="20" uuid="28e99357-b07b-4969-bbdd-49222daf81ec"/>
 				<textElement>
 					<font fontName="Open Sans" size="11" isBold="true"/>
@@ -123,40 +111,16 @@ We have given you all the reasons why you should advertise now! I have taken the
 				<text><![CDATA[Digital Campaign Specialist]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="198" y="747" width="91" height="12" uuid="711d4240-2418-4a3e-b7c2-be927d0ea698"/>
+				<reportElement x="14" y="743" width="569" height="83" uuid="520d59eb-0d4e-4fa3-9ffc-128fcdd12333"/>
 				<textElement>
-					<font fontName="Open Sans" size="8" isBold="true"/>
+					<font size="8" isBold="false"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new SimpleDateFormat("dd MMM yyyy").format(org.apache.commons.lang.time.DateUtils.addMonths(new Date(), 1))]]></textFieldExpression>
+				<textFieldExpression><![CDATA["1. The above mentioned proposal would be due on " + new SimpleDateFormat("dd MMM yyyy").format(org.apache.commons.lang.time.DateUtils.addMonths(new Date(), 1)).toString() + " (PanPages Online Sdn Bhd reserved the right on the rate changes after promotion due date)"+
+"\n2. 50% payment shall be made upon sign confirmation date and the balance 50% payment shall be made within 60 days after sign confirmation date. "+
+"\n3. " + ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("advertiser-company-name", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-2",$P{sections})).getFields())).getValue() + " listing page will be activated within 30 working days upon receiving complete product materials and minimum of"+
+"\n4. Key Phrases or Classifications selected for guaranteed positions are based on a First Come First Serve basis upon receiving complete job sheet."+
+"\n5. This proposal is based on the estimation of your advertising goal(s) and objective(s) to achieve your intended revenue increase."]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="25" y="757" width="45" height="12" uuid="4e6520b8-1617-4a76-9450-b14f3342b433"/>
-				<textElement>
-					<font fontName="Open Sans" size="8" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA["50% payment"]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="24" y="766" width="100" height="12" uuid="ba86d30d-8975-416d-b16a-dc3fcb1fe749"/>
-				<textElement>
-					<font fontName="Open Sans" size="8" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("advertiser-company-name", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-2",$P{sections})).getFields())).getValue()]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="447" y="768" width="56" height="10" uuid="a16ad77f-4ba8-4e9f-9cc8-f7ddd81aec07"/>
-				<textElement>
-					<font fontName="Open Sans" size="8" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA["50% payment."]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="309" y="777" width="100" height="12" uuid="e49880ff-0c83-46c7-884b-47d8be18bdb4"/>
-				<textElement>
-					<font fontName="Open Sans" size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[First Come First Serve]]></text>
-			</staticText>
 		</band>
 	</summary>
 </jasperReport>

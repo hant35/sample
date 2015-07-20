@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90167ed5-0c7a-4203-aa33-cf24b0c47bbb">
 	<property name="ireport.zoom" value="1.1000000000000012"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="129"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["H:\\workspace\\BOW\\report\\templates\\template_3\\"]]></defaultValueExpression>
 	</parameter>
@@ -151,7 +151,7 @@
 				<textFieldExpression><![CDATA[$P{pageNumber}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="true">
-				<reportElement x="68" y="505" width="104" height="20" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" forecolor="#0000CC" uuid="5139d434-e465-484b-9295-981afead0e77"/>
+				<reportElement x="85" y="505" width="87" height="20" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" forecolor="#0000CC" uuid="5139d434-e465-484b-9295-981afead0e77"/>
 				<box leftPadding="5" rightPadding="0">
 					<pen lineWidth="0.0"/>
 					<topPen lineWidth="0.0"/>
@@ -192,13 +192,6 @@
 				</textElement>
 				<textFieldExpression><![CDATA[Double.valueOf(((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("est-clicks-on-ctr", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-5",$P{sections})).getFields())).getValue())]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement mode="Transparent" x="47" y="505" width="38" height="20" isPrintWhenDetailOverflows="true" forecolor="#0000CC" uuid="890237f2-2914-45c3-be63-c78060779d93"/>
-				<textElement verticalAlignment="Middle">
-					<font fontName="Open Sans" size="16" isBold="true"/>
-				</textElement>
-				<text><![CDATA[RM]]></text>
-			</staticText>
 			<textField pattern="">
 				<reportElement x="96" y="120" width="35" height="23" isPrintWhenDetailOverflows="true" uuid="1c7e685b-5ef5-4247-b1ae-c3f00f739e7b"/>
 				<box rightPadding="0"/>
@@ -212,6 +205,14 @@
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["RM "]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="50" y="505" width="35" height="20" isPrintWhenDetailOverflows="true" forecolor="#0000CC" uuid="63b9940f-d48c-4e44-b6e3-d5ebdbaa3456"/>
+				<box rightPadding="0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="14" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["RM "]]></textFieldExpression>
 			</textField>
