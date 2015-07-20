@@ -193,9 +193,7 @@
 				<textFieldExpression><![CDATA[Double.valueOf(((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("est-clicks-on-ctr", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-5",$P{sections})).getFields())).getValue())]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="47" y="505" width="38" height="20" isPrintWhenDetailOverflows="true" forecolor="#0000CC" uuid="890237f2-2914-45c3-be63-c78060779d93">
-					<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("est-monthly-investment", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-5",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("est-monthly-investment", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-5",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
-				</reportElement>
+				<reportElement mode="Transparent" x="47" y="505" width="38" height="20" isPrintWhenDetailOverflows="true" forecolor="#0000CC" uuid="890237f2-2914-45c3-be63-c78060779d93"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="16" isBold="true"/>
 				</textElement>

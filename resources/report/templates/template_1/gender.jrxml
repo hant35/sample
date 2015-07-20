@@ -17,7 +17,7 @@
 		<band height="32">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="497" height="32" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="2336032d-90ea-4c96-b273-a4dca6631a12"/>
-				<textElement>
+				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{_THIS}.joinFields(",")]]></textFieldExpression>

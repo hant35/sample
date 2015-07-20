@@ -17,7 +17,7 @@
 		<band height="35">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="497" height="35" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="62021c64-df4c-4469-958a-edebb5acc7cb"/>
-				<textElement>
+				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
