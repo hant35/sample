@@ -1,5 +1,7 @@
 package com.panpages.bow.service.survey;
 
+
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.panpages.bow.dao.SurveyDao;
+import com.panpages.bow.model.Field;
 import com.panpages.bow.model.FieldTemplate;
 import com.panpages.bow.model.Survey;
 import com.panpages.bow.model.SurveyForm;
@@ -69,5 +72,14 @@ public class SurveyServiceImpl implements SurveyService{
 	public int addField(String fieldName, String fieldValue, Survey survey) {
 		return dao.addField(fieldName, fieldValue, survey);
 	}
+	
+	@Override
+	public List<Survey> findSurveyByMonthYear(Date date){
+		return dao.findSurveyByMonthYear(date);
+	}
 
+	@Override
+	public Field findFieldByName(int id, String name) {
+		return dao.findFieldByName(id, name);
+	}
 }

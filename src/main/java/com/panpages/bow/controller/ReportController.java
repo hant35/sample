@@ -2,6 +2,9 @@ package com.panpages.bow.controller;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,10 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.panpages.bow.configuration.ConfigConstant;
+import com.panpages.bow.model.CustomerSurveys;
 import com.panpages.bow.model.Field;
 import com.panpages.bow.model.Survey;
 import com.panpages.bow.model.utils.SurveyUtils;
 import com.panpages.bow.service.report.ReportService;
+import com.panpages.bow.service.survey.CustomerService;
 import com.panpages.bow.service.survey.SurveyService;
 
 @Controller
@@ -26,6 +31,9 @@ import com.panpages.bow.service.survey.SurveyService;
 public class ReportController {
 
 	@Autowired ApplicationContext ctx;
+	
+	@Autowired
+	CustomerService customerSvc;
 	
 	@Autowired
 	SurveyService surveySvc;
@@ -105,4 +113,34 @@ public class ReportController {
 		
 	}
 	
+	@RequestMapping(value = { "/report/{month}/{year}/out.html" }, method = RequestMethod.GET)
+	public void report(ModelMap model, @PathVariable int month, 
+			 @PathVariable int year,  HttpServletResponse response) {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.YEAR, year);
+		cal.set(Calendar.MONTH, month - 1);
+	    List<String> lstResult = new ArrayList<String>();
+		List<Survey> surveys = surveySvc.findSurveyByMonthYear(cal.getTime());
+		for (Survey survey : surveys) {
+			
+			String result = "";
+			String Email = surveySvc.findFieldByName(survey.getId(), "Email Address").getValue();
+			String UserName = surveySvc.findFieldByName(survey.getId(), "Consultant Name").getValue();
+			String[] tmp = survey.getStorageName().split("_");
+			if(tmp != null && tmp.length > 2) {
+				CustomerSurveys cusSur = customerSvc.findSurveyByCusSurTemplate(tmp[0] + "_" + tmp[1]);
+				if(cusSur != null){
+				String typeSurvey = cusSur.getName();
+				result += typeSurvey;
+				}
+			}
+			
+			result += (Email + " - " + UserName + " - "+survey.getStorageName() + " - " +  survey.getFulfilledDate());
+			lstResult.add(result);
+		}
+		for (String result : lstResult) {
+			System.out.println(result);
+			
+		}
+	}
 }

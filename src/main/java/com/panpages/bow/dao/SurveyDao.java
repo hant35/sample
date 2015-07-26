@@ -1,5 +1,7 @@
 package com.panpages.bow.dao;
 
+
+import java.util.Date;
 import java.util.List;
 
 import com.panpages.bow.model.Field;
@@ -29,5 +31,7 @@ public interface SurveyDao {
     List<SectionTemplate> findSectionTemplatesBelongToSurveyTemplate(int surveyTemplateId);
 	int saveSurveyForm(int surveyTemplateId, SurveyForm form, SurveyCalculate calculation);
 	int addField(String fieldName, String fieldValue, Survey survey);
+	List<Survey> findSurveyByMonthYear(Date date);
+	Field findFieldByName(int id, String name);
 	
 }

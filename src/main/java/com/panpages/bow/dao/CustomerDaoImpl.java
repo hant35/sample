@@ -62,4 +62,14 @@ public class CustomerDaoImpl extends AbstractDao implements CustomerDao {
         return null;
     }
 
+	@Override
+	public CustomerSurveys findSurveyByCusSurTemplate(String customerSurveyTemplate) {
+		 Query query = getSession().createQuery("from CustomerSurveys as s where s.template like :customerSurveyTemplate");
+	        query.setString("customerSurveyTemplate", "%" + customerSurveyTemplate + "%");
+	        for (Object obj : query.list()) {
+	            return (CustomerSurveys) obj;
+	        }
+	        return null;
+	}
+
 }

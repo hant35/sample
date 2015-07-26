@@ -4,7 +4,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -366,5 +370,39 @@ public class SurveyDaoImpl extends AbstractDao implements SurveyDao{
 	     }
 		return field == null? -1 : field.getId();
 	}
+	
+	@Override
+	public List<Survey> findSurveyByMonthYear(Date date){
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+		
+		Query query = getSession().createQuery("from Survey as s where year(s.fulfilledDate) = :dateYear and month(s.fulfilledDate) = :dateMonth");
+		query.setInteger("dateYear", cal.get(Calendar.YEAR));
+		query.setInteger("dateMonth", cal.get(Calendar.MONTH) + 1);
+		List<Survey> result = query.list();
+		
+		return result;
+	}
+
+	@Override
+	public Field findFieldByName(int id, String name) {
+//		SELECT f.name, f.value, f.field_id, fsr.section_id FROM `field` f, field_section_relation fsr, section_survey_relation ssr
+//		where fsr.section_id = ssr.section_id
+//		and f.field_id = fsr.field_id
+//		and ssr.survey_id = 111
+//		and f.name = "Email Address";
+		Query query = getSession().createQuery("Select f from Field as f, FieldAndSectionRelation fsr, SectionAndSurveyRelation ssr"
+				+ " where  fsr.sectionId = ssr.sectionId"
+				+ " and f.id = fsr.fieldId"
+				+ " and ssr.surveyId = :surveyId"
+				+ " and f.name = :name");
+		query.setInteger("surveyId", id);
+		query.setString("name", name);
+		List<Field> result = query.list();
+		return result != null && result.size() > 0? result.get(0) : null;
+		
+	}
+	
+	
 	
 }

@@ -31,6 +31,11 @@ public class CustomerServiceImpl implements CustomerService{
 	public CustomerSurveys findSurveyByCusSurId(int customerSurveyId) {
 		return customerDao.findSurveyByCusSurId(customerSurveyId);
 	}
+	
+	@Override
+	public CustomerSurveys findSurveyByCusSurTemplate(String customerSurveyTemplate) {
+		return customerDao.findSurveyByCusSurTemplate(customerSurveyTemplate);
+	}
 
     @Override
     public Customer findCustomerById(int customerId) {

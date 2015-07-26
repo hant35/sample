@@ -14,5 +14,7 @@ public interface CustomerDao {
 	CustomerSurveys findSurveyByCusSurId(int customerSurveyId);
 
     public Customer findCustomerById(int customerId);
+
+	CustomerSurveys findSurveyByCusSurTemplate(String customerSurveyTemplate);
 	
 }
