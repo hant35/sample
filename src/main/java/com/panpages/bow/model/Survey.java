@@ -140,6 +140,10 @@ public class Survey {
 		return newFulfilledDateStr;
 	}
 	
+	public Date getDate(){
+		return fulfilledDate;
+	}
+	
 	public String getFulfilledDate(String timezone) {
 		if (timezone == null || timezone.trim().equalsIgnoreCase("")) {
 			return getFulfilledDate();

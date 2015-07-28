@@ -5,8 +5,8 @@ import java.util.Date;
 public class Report {
 	private String email;
 	private String userName;
-	private String timeAccess;
-	private String timeReceived;
+	private Date timeAccess;
+	private Date timeReceived;
 	private String type;
 	public String getEmail() {
 		return email;
@@ -20,16 +20,16 @@ public class Report {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public String getTimeAccess() {
+	public Date getTimeAccess() {
 		return timeAccess;
 	}
-	public void setTimeAccess(String timeAccess) {
+	public void setTimeAccess(Date timeAccess) {
 		this.timeAccess = timeAccess;
 	}
-	public String getTimeReceived() {
+	public Date getTimeReceived() {
 		return timeReceived;
 	}
-	public void setTimeReceived(String timeReceived) {
+	public void setTimeReceived(Date timeReceived) {
 		this.timeReceived = timeReceived;
 	}
 	public String getType() {

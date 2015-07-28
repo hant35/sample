@@ -156,8 +156,8 @@ public class ReportController {
 			result.setEmail(Email);
 			String UserName = surveySvc.findFieldByName(survey.getId(), "Consultant Name").getValue();
 			result.setUserName(UserName);
-			result.setTimeAccess(survey.getFulfilledDate());
-			result.setTimeReceived(survey.getFulfilledDate());
+			result.setTimeAccess(survey.getDate());
+			result.setTimeReceived(survey.getDate());
 			
 			String[] tmp = survey.getStorageName().split("_");
 			if(tmp != null && tmp.length > 2) {
@@ -179,6 +179,6 @@ public class ReportController {
 //		String[] mailTo = {"chrisng@panpages.com","davidchew@panpages.com","chavenng@panpages.com","edwardpoh@panpages.com",
 //				"cklim@panpages.com","sharonfong@panpages.com","yenlee@panpages.com"};
 		String[] mailTo = reportMailTo.split(",");
-		emailSvc.sendMail(mailTo, "Report " + cal.get(Calendar.MONTH) + "-" + cal.get(Calendar.YEAR),reportFile);
+		emailSvc.sendMail(mailTo, "Report " + (cal.get(Calendar.MONTH) + 1) + "-" + cal.get(Calendar.YEAR),reportFile);
 	}
 }
