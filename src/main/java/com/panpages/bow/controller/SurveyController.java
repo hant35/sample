@@ -3,6 +3,7 @@ package com.panpages.bow.controller;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -65,6 +66,8 @@ public class SurveyController {
 	@Autowired
 	SurveyCalculateFactory calculationFactory;
 	
+	private Date timeAccess = new Date();
+	
 	private static final Logger logger = Logger.getLogger(SurveyController.class);
 
 	@RequestMapping(value = { "/", "/index.html" }, method = RequestMethod.GET)
@@ -77,6 +80,7 @@ public class SurveyController {
 	public String listTemplates(ModelMap model) {
 		List<SurveyTemplate> surveyTemplates = surveySvc.findAllSurveyTemplates();
 		model.addAttribute("templates", surveyTemplates);
+		timeAccess = new Date();
 		return "templates";
 	}
 	
@@ -153,6 +157,7 @@ public class SurveyController {
 						      (submit != null? SurveyStatus.COMPLETED.getValue() : SurveyStatus.PENDING.getValue());
 		survey.setStatus(surveyStatus);
 		survey.setStorageName(reportName);
+		survey.setTimeAccess(timeAccess);
 		surveySvc.saveSurvey(survey);
 		
 		// Preview mode
@@ -224,6 +229,7 @@ public class SurveyController {
 						      (submit != null? SurveyStatus.COMPLETED.getValue() : SurveyStatus.PENDING.getValue());
 		survey.setStatus(surveyStatus);
 		survey.setStorageName(reportName);
+		survey.setTimeAccess(timeAccess);
 		surveySvc.saveSurvey(survey);
 		
 		// Preview mode
@@ -258,6 +264,7 @@ public class SurveyController {
 							   @PathVariable int surveyId) {
 		Survey survey = surveySvc.findSurveyWithId(surveyId);
 		survey.setStatus(SurveyStatus.COMPLETED.getValue());
+		survey.setTimeAccess(timeAccess);
 		surveySvc.saveSurvey(survey);
 		String reportViewPath = String.format("%1$s/%2$s/%3$s_%4$s.html", "/view", survey.getId(), survey.getStorageName(), ReportType.PDF.getName());
 		

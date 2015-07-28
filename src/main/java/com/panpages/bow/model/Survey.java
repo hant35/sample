@@ -53,6 +53,10 @@ public class Survey {
 	@Type(type="timestamp")
 	private Date fulfilledDate;
 	
+	@Column(name = "TIME_ACCESS", nullable = true)
+	@Type(type="timestamp")
+	private Date timeAccess;
+	
 	@Column(name = "MADE_BY", nullable = false)
 	private String madeBy;
 	
@@ -140,9 +144,7 @@ public class Survey {
 		return newFulfilledDateStr;
 	}
 	
-	public Date getDate(){
-		return fulfilledDate;
-	}
+	
 	
 	public String getFulfilledDate(String timezone) {
 		if (timezone == null || timezone.trim().equalsIgnoreCase("")) {
@@ -160,6 +162,10 @@ public class Survey {
 		return newFulfilledDateStr;
 	}
 	
+	public Date getDate(){
+		return fulfilledDate;
+	}
+	
 	public void setFulfilledDate() {
 		this.fulfilledDate = new Date();
 	}
@@ -170,6 +176,42 @@ public class Survey {
 
 	public void setMadeBy(String madeBy) {
 		this.madeBy = madeBy;
+	}
+
+	public Date getTimeAccess() {
+		return timeAccess;
+	}
+
+	public void setTimeAccess(Date timeAccess) {
+		this.timeAccess = timeAccess;
+	}
+	
+	public String getTimeAccessGMT8() {
+		String newFulfilledDateStr;
+		
+		DateFormat newDateFormat = new SimpleDateFormat("dd MMM yyyy, hh:mm a");
+		TimeZone zone = TimeZone.getTimeZone("GMT+08:00");
+		newDateFormat.setTimeZone(zone);
+		
+		newFulfilledDateStr = newDateFormat.format(timeAccess);
+		
+		return newFulfilledDateStr;
+	}
+	
+	public String getTimeAccess(String timezone) {
+		if (timezone == null || timezone.trim().equalsIgnoreCase("")) {
+			return getFulfilledDate();
+		}
+		
+		String newFulfilledDateStr;
+		
+		DateFormat newDateFormat = new SimpleDateFormat("dd MMM yyyy, hh:mm a");
+		TimeZone zone = TimeZone.getTimeZone(timezone);
+		newDateFormat.setTimeZone(zone);
+		
+		newFulfilledDateStr = newDateFormat.format(timeAccess);
+		
+		return newFulfilledDateStr;
 	}
 	
 }
