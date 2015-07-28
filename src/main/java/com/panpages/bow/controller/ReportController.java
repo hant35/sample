@@ -156,7 +156,7 @@ public class ReportController {
 			result.setEmail(Email);
 			String UserName = surveySvc.findFieldByName(survey.getId(), "Consultant Name").getValue();
 			result.setUserName(UserName);
-			result.setTimeAccess(survey.getDate());
+			result.setTimeAccess(survey.getTimeAccess());
 			result.setTimeReceived(survey.getDate());
 			
 			String[] tmp = survey.getStorageName().split("_");
