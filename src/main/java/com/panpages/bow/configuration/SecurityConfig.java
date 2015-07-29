@@ -36,6 +36,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		    .antMatchers("/j_spring_security_check").access("hasRole('ROLE_ANONYMOUS')")
 		    .antMatchers("/login.html").access("hasRole('ROLE_ANONYMOUS')")
 		    .antMatchers("/admin.html").access("hasRole('ROLE_ADMIN')")
+		    .antMatchers("/report/*/out/dl.html").access("hasRole('ROLE_ADMIN')")
+		    .antMatchers("/report/*/out/all.html").access("hasRole('ROLE_ADMIN')")
 		    .and()
 		    .formLogin().loginPage("/login.html")
 		    .failureUrl("/login.html?error")
