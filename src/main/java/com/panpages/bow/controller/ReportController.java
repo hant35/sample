@@ -146,7 +146,7 @@ public class ReportController {
 		String excelOutputPath = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_OUTPUT_PATH.getName());
 		Calendar cal = Calendar.getInstance();
 		//cal.set(Calendar.YEAR, year);
-		cal.set(Calendar.MONTH, cal.get(Calendar.MONTH) - 1);
+		cal.set(Calendar.MONTH, cal.get(Calendar.MONTH));
 	    List<Report> lstResult = new ArrayList<Report>();
 		List<Survey> surveys = surveySvc.findSurveyByMonthYear(cal.getTime());
 		for (Survey survey : surveys) {
@@ -158,18 +158,22 @@ public class ReportController {
 			result.setUserName(UserName);
 			result.setTimeAccess(survey.getTimeAccess());
 			result.setTimeReceived(survey.getDate());
-			
-			String[] tmp = survey.getStorageName().split("_");
-			if(tmp != null && tmp.length > 2) {
-				CustomerSurveys cusSur = customerSvc.findSurveyByCusSurTemplate(tmp[0] + "_" + tmp[1]);
-				if(cusSur != null){
-				String typeSurvey = cusSur.getName();
-				result.setType(typeSurvey);
-				
-				}else{
-					result.setType(survey.getName());
+			if(survey.getStorageName() != null){
+				String[] tmp = survey.getStorageName().split("_");
+				if(tmp != null && tmp.length > 2) {
+					CustomerSurveys cusSur = customerSvc.findSurveyByCusSurTemplate(tmp[0] + "_" + tmp[1]);
+					if(cusSur != null){
+					String typeSurvey = cusSur.getName();
+					result.setType(typeSurvey);
+					
+					}else{
+						result.setType(survey.getName());
+					}
 				}
+			}else{
+				result.setType("");
 			}
+			
 			
 			lstResult.add(result);
 		}
