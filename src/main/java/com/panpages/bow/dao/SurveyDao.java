@@ -24,7 +24,7 @@ public interface SurveyDao {
 	FieldTemplate findFieldTemplateWithSlugName(String slugName);
 	void saveField(Field field);
 	void saveSection(Section section);
-	int saveSurveyForm(int templateId, SurveyForm form);
+	int saveSurveyForm(int templateId, SurveyForm form, Date timeAccess);
 	void saveSectionAndSurveyRelation(SectionAndSurveyRelation relation);
 	void saveFieldAndSectionRelation(FieldAndSectionRelation relation);
     SurveyTemplate findSurveyTemplateWithId(int templateId);

@@ -51,15 +51,24 @@
 				<a href="<c:url value="/index.html" />"><img class="img-responsive" src="<c:url value="/assets/images/logo.jpg" />" /></a>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 main-menu">
-				 <span class="menu-item"><a href="<c:url value="/index.html" />">HOME</a></span>
-				 &frasl;
-				 <span class="menu-item"><a href="<c:url value="/templates.html" />">SURVEYS</a></span>
+				 
+				 <span class="menu-item"><a href="<c:url value="/customers.html" />">ALL SURVEYS</a></span>
 				 &frasl; 
-				 <span class="menu-item"><a href="http://about.panpages.com/">ABOUT</a></span>
+				 <span class="menu-item"><a href="http://about.panpages.com/">ABOUT PANPAGES</a></span>
 			</div>
 		</div>
 		<div class="separator"></div>
-		<div id="content"></div>
+		<div id="content">
+			
+			
+			<br/><br/>
+			
+				<h2>
+                                    <a href="report/e10adc3949ba59abbe56e057f20f883e/out/dl.html"  class="proposal">Download Report</a>
+				</h2>
+			
+			<br/><br/>
+		</div>
 	</div>
 
 	<div id="footer">

@@ -36,12 +36,12 @@ public class SurveyServiceImpl implements SurveyService{
 	}
 
 	@Override
-	public int saveSurveyForm(int surveyTemplateId, SurveyForm form) {
+	public int saveSurveyForm(int surveyTemplateId, SurveyForm form, Date timeAccess) {
 		if (form == null) {
 			return -1;
 		}
 		
-		return dao.saveSurveyForm(surveyTemplateId, form);
+		return dao.saveSurveyForm(surveyTemplateId, form, timeAccess);
 	}
 	
 	@Override

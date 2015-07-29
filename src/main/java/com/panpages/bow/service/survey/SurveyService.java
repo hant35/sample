@@ -15,7 +15,7 @@ public interface SurveyService {
 	void saveSurvey(Survey survey);
 	List<Survey> findAllSurveys(); 
 	List<SurveyTemplate> findAllSurveyTemplates();
-	int saveSurveyForm(int surveyTemplateId, SurveyForm form);
+	int saveSurveyForm(int surveyTemplateId, SurveyForm form, Date timeAccess);
 	Survey findSurveyWithId(int surveyId); 
 	FieldTemplate findFieldTemplateWithSlugName(String slugName);
 	SurveyTemplate findSurveyTemplateWithId(int surveyTemplateId);

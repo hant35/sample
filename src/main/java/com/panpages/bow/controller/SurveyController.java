@@ -127,7 +127,7 @@ public class SurveyController {
         	 customerSurveyId = 1;
         	 
         	 
-		int surveyId = surveySvc.saveSurveyForm(customerSurveyId, form);		
+		int surveyId = surveySvc.saveSurveyForm(customerSurveyId, form, timeAccess);		
 		
 		// Redirect to error page with surveyId -1
 		if (surveyId == -1) {
@@ -203,7 +203,7 @@ public class SurveyController {
 							 BindingResult result, 
 							 ModelMap model) {
 		surveyTemplateId = 1;
-		int surveyId = surveySvc.saveSurveyForm(surveyTemplateId, form);		
+		int surveyId = surveySvc.saveSurveyForm(surveyTemplateId, form, timeAccess);		
 		
 		// Redirect to error page with surveyId -1
 		if (surveyId == -1) {

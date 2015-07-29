@@ -121,8 +121,8 @@ public class ReportController {
 		
 	}
 	
-	@RequestMapping(value = { "/report/{key}/out.html" }, method = RequestMethod.GET)
-	public void report(ModelMap model, @PathVariable String key, 
+	@RequestMapping(value = { "/report/{key}/out/{action}.html" }, method = RequestMethod.GET)
+	public void report(ModelMap model, @PathVariable String key, @PathVariable String action,
 			  HttpServletResponse response) throws Exception {
 		String reportKey = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_REPORT_KEY.getName());
 		 try {
@@ -146,7 +146,7 @@ public class ReportController {
 		String excelOutputPath = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_OUTPUT_PATH.getName());
 		Calendar cal = Calendar.getInstance();
 		//cal.set(Calendar.YEAR, year);
-		cal.set(Calendar.MONTH, cal.get(Calendar.MONTH));
+		cal.set(Calendar.MONTH, cal.get(Calendar.MONTH) - 1);
 	    List<Report> lstResult = new ArrayList<Report>();
 		List<Survey> surveys = surveySvc.findSurveyByMonthYear(cal.getTime());
 		for (Survey survey : surveys) {
@@ -173,16 +173,52 @@ public class ReportController {
 			}else{
 				result.setType("");
 			}
-			
-			
 			lstResult.add(result);
 		}
 		OfficeFileUtils fileUtils = new OfficeFileUtils();
 		String reportFile = fileUtils.createExcelFile(excelOutputPath, cal.get(Calendar.MONTH) + "-" + cal.get(Calendar.YEAR), lstResult);
-		String reportMailTo = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_REPORT_MAILTO.getName());
-//		String[] mailTo = {"chrisng@panpages.com","davidchew@panpages.com","chavenng@panpages.com","edwardpoh@panpages.com",
-//				"cklim@panpages.com","sharonfong@panpages.com","yenlee@panpages.com"};
-		String[] mailTo = reportMailTo.split(",");
-		emailSvc.sendMail(mailTo, "Report " + (cal.get(Calendar.MONTH) + 1) + "-" + cal.get(Calendar.YEAR),reportFile);
+		if(action.equals("dl")){
+			File fileTemp = new File(reportFile);
+	         FileInputStream fileInputStream = new FileInputStream(fileTemp);
+	         byte[] arr = new byte[1024];
+	         int numRead = -1;
+
+	         response.addHeader("Content-Length", Long.toString(fileTemp.length()));
+	         response.setContentType("application/octet-stream");
+	         response.addHeader("Content-Disposition", "inline; filename=\"" + fileTemp.getName() + "\"");
+	         while ((numRead = fileInputStream.read(arr)) != -1) {
+	             response.getOutputStream().write(arr, 0, numRead);
+	         }
+	         fileInputStream.close();
+		}else if (action.equals("mail")) {
+			String reportMailTo = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_REPORT_MAILTO.getName());
+			String[] mailTo = reportMailTo.split(",");
+			emailSvc.sendMail(mailTo, "Report " + (cal.get(Calendar.MONTH) + 1) + "-" + cal.get(Calendar.YEAR),reportFile);
+		}else if (action.equals("all")){
+			try {
+				String reportMailTo = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_REPORT_MAILTO.getName());
+				String[] mailTo = reportMailTo.split(",");
+				emailSvc.sendMail(mailTo, "Report " + (cal.get(Calendar.MONTH) + 1) + "-" + cal.get(Calendar.YEAR),reportFile);	
+			} catch (Exception e) {
+			
+			}
+			File fileTemp = new File(reportFile);
+	         FileInputStream fileInputStream = new FileInputStream(fileTemp);
+	         byte[] arr = new byte[1024];
+	         int numRead = -1;
+
+	         response.addHeader("Content-Length", Long.toString(fileTemp.length()));
+	         response.setContentType("application/octet-stream");
+	         response.addHeader("Content-Disposition", "inline; filename=\"" + fileTemp.getName() + "\"");
+	         while ((numRead = fileInputStream.read(arr)) != -1) {
+	             response.getOutputStream().write(arr, 0, numRead);
+	         }
+	         fileInputStream.close();
+		}
+			
+			
+			
+			
+		
 	}
 }

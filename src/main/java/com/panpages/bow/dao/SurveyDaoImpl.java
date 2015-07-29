@@ -101,7 +101,7 @@ public class SurveyDaoImpl extends AbstractDao implements SurveyDao{
 	}
 
 	@Override
-	public int saveSurveyForm(int templateId, SurveyForm form) {
+	public int saveSurveyForm(int templateId, SurveyForm form, Date timeAccess) {
 		Session session = HibernateConfiguration.getSessionFactory().getObject().openSession();
 		Transaction tx = null; 
 		Survey survey = null;
@@ -125,7 +125,7 @@ public class SurveyDaoImpl extends AbstractDao implements SurveyDao{
 			survey.setName(surveyTemplate.getName());
 			survey.setStatus(SurveyStatus.PENDING.getValue());
 			survey.setSurveyTemplate(surveyTemplate);
-			
+			survey.setTimeAccess(timeAccess);
 			saveSurvey(survey);
 			
 			// Create sections belonging to this survey
