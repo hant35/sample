@@ -40,7 +40,7 @@
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_1.jasper"]]></subreportExpression>
 			</subreport>
-<break>
+			<break>
 				<reportElement x="0" y="213" width="595" height="1" uuid="7847c0ce-ab39-494e-9d52-c85d6f77710a"/>
 			</break>
 			<subreport>
@@ -49,17 +49,14 @@
 					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportParameter name="sections">
-					<subreportParameterExpression><![CDATA[$P{sections}]]></subreportParameterExpression>
+					<subreportParameterExpression><![CDATA[$F{sections}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="pageNumber">
+				<subreportParameter name="pageSubNumber">
 					<subreportParameterExpression><![CDATA[0]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_5_2_subreport.jasper"]]></subreportExpression>
 			</subreport>
-
-
-
 		</band>
 	</summary>
 </jasperReport>
