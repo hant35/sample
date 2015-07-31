@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name=" priority_objective" language="groovy" pageWidth="565" pageHeight="225" columnWidth="565" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9b102c41-4df5-4e9e-98f2-5fe209f57c76">
-	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
@@ -15,11 +15,13 @@
 	</background>
 	<detail>
 		<band height="223" splitType="Prevent">
-			<image onErrorType="Blank">
-				<reportElement stretchType="RelativeToBandHeight" x="31" y="1" width="120" height="110" isRemoveLineWhenBlank="true" uuid="4bdfb650-4731-4925-a2f1-81dde0a7dd96">
-					<printWhenExpression><![CDATA[$F{fields}.size() >= 1]]></printWhenExpression>
-				</reportElement>
-				<imageExpression><![CDATA[$F{fields}.size() >= 1 ?(
+			<frame>
+				<reportElement x="31" y="1" width="120" height="110" uuid="981fff20-b572-4dc6-8b2c-40f0c3a114bd"/>
+				<image hAlign="Center" onErrorType="Blank">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="120" height="60" isRemoveLineWhenBlank="true" uuid="4bdfb650-4731-4925-a2f1-81dde0a7dd96">
+						<printWhenExpression><![CDATA[$F{fields}.size() >= 1]]></printWhenExpression>
+					</reportElement>
+					<imageExpression><![CDATA[$F{fields}.size() >= 1 ?(
 $F{fields}.get(0).value == "increase-website-traffic"? $P{SUBREPORT_DIR} + "/images/page_3/traffic.png":
 $F{fields}.get(0).value == "increase-brand-awareness"? $P{SUBREPORT_DIR} + "/images/page_3/brandAwareness.png":
 $F{fields}.get(0).value == "increase-online-enquiry-submission"? $P{SUBREPORT_DIR} + "/images/page_3/Submisstion.png":
@@ -28,12 +30,30 @@ $F{fields}.get(0).value == "increase-phone-calls"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(0).value == "increase-online-purchase"? $P{SUBREPORT_DIR} + "/images/page_3/purchase.png":
 $F{fields}.get(0).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/page_3/retargeting.png":
 $F{fields}.get(0).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
-			</image>
-			<image onErrorType="Blank">
-				<reportElement stretchType="RelativeToBandHeight" x="154" y="1" width="120" height="110" isRemoveLineWhenBlank="true" uuid="2651787d-5e66-471d-b837-77c258b12a95">
-					<printWhenExpression><![CDATA[$F{fields}.size() >= 2]]></printWhenExpression>
-				</reportElement>
-				<imageExpression><![CDATA[$F{fields}.size() >= 2 ?(
+				</image>
+				<textField>
+					<reportElement x="0" y="65" width="120" height="45" uuid="eb403640-db36-4a9f-b45d-92640a1d0823"/>
+					<textElement textAlignment="Center">
+						<font fontName="Open Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fields}.size() >= 1 ?(
+$F{fields}.get(0).value == "increase-website-traffic"? "Increase Website\nTraffic":
+$F{fields}.get(0).value == "increase-brand-awareness"? "Increase\nBrand Awareness":
+$F{fields}.get(0).value == "increase-online-enquiry-submission"? "Increase Online\nForm Submission":
+$F{fields}.get(0).value == "increase-store-visits"? "Increase\nStore Visits":
+$F{fields}.get(0).value == "increase-phone-calls"? "Increase Phone\nCalls":
+$F{fields}.get(0).value == "increase-online-purchase"? "Increase Online\nPurchase":
+$F{fields}.get(0).value == "retargeting-visitors"? "Retargeting\nVisitors":
+$F{fields}.get(0).value == "increase-geographical-coverage"? "Increase\nGeographical\nCoverage":""):""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="154" y="1" width="120" height="110" uuid="419478cc-7076-4c32-bea6-9714cbad24a8"/>
+				<image hAlign="Center" onErrorType="Blank">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="120" height="60" isRemoveLineWhenBlank="true" uuid="2651787d-5e66-471d-b837-77c258b12a95">
+						<printWhenExpression><![CDATA[$F{fields}.size() >= 2]]></printWhenExpression>
+					</reportElement>
+					<imageExpression><![CDATA[$F{fields}.size() >= 2 ?(
 $F{fields}.get(1).value == "increase-website-traffic"? $P{SUBREPORT_DIR} + "/images/page_3/traffic.png":
 $F{fields}.get(1).value == "increase-brand-awareness"? $P{SUBREPORT_DIR} + "/images/page_3/brandAwareness.png":
 $F{fields}.get(1).value == "increase-online-enquiry-submission"? $P{SUBREPORT_DIR} + "/images/page_3/Submisstion.png":
@@ -42,12 +62,30 @@ $F{fields}.get(1).value == "increase-phone-calls"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(1).value == "increase-online-purchase"? $P{SUBREPORT_DIR} + "/images/page_3/purchase.png":
 $F{fields}.get(1).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/page_3/retargeting.png":
 $F{fields}.get(1).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
-			</image>
-			<image onErrorType="Blank">
-				<reportElement stretchType="RelativeToBandHeight" x="277" y="1" width="120" height="110" isRemoveLineWhenBlank="true" uuid="0c897925-1128-4ca9-8448-add285ccaab2">
-					<printWhenExpression><![CDATA[$F{fields}.size() >= 3]]></printWhenExpression>
-				</reportElement>
-				<imageExpression><![CDATA[$F{fields}.size() >= 3 ?(
+				</image>
+				<textField>
+					<reportElement x="0" y="65" width="120" height="45" uuid="3f671abe-8a02-4fa0-9e61-41ccedeec6c9"/>
+					<textElement textAlignment="Center">
+						<font fontName="Open Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fields}.size() >= 2 ?(
+$F{fields}.get(1).value == "increase-website-traffic"? "Increase Website\nTraffic":
+$F{fields}.get(1).value == "increase-brand-awareness"? "Increase\nBrand Awareness":
+$F{fields}.get(1).value == "increase-online-enquiry-submission"? "Increase Online\nForm Submission":
+$F{fields}.get(1).value == "increase-store-visits"? "Increase\nStore Visits":
+$F{fields}.get(1).value == "increase-phone-calls"? "Increase Phone\nCalls":
+$F{fields}.get(1).value == "increase-online-purchase"? "Increase Online\nPurchase":
+$F{fields}.get(1).value == "retargeting-visitors"? "Retargeting\nVisitors":
+$F{fields}.get(1).value == "increase-geographical-coverage"? "Increase\nGeographical\nCoverage":""):""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="277" y="1" width="120" height="110" uuid="e2872e24-dc13-46a4-9a97-6a5eec66a78f"/>
+				<image hAlign="Center" onErrorType="Blank">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="120" height="60" isRemoveLineWhenBlank="true" uuid="0c897925-1128-4ca9-8448-add285ccaab2">
+						<printWhenExpression><![CDATA[$F{fields}.size() >= 3]]></printWhenExpression>
+					</reportElement>
+					<imageExpression><![CDATA[$F{fields}.size() >= 3 ?(
 $F{fields}.get(2).value == "increase-website-traffic"? $P{SUBREPORT_DIR} + "/images/page_3/traffic.png":
 $F{fields}.get(2).value == "increase-brand-awareness"? $P{SUBREPORT_DIR} + "/images/page_3/brandAwareness.png":
 $F{fields}.get(2).value == "increase-online-enquiry-submission"? $P{SUBREPORT_DIR} + "/images/page_3/Submisstion.png":
@@ -56,12 +94,30 @@ $F{fields}.get(2).value == "increase-phone-calls"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(2).value == "increase-online-purchase"? $P{SUBREPORT_DIR} + "/images/page_3/purchase.png":
 $F{fields}.get(2).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/page_3/retargeting.png":
 $F{fields}.get(2).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
-			</image>
-			<image onErrorType="Blank">
-				<reportElement stretchType="RelativeToBandHeight" x="400" y="1" width="120" height="110" isRemoveLineWhenBlank="true" uuid="654cddb6-01a6-456a-af66-ab45e9b7d165">
-					<printWhenExpression><![CDATA[$F{fields}.size() >= 4]]></printWhenExpression>
-				</reportElement>
-				<imageExpression><![CDATA[$F{fields}.size() >= 4 ?(
+				</image>
+				<textField>
+					<reportElement x="0" y="65" width="120" height="45" uuid="b62f8cea-09c5-471c-92f1-79830960cd26"/>
+					<textElement textAlignment="Center">
+						<font fontName="Open Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fields}.size() >= 3 ?(
+$F{fields}.get(2).value == "increase-website-traffic"? "Increase Website\nTraffic":
+$F{fields}.get(2).value == "increase-brand-awareness"? "Increase\nBrand Awareness":
+$F{fields}.get(2).value == "increase-online-enquiry-submission"? "Increase Online\nForm Submission":
+$F{fields}.get(2).value == "increase-store-visits"? "Increase\nStore Visits":
+$F{fields}.get(2).value == "increase-phone-calls"? "Increase Phone\nCalls":
+$F{fields}.get(2).value == "increase-online-purchase"? "Increase Online\nPurchase":
+$F{fields}.get(2).value == "retargeting-visitors"? "Retargeting\nVisitors":
+$F{fields}.get(2).value == "increase-geographical-coverage"? "Increase\nGeographical\nCoverage":""):""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="400" y="1" width="120" height="110" uuid="c607e5c3-7d1d-463f-b2ec-bf03495611d4"/>
+				<image hAlign="Center" onErrorType="Blank">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="120" height="60" isRemoveLineWhenBlank="true" uuid="654cddb6-01a6-456a-af66-ab45e9b7d165">
+						<printWhenExpression><![CDATA[$F{fields}.size() >= 4]]></printWhenExpression>
+					</reportElement>
+					<imageExpression><![CDATA[$F{fields}.size() >= 4 ?(
 $F{fields}.get(3).value == "increase-website-traffic"? $P{SUBREPORT_DIR} + "/images/page_3/traffic.png":
 $F{fields}.get(3).value == "increase-brand-awareness"? $P{SUBREPORT_DIR} + "/images/page_3/brandAwareness.png":
 $F{fields}.get(3).value == "increase-online-enquiry-submission"? $P{SUBREPORT_DIR} + "/images/page_3/Submisstion.png":
@@ -70,40 +126,30 @@ $F{fields}.get(3).value == "increase-phone-calls"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(3).value == "increase-online-purchase"? $P{SUBREPORT_DIR} + "/images/page_3/purchase.png":
 $F{fields}.get(3).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/page_3/retargeting.png":
 $F{fields}.get(3).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
-			</image>
-			<image onErrorType="Blank">
-				<reportElement stretchType="RelativeToBandHeight" x="400" y="112" width="120" height="110" isRemoveLineWhenBlank="true" uuid="16506a23-e083-4ce9-a09d-b7da358bb353">
-					<printWhenExpression><![CDATA[$F{fields}.size() >= 8]]></printWhenExpression>
-				</reportElement>
-				<imageExpression><![CDATA[$F{fields}.size() >= 8 ?(
-$F{fields}.get(7).value == "increase-website-traffic"? $P{SUBREPORT_DIR} + "/images/page_3/traffic.png":
-$F{fields}.get(7).value == "increase-brand-awareness"? $P{SUBREPORT_DIR} + "/images/page_3/brandAwareness.png":
-$F{fields}.get(7).value == "increase-online-enquiry-submission"? $P{SUBREPORT_DIR} + "/images/page_3/Submisstion.png":
-$F{fields}.get(7).value == "increase-store-visits"? $P{SUBREPORT_DIR} + "/images/page_3/storeVisit.png":
-$F{fields}.get(7).value == "increase-phone-calls"? $P{SUBREPORT_DIR} + "/images/page_3/phone.png":
-$F{fields}.get(7).value == "increase-online-purchase"? $P{SUBREPORT_DIR} + "/images/page_3/purchase.png":
-$F{fields}.get(7).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/page_3/retargeting.png":
-$F{fields}.get(7).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
-			</image>
-			<image onErrorType="Blank">
-				<reportElement stretchType="RelativeToBandHeight" x="154" y="112" width="120" height="110" isRemoveLineWhenBlank="true" uuid="b3857fae-303f-43d6-8446-2cb7f023e268">
-					<printWhenExpression><![CDATA[$F{fields}.size() >= 6]]></printWhenExpression>
-				</reportElement>
-				<imageExpression><![CDATA[$F{fields}.size() >= 6 ?(
-$F{fields}.get(5).value == "increase-website-traffic"? $P{SUBREPORT_DIR} + "/images/page_3/traffic.png":
-$F{fields}.get(5).value == "increase-brand-awareness"? $P{SUBREPORT_DIR} + "/images/page_3/brandAwareness.png":
-$F{fields}.get(5).value == "increase-online-enquiry-submission"? $P{SUBREPORT_DIR} + "/images/page_3/Submisstion.png":
-$F{fields}.get(5).value == "increase-store-visits"? $P{SUBREPORT_DIR} + "/images/page_3/storeVisit.png":
-$F{fields}.get(5).value == "increase-phone-calls"? $P{SUBREPORT_DIR} + "/images/page_3/phone.png":
-$F{fields}.get(5).value == "increase-online-purchase"? $P{SUBREPORT_DIR} + "/images/page_3/purchase.png":
-$F{fields}.get(5).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/page_3/retargeting.png":
-$F{fields}.get(5).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
-			</image>
-			<image onErrorType="Blank">
-				<reportElement stretchType="RelativeToBandHeight" x="31" y="112" width="120" height="110" isRemoveLineWhenBlank="true" uuid="909f29f9-687a-4a3d-8388-5c3fb998fdfa">
-					<printWhenExpression><![CDATA[$F{fields}.size() >= 5]]></printWhenExpression>
-				</reportElement>
-				<imageExpression><![CDATA[$F{fields}.size() >= 5 ?(
+				</image>
+				<textField>
+					<reportElement x="0" y="65" width="120" height="45" uuid="3a1549f1-16e6-4dfd-bde0-bb262e2f9d91"/>
+					<textElement textAlignment="Center">
+						<font fontName="Open Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fields}.size() >= 4 ?(
+$F{fields}.get(3).value == "increase-website-traffic"? "Increase Website\nTraffic":
+$F{fields}.get(3).value == "increase-brand-awareness"? "Increase\nBrand Awareness":
+$F{fields}.get(3).value == "increase-online-enquiry-submission"? "Increase Online\nForm Submission":
+$F{fields}.get(3).value == "increase-store-visits"? "Increase\nStore Visits":
+$F{fields}.get(3).value == "increase-phone-calls"? "Increase Phone\nCalls":
+$F{fields}.get(3).value == "increase-online-purchase"? "Increase Online\nPurchase":
+$F{fields}.get(3).value == "retargeting-visitors"? "Retargeting\nVisitors":
+$F{fields}.get(3).value == "increase-geographical-coverage"? "Increase\nGeographical\nCoverage":""):""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="31" y="112" width="120" height="110" uuid="5fb13bdd-e5c9-42e0-a37a-8dbf12419928"/>
+				<image hAlign="Center" onErrorType="Blank">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="120" height="60" isRemoveLineWhenBlank="true" uuid="909f29f9-687a-4a3d-8388-5c3fb998fdfa">
+						<printWhenExpression><![CDATA[$F{fields}.size() >= 5]]></printWhenExpression>
+					</reportElement>
+					<imageExpression><![CDATA[$F{fields}.size() >= 5 ?(
 $F{fields}.get(4).value == "increase-website-traffic"? $P{SUBREPORT_DIR} + "/images/page_3/traffic.png":
 $F{fields}.get(4).value == "increase-brand-awareness"? $P{SUBREPORT_DIR} + "/images/page_3/brandAwareness.png":
 $F{fields}.get(4).value == "increase-online-enquiry-submission"? $P{SUBREPORT_DIR} + "/images/page_3/Submisstion.png":
@@ -112,12 +158,62 @@ $F{fields}.get(4).value == "increase-phone-calls"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(4).value == "increase-online-purchase"? $P{SUBREPORT_DIR} + "/images/page_3/purchase.png":
 $F{fields}.get(4).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/page_3/retargeting.png":
 $F{fields}.get(4).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
-			</image>
-			<image onErrorType="Blank">
-				<reportElement stretchType="RelativeToBandHeight" x="277" y="112" width="120" height="110" isRemoveLineWhenBlank="true" uuid="b9ddd742-7221-4de5-85c6-c0cbae32921c">
-					<printWhenExpression><![CDATA[$F{fields}.size() >= 7]]></printWhenExpression>
-				</reportElement>
-				<imageExpression><![CDATA[$F{fields}.size() >= 7 ?(
+				</image>
+				<textField>
+					<reportElement x="0" y="65" width="120" height="45" uuid="8be5f2aa-c0af-4573-9011-4ee53191943d"/>
+					<textElement textAlignment="Center">
+						<font fontName="Open Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fields}.size() >= 5 ?(
+$F{fields}.get(4).value == "increase-website-traffic"? "Increase Website\nTraffic":
+$F{fields}.get(4).value == "increase-brand-awareness"? "Increase\nBrand Awareness":
+$F{fields}.get(4).value == "increase-online-enquiry-submission"? "Increase Online\nForm Submission":
+$F{fields}.get(4).value == "increase-store-visits"? "Increase\nStore Visits":
+$F{fields}.get(4).value == "increase-phone-calls"? "Increase Phone\nCalls":
+$F{fields}.get(4).value == "increase-online-purchase"? "Increase Online\nPurchase":
+$F{fields}.get(4).value == "retargeting-visitors"? "Retargeting\nVisitors":
+$F{fields}.get(4).value == "increase-geographical-coverage"? "Increase\nGeographical\nCoverage":""):""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="154" y="112" width="120" height="110" uuid="20340fcc-d74a-4932-8d7e-d0274e0c7dcc"/>
+				<image hAlign="Center" onErrorType="Blank">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="120" height="60" isRemoveLineWhenBlank="true" uuid="b3857fae-303f-43d6-8446-2cb7f023e268">
+						<printWhenExpression><![CDATA[$F{fields}.size() >= 6]]></printWhenExpression>
+					</reportElement>
+					<imageExpression><![CDATA[$F{fields}.size() >= 6 ?(
+$F{fields}.get(5).value == "increase-website-traffic"? $P{SUBREPORT_DIR} + "/images/page_3/traffic.png":
+$F{fields}.get(5).value == "increase-brand-awareness"? $P{SUBREPORT_DIR} + "/images/page_3/brandAwareness.png":
+$F{fields}.get(5).value == "increase-online-enquiry-submission"? $P{SUBREPORT_DIR} + "/images/page_3/Submisstion.png":
+$F{fields}.get(5).value == "increase-store-visits"? $P{SUBREPORT_DIR} + "/images/page_3/storeVisit.png":
+$F{fields}.get(5).value == "increase-phone-calls"? $P{SUBREPORT_DIR} + "/images/page_3/phone.png":
+$F{fields}.get(5).value == "increase-online-purchase"? $P{SUBREPORT_DIR} + "/images/page_3/purchase.png":
+$F{fields}.get(5).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/page_3/retargeting.png":
+$F{fields}.get(5).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="0" y="65" width="120" height="45" uuid="7fa44d5b-ce8b-47b3-be43-8aa2a9fe9ca8"/>
+					<textElement textAlignment="Center">
+						<font fontName="Open Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fields}.size() >= 6 ?(
+$F{fields}.get(5).value == "increase-website-traffic"? "Increase Website\nTraffic":
+$F{fields}.get(5).value == "increase-brand-awareness"? "Increase\nBrand Awareness":
+$F{fields}.get(5).value == "increase-online-enquiry-submission"? "Increase Online\nForm Submission":
+$F{fields}.get(5).value == "increase-store-visits"? "Increase\nStore Visits":
+$F{fields}.get(5).value == "increase-phone-calls"? "Increase Phone\nCalls":
+$F{fields}.get(5).value == "increase-online-purchase"? "Increase Online\nPurchase":
+$F{fields}.get(5).value == "retargeting-visitors"? "Retargeting\nVisitors":
+$F{fields}.get(5).value == "increase-geographical-coverage"? "Increase\nGeographical\nCoverage":""):""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="277" y="112" width="120" height="110" uuid="a729f83b-2975-4fd4-8abe-2e580309e0c9"/>
+				<image hAlign="Center" onErrorType="Blank">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="120" height="60" isRemoveLineWhenBlank="true" uuid="b9ddd742-7221-4de5-85c6-c0cbae32921c">
+						<printWhenExpression><![CDATA[$F{fields}.size() >= 7]]></printWhenExpression>
+					</reportElement>
+					<imageExpression><![CDATA[$F{fields}.size() >= 7 ?(
 $F{fields}.get(6).value == "increase-website-traffic"? $P{SUBREPORT_DIR} + "/images/page_3/traffic.png":
 $F{fields}.get(6).value == "increase-brand-awareness"? $P{SUBREPORT_DIR} + "/images/page_3/brandAwareness.png":
 $F{fields}.get(6).value == "increase-online-enquiry-submission"? $P{SUBREPORT_DIR} + "/images/page_3/Submisstion.png":
@@ -126,7 +222,55 @@ $F{fields}.get(6).value == "increase-phone-calls"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(6).value == "increase-online-purchase"? $P{SUBREPORT_DIR} + "/images/page_3/purchase.png":
 $F{fields}.get(6).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/page_3/retargeting.png":
 $F{fields}.get(6).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
-			</image>
+				</image>
+				<textField>
+					<reportElement x="0" y="65" width="120" height="45" uuid="695dface-c8f8-44a2-a830-63d9354db0fd"/>
+					<textElement textAlignment="Center">
+						<font fontName="Open Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fields}.size() >= 7 ?(
+$F{fields}.get(6).value == "increase-website-traffic"? "Increase Website\nTraffic":
+$F{fields}.get(6).value == "increase-brand-awareness"? "Increase\nBrand Awareness":
+$F{fields}.get(6).value == "increase-online-enquiry-submission"? "Increase Online\nForm Submission":
+$F{fields}.get(6).value == "increase-store-visits"? "Increase\nStore Visits":
+$F{fields}.get(6).value == "increase-phone-calls"? "Increase Phone\nCalls":
+$F{fields}.get(6).value == "increase-online-purchase"? "Increase Online\nPurchase":
+$F{fields}.get(6).value == "retargeting-visitors"? "Retargeting\nVisitors":
+$F{fields}.get(6).value == "increase-geographical-coverage"? "Increase\nGeographical\nCoverage":""):""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="400" y="112" width="120" height="110" uuid="ae3197b7-c87f-41dd-95cf-afdeb2f76dd4"/>
+				<image hAlign="Center" onErrorType="Blank">
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="120" height="60" isRemoveLineWhenBlank="true" uuid="16506a23-e083-4ce9-a09d-b7da358bb353">
+						<printWhenExpression><![CDATA[$F{fields}.size() >= 8]]></printWhenExpression>
+					</reportElement>
+					<imageExpression><![CDATA[$F{fields}.size() >= 8 ?(
+$F{fields}.get(7).value == "increase-website-traffic"? $P{SUBREPORT_DIR} + "/images/page_3/traffic.png":
+$F{fields}.get(7).value == "increase-brand-awareness"? $P{SUBREPORT_DIR} + "/images/page_3/brandAwareness.png":
+$F{fields}.get(7).value == "increase-online-enquiry-submission"? $P{SUBREPORT_DIR} + "/images/page_3/Submisstion.png":
+$F{fields}.get(7).value == "increase-store-visits"? $P{SUBREPORT_DIR} + "/images/page_3/storeVisit.png":
+$F{fields}.get(7).value == "increase-phone-calls"? $P{SUBREPORT_DIR} + "/images/page_3/phone.png":
+$F{fields}.get(7).value == "increase-online-purchase"? $P{SUBREPORT_DIR} + "/images/page_3/purchase.png":
+$F{fields}.get(7).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/page_3/retargeting.png":
+$F{fields}.get(7).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="0" y="65" width="120" height="45" uuid="567bdbdf-19ba-46f1-80a2-f5594bc62f7f"/>
+					<textElement textAlignment="Center">
+						<font fontName="Open Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fields}.size() >= 8?(
+$F{fields}.get(7).value == "increase-website-traffic"? "Increase Website\nTraffic":
+$F{fields}.get(7).value == "increase-brand-awareness"? "Increase\nBrand Awareness":
+$F{fields}.get(7).value == "increase-online-enquiry-submission"? "Increase Online\nForm Submission":
+$F{fields}.get(7).value == "increase-store-visits"? "Increase\nStore Visits":
+$F{fields}.get(7).value == "increase-phone-calls"? "Increase Phone\nCalls":
+$F{fields}.get(7).value == "increase-online-purchase"? "Increase Online\nPurchase":
+$F{fields}.get(7).value == "retargeting-visitors"? "Retargeting\nVisitors":
+$F{fields}.get(7).value == "increase-geographical-coverage"? "Increase\nGeographical\nCoverage":""):""]]></textFieldExpression>
+				</textField>
+			</frame>
 		</band>
 	</detail>
 </jasperReport>

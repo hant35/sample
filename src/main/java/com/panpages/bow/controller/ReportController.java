@@ -146,6 +146,7 @@ public class ReportController {
 		String excelOutputPath = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_OUTPUT_PATH.getName());
 		Calendar cal = Calendar.getInstance();
 		//cal.set(Calendar.YEAR, year);
+		cal.set(Calendar.DAY_OF_MONTH, 1);
 		cal.set(Calendar.MONTH, cal.get(Calendar.MONTH) - 1);
 	    List<Report> lstResult = new ArrayList<Report>();
 		List<Survey> surveys = surveySvc.findSurveyByMonthYear(cal.getTime());
@@ -176,7 +177,7 @@ public class ReportController {
 			lstResult.add(result);
 		}
 		OfficeFileUtils fileUtils = new OfficeFileUtils();
-		String reportFile = fileUtils.createExcelFile(excelOutputPath, cal.get(Calendar.MONTH) + "-" + cal.get(Calendar.YEAR), lstResult);
+		String reportFile = fileUtils.createExcelFile(excelOutputPath, (cal.get(Calendar.MONTH) + 1) + "-" + cal.get(Calendar.YEAR), lstResult);
 		if(action.equals("dl")){
 			File fileTemp = new File(reportFile);
 	         FileInputStream fileInputStream = new FileInputStream(fileTemp);
