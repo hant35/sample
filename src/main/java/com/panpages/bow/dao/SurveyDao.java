@@ -1,6 +1,7 @@
 package com.panpages.bow.dao;
 
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -33,5 +34,6 @@ public interface SurveyDao {
 	int addField(String fieldName, String fieldValue, Survey survey);
 	List<Survey> findSurveyByMonthYear(Date date);
 	Field findFieldByName(int id, String name);
+	List<Survey> findSurveyByMonthYear(Calendar fromDate, Calendar toDate);
 	
 }

@@ -1,6 +1,7 @@
 package com.panpages.bow.service.survey;
 
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -22,5 +23,6 @@ public interface SurveyService {
 	int saveSurveyForm(int surveyTemplateId, SurveyForm form, SurveyCalculate calculation);
 	int addField(String fieldName, String fieldValue, Survey survey);
 	List<Survey> findSurveyByMonthYear(Date date);
+	List<Survey> findSurveyByMonthYear(Calendar fromDate, Calendar toDate);
 	Field findFieldByName(int id, String name);
 }

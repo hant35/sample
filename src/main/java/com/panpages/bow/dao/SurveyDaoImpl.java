@@ -376,7 +376,8 @@ public class SurveyDaoImpl extends AbstractDao implements SurveyDao{
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(date);
 		
-		Query query = getSession().createQuery("from Survey as s where year(s.fulfilledDate) = :dateYear and month(s.fulfilledDate) = :dateMonth");
+		Query query = getSession().createQuery("from Survey as s where s.status = :status and year(s.fulfilledDate) = :dateYear and month(s.fulfilledDate) = :dateMonth");
+		query.setParameter("status", "completed");
 		query.setInteger("dateYear", cal.get(Calendar.YEAR));
 		query.setInteger("dateMonth", cal.get(Calendar.MONTH) + 1);
 		List<Survey> result = query.list();
@@ -401,6 +402,19 @@ public class SurveyDaoImpl extends AbstractDao implements SurveyDao{
 		List<Field> result = query.list();
 		return result != null && result.size() > 0? result.get(0) : null;
 		
+	}
+
+	@Override
+	public List<Survey> findSurveyByMonthYear(Calendar fromDate, Calendar toDate) {
+				
+		Query query = getSession().createQuery("from Survey as s where s.status = :status and s.fulfilledDate between :fromDate and :toDate");
+		query.setParameter("status", "completed");
+		query.setParameter("start_date", fromDate);
+		query.setParameter("start_date", fromDate);
+		query.setParameter("toDate", toDate);
+		List<Survey> result = query.list();
+		
+		return result;
 	}
 	
 	

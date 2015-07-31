@@ -1,6 +1,7 @@
 package com.panpages.bow.service.survey;
 
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -81,5 +82,10 @@ public class SurveyServiceImpl implements SurveyService{
 	@Override
 	public Field findFieldByName(int id, String name) {
 		return dao.findFieldByName(id, name);
+	}
+	
+	@Override
+	public List<Survey> findSurveyByMonthYear(Calendar fromDate, Calendar toDate){
+		return dao.findSurveyByMonthYear(fromDate, toDate);
 	}
 }

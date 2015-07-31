@@ -6,6 +6,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
@@ -15,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -216,10 +218,88 @@ public class ReportController {
 	         }
 	         fileInputStream.close();
 		}
+	}
+	
+	@RequestMapping(value = { "/report/out.html" }, method = RequestMethod.POST)
+	public void reportFormTo(ModelMap model,@ModelAttribute(value = "bean") Report report, @PathVariable String action,
+			  HttpServletResponse response) throws Exception {
+		String excelOutputPath = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_OUTPUT_PATH.getName());
+		
+	    List<Report> lstResult = new ArrayList<Report>();
+	    if(report != null && report.getFromDate() != null && report.getToDate()!= null ) {
+	    	Calendar fromDate = Calendar.getInstance();
+			fromDate.setTime(report.getFromDate());
+			Calendar toDate = Calendar.getInstance();
+			toDate.setTime(report.getToDate());
 			
-			
-			
-			
+	    	List<Survey> surveys = surveySvc.findSurveyByMonthYear(fromDate, toDate);
+			for (Survey survey : surveys) {
+				
+				Report result = new Report();
+				String Email = surveySvc.findFieldByName(survey.getId(), "Email Address").getValue();
+				result.setEmail(Email);
+				String UserName = surveySvc.findFieldByName(survey.getId(), "Consultant Name").getValue();
+				result.setUserName(UserName);
+				result.setTimeAccess(survey.getTimeAccess());
+				result.setTimeReceived(survey.getDate());
+				if(survey.getStorageName() != null){
+					String[] tmp = survey.getStorageName().split("_");
+					if(tmp != null && tmp.length > 2) {
+						CustomerSurveys cusSur = customerSvc.findSurveyByCusSurTemplate(tmp[0] + "_" + tmp[1]);
+						if(cusSur != null){
+						String typeSurvey = cusSur.getName();
+						result.setType(typeSurvey);
+						
+						}else{
+							result.setType(survey.getName());
+						}
+					}
+				}else{
+					result.setType("");
+				}
+				lstResult.add(result);
+			}
+			OfficeFileUtils fileUtils = new OfficeFileUtils();
+			String reportFile = fileUtils.createExcelFile(excelOutputPath, (fromDate.getTime().toString() + " - " + toDate.getTime().toString()), lstResult);
+			if(action.equals("dl")){
+				File fileTemp = new File(reportFile);
+		         FileInputStream fileInputStream = new FileInputStream(fileTemp);
+		         byte[] arr = new byte[1024];
+		         int numRead = -1;
+
+		         response.addHeader("Content-Length", Long.toString(fileTemp.length()));
+		         response.setContentType("application/octet-stream");
+		         response.addHeader("Content-Disposition", "inline; filename=\"" + fileTemp.getName() + "\"");
+		         while ((numRead = fileInputStream.read(arr)) != -1) {
+		             response.getOutputStream().write(arr, 0, numRead);
+		         }
+		         fileInputStream.close();
+			}else if (action.equals("mail")) {
+				String reportMailTo = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_REPORT_MAILTO.getName());
+				String[] mailTo = reportMailTo.split(",");
+				emailSvc.sendMail(mailTo, "Report " + (fromDate.getTime().toString() + " - " + toDate.getTime().toString()),reportFile);
+			}else if (action.equals("all")){
+				try {
+					String reportMailTo = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_REPORT_MAILTO.getName());
+					String[] mailTo = reportMailTo.split(",");
+					emailSvc.sendMail(mailTo, "Report " + (fromDate.getTime().toString() + " - " + toDate.getTime().toString()),reportFile);	
+				} catch (Exception e) {
+				
+				}
+				File fileTemp = new File(reportFile);
+		         FileInputStream fileInputStream = new FileInputStream(fileTemp);
+		         byte[] arr = new byte[1024];
+		         int numRead = -1;
+
+		         response.addHeader("Content-Length", Long.toString(fileTemp.length()));
+		         response.setContentType("application/octet-stream");
+		         response.addHeader("Content-Disposition", "inline; filename=\"" + fileTemp.getName() + "\"");
+		         while ((numRead = fileInputStream.read(arr)) != -1) {
+		             response.getOutputStream().write(arr, 0, numRead);
+		         }
+		         fileInputStream.close();
+			}
+	    }
 		
 	}
 }

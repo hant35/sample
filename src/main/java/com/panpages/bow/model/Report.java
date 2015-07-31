@@ -8,6 +8,8 @@ public class Report {
 	private Date timeAccess;
 	private Date timeReceived;
 	private String type;
+	private Date fromDate;
+	private Date toDate;
 	public String getEmail() {
 		return email;
 	}
@@ -37,6 +39,18 @@ public class Report {
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+	public Date getFromDate() {
+		return fromDate;
+	}
+	public void setFromDate(Date fromDate) {
+		this.fromDate = fromDate;
+	}
+	public Date getToDate() {
+		return toDate;
+	}
+	public void setToDate(Date toDate) {
+		this.toDate = toDate;
 	}
 	
 	
