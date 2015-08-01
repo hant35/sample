@@ -15,6 +15,7 @@ import com.panpages.bow.model.FieldTemplate;
 import com.panpages.bow.model.Survey;
 import com.panpages.bow.model.SurveyForm;
 import com.panpages.bow.model.SurveyTemplate;
+import com.panpages.bow.model.SystemConfig;
 
 @Service("surveyService")
 @Transactional
@@ -87,5 +88,17 @@ public class SurveyServiceImpl implements SurveyService{
 	@Override
 	public List<Survey> findSurveyByMonthYear(Calendar fromDate, Calendar toDate){
 		return dao.findSurveyByMonthYear(fromDate, toDate);
+	}
+
+	@Override
+	public SystemConfig getSystemConfig(String key) {
+		
+		return dao.getSystemConfig(key);
+	}
+	
+	@Override
+	public int saveSystemConfig(SystemConfig systemConfig) {
+		
+		return dao.saveSystemConfig(systemConfig);
 	}
 }

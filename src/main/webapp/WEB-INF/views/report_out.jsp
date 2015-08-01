@@ -69,16 +69,14 @@
 		<div id="content">
 
 
-			<br /> <br />
-
-			<h2>
-				<a href="report/e10adc3949ba59abbe56e057f20f883e/out/dl.html"
-					class="proposal">Download Report</a>
-			</h2>
-
-			<br /> <br />
+			
 			<form:form action="report_out.html?submit" method="POST"
 				modelAttribute="report" id="reportForm">
+				<br /> <br />
+
+			<div class="alert alert-info" role="alert" >${report.result}</div>
+
+			<br /> <br />
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -141,23 +139,9 @@
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
 				</div>
-				<br><br>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="mailtoDiv" style="display: none">
-					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
-					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-						<form:textarea path="mailTo" rows="4" cols="50" class="form-control"  id="mailto"
-							name="mailto" required="required"/>
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
-					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-						&nbsp;
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
-				</div>
-				<br/><br/>
+				<br>
+				<br>
+				<br>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -181,16 +165,6 @@
 		$('#toDatePk').datepicker({
 			format : "dd/mm/yyyy"
 		});
-		
-		$('#action').on('change', function() {
-			 
-			  if(this.value == 'mail' || this.value ==  'all'){
-				  $('#mailtoDiv').css('display','inline');  
-			  }else{
-				  $('#mailtoDiv').css('display','none');  
-			  }
-			  
-			});
 	</script>
 </body>
 </html>

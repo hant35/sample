@@ -2,6 +2,8 @@ package com.panpages.bow.controller;
 
 import java.util.Calendar;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,11 +14,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.panpages.bow.configuration.ConfigConstant;
 import com.panpages.bow.model.Report;
+import com.panpages.bow.model.SystemConfig;
+import com.panpages.bow.service.survey.SurveyService;
 
 @Controller
 public class LoginController {
 
+	@Autowired
+	SurveyService surveySvc;
+
+	@Autowired
+	ApplicationContext ctx;
+	
 	@RequestMapping(value = "/admin.html", method = RequestMethod.GET)
 	public ModelAndView adminPage() {
 		ModelAndView model = new ModelAndView();
@@ -30,6 +41,13 @@ public class LoginController {
 		Report report = new Report();
 		report.setFromDate(fromDate.getTime());
 		report.setToDate(toDate.getTime());
+		SystemConfig config = surveySvc.getSystemConfig("excel_mailto");
+		if(config !=null && config.getValue() != null) {
+			report.setMailTo(config.getValue());
+		}else{
+			String reportMailTo = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_REPORT_MAILTO.getName());
+			report.setMailTo(reportMailTo);
+		}
 		model.addObject("report", report);
 		model.setViewName("admin");
 

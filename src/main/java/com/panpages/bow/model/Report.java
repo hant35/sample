@@ -10,6 +10,11 @@ public class Report {
 	private String type;
 	private Date fromDate;
 	private Date toDate;
+	private String sFromDate;
+	private String sToDate;
+	private String action;
+	private String result;
+	private String mailTo;
 	public String getEmail() {
 		return email;
 	}
@@ -51,6 +56,36 @@ public class Report {
 	}
 	public void setToDate(Date toDate) {
 		this.toDate = toDate;
+	}
+	public String getAction() {
+		return action;
+	}
+	public void setAction(String action) {
+		this.action = action;
+	}
+	public String getsFromDate() {
+		return sFromDate;
+	}
+	public void setsFromDate(String sFromDate) {
+		this.sFromDate = sFromDate;
+	}
+	public String getsToDate() {
+		return sToDate;
+	}
+	public void setsToDate(String sToDate) {
+		this.sToDate = sToDate;
+	}
+	public String getResult() {
+		return result;
+	}
+	public void setResult(String result) {
+		this.result = result;
+	}
+	public String getMailTo() {
+		return mailTo;
+	}
+	public void setMailTo(String mailTo) {
+		this.mailTo = mailTo;
 	}
 	
 	

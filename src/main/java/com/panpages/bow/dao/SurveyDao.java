@@ -14,6 +14,7 @@ import com.panpages.bow.model.SectionTemplate;
 import com.panpages.bow.model.Survey;
 import com.panpages.bow.model.SurveyForm;
 import com.panpages.bow.model.SurveyTemplate;
+import com.panpages.bow.model.SystemConfig;
 import com.panpages.bow.service.survey.SurveyCalculate;
 
 public interface SurveyDao {
@@ -35,5 +36,7 @@ public interface SurveyDao {
 	List<Survey> findSurveyByMonthYear(Date date);
 	Field findFieldByName(int id, String name);
 	List<Survey> findSurveyByMonthYear(Calendar fromDate, Calendar toDate);
+	SystemConfig getSystemConfig(String key);
+	int saveSystemConfig(SystemConfig systemConfig);
 	
 }

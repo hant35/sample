@@ -10,6 +10,7 @@ import com.panpages.bow.model.FieldTemplate;
 import com.panpages.bow.model.Survey;
 import com.panpages.bow.model.SurveyForm;
 import com.panpages.bow.model.SurveyTemplate;
+import com.panpages.bow.model.SystemConfig;
 
 public interface SurveyService {
 	
@@ -25,4 +26,6 @@ public interface SurveyService {
 	List<Survey> findSurveyByMonthYear(Date date);
 	List<Survey> findSurveyByMonthYear(Calendar fromDate, Calendar toDate);
 	Field findFieldByName(int id, String name);
+	SystemConfig getSystemConfig(String key);
+	int saveSystemConfig(SystemConfig systemConfig);
 }
