@@ -16,5 +16,8 @@ public interface MailService {
 	void sendMail(Survey survey, Map<String, String> params, String filePath) throws MailException;
 	
 	void sendMailAttach(Mail mail, String filePath)  throws MailException, MessagingException;
+
+	void sendMail(String[] mailTo, String subject, String reportFile);
+	
 	
 }

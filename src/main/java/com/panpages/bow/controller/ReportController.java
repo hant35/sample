@@ -2,6 +2,8 @@ package com.panpages.bow.controller;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -20,11 +22,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.panpages.bow.configuration.ConfigConstant;
 import com.panpages.bow.model.CustomerSurveys;
 import com.panpages.bow.model.Field;
+import com.panpages.bow.model.Report;
 import com.panpages.bow.model.Survey;
 import com.panpages.bow.model.utils.SurveyUtils;
+import com.panpages.bow.service.mail.MailService;
 import com.panpages.bow.service.report.ReportService;
 import com.panpages.bow.service.survey.CustomerService;
 import com.panpages.bow.service.survey.SurveyService;
+import com.panpages.bow.service.utils.OfficeFileUtils;
 
 @Controller
 @RequestMapping("/")
@@ -40,6 +45,9 @@ public class ReportController {
 	
 	@Autowired
 	ReportService reportSvc;
+	
+	@Autowired
+	MailService emailSvc;
 	
 	private static final Logger logger = Logger.getLogger(ReportController.class);
 	
@@ -113,34 +121,64 @@ public class ReportController {
 		
 	}
 	
-	@RequestMapping(value = { "/report/{month}/{year}/out.html" }, method = RequestMethod.GET)
-	public void report(ModelMap model, @PathVariable int month, 
-			 @PathVariable int year,  HttpServletResponse response) {
+	@RequestMapping(value = { "/report/{key}/out.html" }, method = RequestMethod.GET)
+	public void report(ModelMap model, @PathVariable String key, 
+			  HttpServletResponse response) throws Exception {
+		String reportKey = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_REPORT_KEY.getName());
+		 try {
+			MessageDigest md = MessageDigest.getInstance("MD5");
+			md.update(reportKey.getBytes());
+	        byte byteData[] = md.digest();
+	        StringBuffer sb = new StringBuffer();
+	        for (int i = 0; i < byteData.length; i++) {
+	        	sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+	        }
+	        String hashKey = sb.toString();
+	        if(!hashKey.equals(key)) {
+	        	throw new Exception("Key not match.");
+	        }
+		} catch (NoSuchAlgorithmException e) {
+			
+			e.printStackTrace();
+			return;
+		}
+		 
+		String excelOutputPath = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_OUTPUT_PATH.getName());
 		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.YEAR, year);
-		cal.set(Calendar.MONTH, month - 1);
-	    List<String> lstResult = new ArrayList<String>();
+		//cal.set(Calendar.YEAR, year);
+		cal.set(Calendar.MONTH, cal.get(Calendar.MONTH) - 1);
+	    List<Report> lstResult = new ArrayList<Report>();
 		List<Survey> surveys = surveySvc.findSurveyByMonthYear(cal.getTime());
 		for (Survey survey : surveys) {
 			
-			String result = "";
+			Report result = new Report();
 			String Email = surveySvc.findFieldByName(survey.getId(), "Email Address").getValue();
+			result.setEmail(Email);
 			String UserName = surveySvc.findFieldByName(survey.getId(), "Consultant Name").getValue();
+			result.setUserName(UserName);
+			result.setTimeAccess(survey.getFulfilledDate());
+			result.setTimeReceived(survey.getFulfilledDate());
+			
 			String[] tmp = survey.getStorageName().split("_");
 			if(tmp != null && tmp.length > 2) {
 				CustomerSurveys cusSur = customerSvc.findSurveyByCusSurTemplate(tmp[0] + "_" + tmp[1]);
 				if(cusSur != null){
 				String typeSurvey = cusSur.getName();
-				result += typeSurvey;
+				result.setType(typeSurvey);
+				
+				}else{
+					result.setType(survey.getName());
 				}
 			}
 			
-			result += (Email + " - " + UserName + " - "+survey.getStorageName() + " - " +  survey.getFulfilledDate());
 			lstResult.add(result);
 		}
-		for (String result : lstResult) {
-			System.out.println(result);
-			
-		}
+		OfficeFileUtils fileUtils = new OfficeFileUtils();
+		String reportFile = fileUtils.createExcelFile(excelOutputPath, cal.get(Calendar.MONTH) + "-" + cal.get(Calendar.YEAR), lstResult);
+		String reportMailTo = ctx.getEnvironment().getProperty(ConfigConstant.EXCEL_REPORT_MAILTO.getName());
+//		String[] mailTo = {"chrisng@panpages.com","davidchew@panpages.com","chavenng@panpages.com","edwardpoh@panpages.com",
+//				"cklim@panpages.com","sharonfong@panpages.com","yenlee@panpages.com"};
+		String[] mailTo = reportMailTo.split(",");
+		emailSvc.sendMail(mailTo, "Report " + cal.get(Calendar.MONTH) + "-" + cal.get(Calendar.YEAR),reportFile);
 	}
 }

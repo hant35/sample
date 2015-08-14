@@ -121,6 +121,35 @@ public class MailServiceImpl implements MailService {
 			logger.error(e.getStackTrace());
 		}
 	}
+	
+	@Override
+	public void sendMail(String[] mailTo, String subject, String reportFile) throws MailException {
+		
+		
+		try {
+			SimpleMailMessage message = new SimpleMailMessage();
+			String fromMail = ctx.getEnvironment().getProperty(ConfigConstant.MAIL_USERNAME.getName());
+			message.setFrom(fromMail);
+			message.setTo(mailTo);
+			message.setSubject(subject);
+
+			
+			MimeMessage mimeMessage = mailSender.createMimeMessage();
+			MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
+
+			helper.setFrom(message.getFrom());
+			helper.setTo(message.getTo());
+			helper.setSubject(message.getSubject());
+			helper.setText(message.getSubject());
+			FileSystemResource file = new FileSystemResource(reportFile);
+			helper.addAttachment(file.getFilename(), file);
+			
+			mailSender.send(mimeMessage);
+		} catch (Exception e) {
+			e.printStackTrace();
+			logger.error(e.getStackTrace());
+		}
+	}
 
 	@Override
 	public void sendMailAttach(Mail mail, String filePath)
