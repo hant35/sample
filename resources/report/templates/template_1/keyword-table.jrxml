@@ -55,7 +55,7 @@
 	<detail>
 		<band height="22" splitType="Stretch">
 			<textField>
-				<reportElement style="Zebra" isPrintRepeatedValues="false" mode="Opaque" x="25" y="1" width="176" height="20" uuid="d8aeb376-8611-4f24-8bef-de57ebc67dc8"/>
+				<reportElement style="Zebra" isPrintRepeatedValues="false" mode="Opaque" x="25" y="1" width="176" height="20" forecolor="#7F7F7F" uuid="d8aeb376-8611-4f24-8bef-de57ebc67dc8"/>
 				<box leftPadding="10" bottomPadding="1"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans"/>
@@ -63,7 +63,7 @@
 				<textFieldExpression><![CDATA[$F{value}.split(",")[0]]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Zebra" mode="Opaque" x="201" y="1" width="180" height="20" uuid="e438ef22-d189-4ea9-b443-15a13d8cfb4a"/>
+				<reportElement style="Zebra" mode="Opaque" x="201" y="1" width="180" height="20" forecolor="#7F7F7F" uuid="e438ef22-d189-4ea9-b443-15a13d8cfb4a"/>
 				<box rightPadding="10"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Open Sans"/>
@@ -71,7 +71,7 @@
 				<textFieldExpression><![CDATA[$F{value}.split(",")[1]]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Zebra" mode="Opaque" x="381" y="1" width="189" height="20" uuid="4249b27f-6f2e-49dd-9c64-8b87a4006984"/>
+				<reportElement style="Zebra" mode="Opaque" x="381" y="1" width="189" height="20" forecolor="#7F7F7F" uuid="4249b27f-6f2e-49dd-9c64-8b87a4006984"/>
 				<box rightPadding="10"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Open Sans"/>

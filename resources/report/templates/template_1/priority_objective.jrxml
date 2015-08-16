@@ -32,7 +32,7 @@ $F{fields}.get(0).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(0).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
 				</image>
 				<textField>
-					<reportElement x="0" y="65" width="120" height="45" uuid="eb403640-db36-4a9f-b45d-92640a1d0823"/>
+					<reportElement x="0" y="65" width="120" height="45" forecolor="#7F7F7F" uuid="eb403640-db36-4a9f-b45d-92640a1d0823"/>
 					<textElement textAlignment="Center">
 						<font fontName="Open Sans" isBold="true"/>
 					</textElement>
@@ -64,7 +64,7 @@ $F{fields}.get(1).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(1).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
 				</image>
 				<textField>
-					<reportElement x="0" y="65" width="120" height="45" uuid="3f671abe-8a02-4fa0-9e61-41ccedeec6c9"/>
+					<reportElement x="0" y="65" width="120" height="45" forecolor="#7F7F7F" uuid="3f671abe-8a02-4fa0-9e61-41ccedeec6c9"/>
 					<textElement textAlignment="Center">
 						<font fontName="Open Sans" isBold="true"/>
 					</textElement>
@@ -96,7 +96,7 @@ $F{fields}.get(2).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(2).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
 				</image>
 				<textField>
-					<reportElement x="0" y="65" width="120" height="45" uuid="b62f8cea-09c5-471c-92f1-79830960cd26"/>
+					<reportElement x="0" y="65" width="120" height="45" forecolor="#7F7F7F" uuid="b62f8cea-09c5-471c-92f1-79830960cd26"/>
 					<textElement textAlignment="Center">
 						<font fontName="Open Sans" isBold="true"/>
 					</textElement>
@@ -128,7 +128,7 @@ $F{fields}.get(3).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(3).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
 				</image>
 				<textField>
-					<reportElement x="0" y="65" width="120" height="45" uuid="3a1549f1-16e6-4dfd-bde0-bb262e2f9d91"/>
+					<reportElement x="0" y="65" width="120" height="45" forecolor="#7F7F7F" uuid="3a1549f1-16e6-4dfd-bde0-bb262e2f9d91"/>
 					<textElement textAlignment="Center">
 						<font fontName="Open Sans" isBold="true"/>
 					</textElement>
@@ -160,7 +160,7 @@ $F{fields}.get(4).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(4).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
 				</image>
 				<textField>
-					<reportElement x="0" y="65" width="120" height="45" uuid="8be5f2aa-c0af-4573-9011-4ee53191943d"/>
+					<reportElement x="0" y="65" width="120" height="45" forecolor="#7F7F7F" uuid="8be5f2aa-c0af-4573-9011-4ee53191943d"/>
 					<textElement textAlignment="Center">
 						<font fontName="Open Sans" isBold="true"/>
 					</textElement>
@@ -192,7 +192,7 @@ $F{fields}.get(5).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(5).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
 				</image>
 				<textField>
-					<reportElement x="0" y="65" width="120" height="45" uuid="7fa44d5b-ce8b-47b3-be43-8aa2a9fe9ca8"/>
+					<reportElement x="0" y="65" width="120" height="45" forecolor="#7F7F7F" uuid="7fa44d5b-ce8b-47b3-be43-8aa2a9fe9ca8"/>
 					<textElement textAlignment="Center">
 						<font fontName="Open Sans" isBold="true"/>
 					</textElement>
@@ -224,7 +224,7 @@ $F{fields}.get(6).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(6).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
 				</image>
 				<textField>
-					<reportElement x="0" y="65" width="120" height="45" uuid="695dface-c8f8-44a2-a830-63d9354db0fd"/>
+					<reportElement x="0" y="65" width="120" height="45" forecolor="#7F7F7F" uuid="695dface-c8f8-44a2-a830-63d9354db0fd"/>
 					<textElement textAlignment="Center">
 						<font fontName="Open Sans" isBold="true"/>
 					</textElement>
@@ -256,7 +256,7 @@ $F{fields}.get(7).value == "retargeting-visitors"? $P{SUBREPORT_DIR} + "/images/
 $F{fields}.get(7).value == "increase-geographical-coverage"? $P{SUBREPORT_DIR} + "/images/page_3/geographic.png":""):""]]></imageExpression>
 				</image>
 				<textField>
-					<reportElement x="0" y="65" width="120" height="45" uuid="567bdbdf-19ba-46f1-80a2-f5594bc62f7f"/>
+					<reportElement x="0" y="65" width="120" height="45" forecolor="#7F7F7F" uuid="567bdbdf-19ba-46f1-80a2-f5594bc62f7f"/>
 					<textElement textAlignment="Center">
 						<font fontName="Open Sans" isBold="true"/>
 					</textElement>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_5_2_subreport" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aa4e2863-04cb-41de-9474-a2e60ad6511e">
-	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="374"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<parameter name="sections" class="java.util.List"/>
 	<parameter name="pageSubNumber" class="java.lang.Integer"/>
@@ -28,7 +28,7 @@
 				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_6/Picture1.png"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="15" y="71" width="551" height="24" uuid="ed9f24ad-21b0-46d5-8da3-069585e83090"/>
+				<reportElement x="15" y="71" width="551" height="24" forecolor="#7F7F7F" uuid="ed9f24ad-21b0-46d5-8da3-069585e83090"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
@@ -39,7 +39,7 @@
 				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_6/Picture7.png"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="15" y="291" width="569" height="250" uuid="f1ccfba2-632e-49aa-b516-41170bc9e2e2"/>
+				<reportElement x="15" y="291" width="569" height="250" forecolor="#7F7F7F" uuid="f1ccfba2-632e-49aa-b516-41170bc9e2e2"/>
 				<textElement verticalAlignment="Middle" markup="none">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
@@ -65,7 +65,7 @@ We have given you all the reasons why you should advertise now! I have taken the
 				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_6/Picture3.png"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="204" y="15" width="252" height="50" isPrintWhenDetailOverflows="true" uuid="1671ff10-d2a1-409c-a399-a546b35d27fe"/>
+				<reportElement x="204" y="15" width="252" height="50" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="1671ff10-d2a1-409c-a399-a546b35d27fe"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="18" isBold="false"/>
 				</textElement>
@@ -83,35 +83,35 @@ We have given you all the reasons why you should advertise now! I have taken the
 				<textFieldExpression><![CDATA[$P{pageSubNumber} + 1]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="15" y="728" width="569" height="16" uuid="5f02e3de-453a-442c-a75d-644de9ded6aa"/>
+				<reportElement x="15" y="728" width="569" height="16" forecolor="#7F7F7F" uuid="5f02e3de-453a-442c-a75d-644de9ded6aa"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="7" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Terms & Conditions:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="15" y="360" width="155" height="20" uuid="28e99357-b07b-4969-bbdd-49222daf81ec"/>
+				<reportElement x="15" y="360" width="155" height="20" forecolor="#7F7F7F" uuid="28e99357-b07b-4969-bbdd-49222daf81ec"/>
 				<textElement>
 					<font fontName="Open Sans" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Business Associates Service]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="14" y="401" width="156" height="20" uuid="e175d6a8-7d26-4bdd-a8fc-93113f8f423f"/>
+				<reportElement x="14" y="401" width="156" height="20" forecolor="#7F7F7F" uuid="e175d6a8-7d26-4bdd-a8fc-93113f8f423f"/>
 				<textElement>
 					<font fontName="Open Sans" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[User Friendly Personal Log In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="15" y="444" width="163" height="20" uuid="487ab496-0f67-4736-95ff-ed735a3858d6"/>
+				<reportElement x="15" y="444" width="163" height="20" forecolor="#7F7F7F" uuid="487ab496-0f67-4736-95ff-ed735a3858d6"/>
 				<textElement>
 					<font fontName="Open Sans" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Digital Campaign Specialist]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="14" y="743" width="569" height="83" uuid="520d59eb-0d4e-4fa3-9ffc-128fcdd12333"/>
+				<reportElement x="14" y="743" width="569" height="83" forecolor="#7F7F7F" uuid="520d59eb-0d4e-4fa3-9ffc-128fcdd12333"/>
 				<textElement>
 					<font size="8" isBold="false"/>
 				</textElement>

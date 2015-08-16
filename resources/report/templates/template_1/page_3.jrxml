@@ -18,7 +18,7 @@
 				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_3/TMPanPanpages.jpg"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="203" y="12" width="267" height="50" uuid="a80868ab-9eab-408c-9de0-2772656fee60"/>
+				<reportElement x="203" y="12" width="267" height="50" forecolor="#7F7F7F" uuid="a80868ab-9eab-408c-9de0-2772656fee60"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="18" isBold="false"/>
 				</textElement>
@@ -45,7 +45,7 @@
 				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_2/gender.png"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement mode="Opaque" x="15" y="491" width="565" height="30" backcolor="#CCCCFF" uuid="abdd0913-6fd6-492d-9982-5f192031f6d2"/>
+				<reportElement mode="Opaque" x="15" y="491" width="565" height="30" forecolor="#7F7F7F" backcolor="#CCCCFF" uuid="abdd0913-6fd6-492d-9982-5f192031f6d2"/>
 				<box leftPadding="10" rightPadding="10"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="false"/>
@@ -53,42 +53,42 @@
 				<text><![CDATA[This adverting plan is designed to help you in achieving your business objective(s).]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="15" y="527" width="565" height="20" uuid="883448c7-22cd-4ffb-b8f7-7780ff8e9931"/>
+				<reportElement x="15" y="527" width="565" height="20" forecolor="#7F7F7F" uuid="883448c7-22cd-4ffb-b8f7-7780ff8e9931"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
 				<text><![CDATA[Your priority objective(s) would be:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="85" y="170" width="497" height="20" uuid="a373fa35-7f59-4722-9b7c-6abd0765d8ca"/>
+				<reportElement x="85" y="170" width="497" height="20" forecolor="#7F7F7F" uuid="a373fa35-7f59-4722-9b7c-6abd0765d8ca"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
 				<text><![CDATA[Language(s) that your would like to advertise is(are):]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="85" y="250" width="497" height="20" uuid="d6fbffe8-e956-4f82-af5d-8161d5a61dd7"/>
+				<reportElement x="85" y="250" width="497" height="20" forecolor="#7F7F7F" uuid="d6fbffe8-e956-4f82-af5d-8161d5a61dd7"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
 				<text><![CDATA[You would like to target people who are working as:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="85" y="90" width="497" height="20" uuid="b4b37891-e4ac-452d-b584-bc6266cc05cf"/>
+				<reportElement x="85" y="90" width="497" height="20" forecolor="#7F7F7F" uuid="b4b37891-e4ac-452d-b584-bc6266cc05cf"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
 				<text><![CDATA[You would like to advertise in:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="84" y="333" width="498" height="20" uuid="cac5f144-9cc1-4e93-baab-50e1ada1ca6c"/>
+				<reportElement x="84" y="333" width="498" height="20" forecolor="#7F7F7F" uuid="cac5f144-9cc1-4e93-baab-50e1ada1ca6c"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
 				<text><![CDATA[You would like to target people who aged between:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="85" y="413" width="497" height="20" uuid="b462d032-44d2-48fc-b7f3-70a505b7958d"/>
+				<reportElement x="85" y="413" width="497" height="20" forecolor="#7F7F7F" uuid="b462d032-44d2-48fc-b7f3-70a505b7958d"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>

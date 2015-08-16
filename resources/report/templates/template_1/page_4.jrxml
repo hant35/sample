@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90167ed5-0c7a-4203-aa33-cf24b0c47bbb">
 	<property name="ireport.zoom" value="1.1000000000000012"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="129"/>
+	<property name="ireport.y" value="403"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["H:\\workspace\\BOW\\report\\templates\\template_3\\"]]></defaultValueExpression>
 	</parameter>
@@ -18,7 +18,7 @@
 				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_3/TMPanPanpages.jpg"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement positionType="Float" x="191" y="13" width="267" height="50" isPrintWhenDetailOverflows="true" uuid="791dd4a2-eb53-4f4a-9475-ff9984c913a6"/>
+				<reportElement positionType="Float" x="191" y="13" width="267" height="50" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="791dd4a2-eb53-4f4a-9475-ff9984c913a6"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="18" isBold="false"/>
 				</textElement>
@@ -41,14 +41,14 @@
 				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_3/googleAds.png"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="96" y="100" width="428" height="20" isPrintWhenDetailOverflows="true" uuid="1463edd0-2aa8-4320-b17f-824a5f852590"/>
+				<reportElement x="96" y="100" width="428" height="20" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="1463edd0-2aa8-4320-b17f-824a5f852590"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
 				<text><![CDATA[Your expected revenue increased via your advertising plan is:]]></text>
 			</staticText>
 			<textField pattern="#,##0">
-				<reportElement x="131" y="120" width="139" height="23" isPrintWhenDetailOverflows="true" uuid="b2d861bd-5b6d-42ed-a62c-1e6beb7d8259"/>
+				<reportElement x="131" y="120" width="139" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="b2d861bd-5b6d-42ed-a62c-1e6beb7d8259"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
@@ -56,7 +56,7 @@
 				<textFieldExpression><![CDATA[Double.valueOf(((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("step-5-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-5",$P{sections})).getFields())).getValue())]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
-				<reportElement x="131" y="203" width="139" height="23" isPrintWhenDetailOverflows="true" uuid="14374eb3-8f44-437f-8760-38f09b7e6163"/>
+				<reportElement x="131" y="203" width="139" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="14374eb3-8f44-437f-8760-38f09b7e6163"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
@@ -64,7 +64,7 @@
 				<textFieldExpression><![CDATA[Double.valueOf(((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("step-5-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-5",$P{sections})).getFields())).getValue())]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="96" y="183" width="428" height="20" isPrintWhenDetailOverflows="true" uuid="cbd06702-c01d-4a2c-9ccd-b26a61105d7c"/>
+				<reportElement x="96" y="183" width="428" height="20" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="cbd06702-c01d-4a2c-9ccd-b26a61105d7c"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
@@ -72,7 +72,7 @@
 ]]></text>
 			</staticText>
 			<textField pattern="#,##0">
-				<reportElement x="96" y="287" width="174" height="23" isPrintWhenDetailOverflows="true" uuid="d21a315b-2a22-4343-bba6-8b6a51e3235c"/>
+				<reportElement x="96" y="287" width="174" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="d21a315b-2a22-4343-bba6-8b6a51e3235c"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
@@ -80,7 +80,7 @@
 				<textFieldExpression><![CDATA[Double.valueOf(((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("step-5-d", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-5",$P{sections})).getFields())).getValue()) + "%"]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="96" y="267" width="428" height="20" isPrintWhenDetailOverflows="true" uuid="b8a08486-6d72-490f-a683-e3995841b166"/>
+				<reportElement x="96" y="267" width="428" height="20" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="b8a08486-6d72-490f-a683-e3995841b166"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
@@ -88,7 +88,7 @@
 ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="96" y="371" width="174" height="23" isPrintWhenDetailOverflows="true" uuid="f882871d-bb43-454f-ac6b-27c51a6ecbdd"/>
+				<reportElement x="96" y="371" width="174" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="f882871d-bb43-454f-ac6b-27c51a6ecbdd"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
@@ -96,14 +96,14 @@
 				<textFieldExpression><![CDATA[Double.valueOf(((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("step-5-h", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-5",$P{sections})).getFields())).getValue())+" Months"]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="96" y="351" width="428" height="20" isPrintWhenDetailOverflows="true" uuid="6cd14086-2ea9-4c15-8b0d-f7eed5db62ef"/>
+				<reportElement x="96" y="351" width="428" height="20" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="6cd14086-2ea9-4c15-8b0d-f7eed5db62ef"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
 				<text><![CDATA[You intend to run your Google AdWords Campaign for:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="15" y="427" width="562" height="42" isPrintWhenDetailOverflows="true" backcolor="#CCCCFF" uuid="acd626b4-7f5c-4693-8ffc-7c0498774461"/>
+				<reportElement mode="Opaque" x="15" y="427" width="562" height="42" isPrintWhenDetailOverflows="true" forecolor="#063F3F" backcolor="#CCCCFF" uuid="acd626b4-7f5c-4693-8ffc-7c0498774461"/>
 				<box leftPadding="10" rightPadding="10"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11" isBold="true"/>
@@ -123,21 +123,21 @@
 				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "/images/page_3/clickAds.png"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="36" y="525" width="134" height="20" isPrintWhenDetailOverflows="true" uuid="d9adfc76-264b-45da-8feb-ff7820aec7eb"/>
+				<reportElement x="36" y="525" width="134" height="20" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="d9adfc76-264b-45da-8feb-ff7820aec7eb"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
 				<text><![CDATA[Monthly Budget]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="222" y="525" width="147" height="20" isPrintWhenDetailOverflows="true" uuid="abe28e58-29b0-47f5-9402-e1fa45f714ad"/>
+				<reportElement x="222" y="525" width="147" height="20" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="abe28e58-29b0-47f5-9402-e1fa45f714ad"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
 				<text><![CDATA[Times your ads could show]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="401" y="525" width="144" height="20" isPrintWhenDetailOverflows="true" uuid="40ec4c2b-9e86-4526-85cd-0be7011e678f"/>
+				<reportElement x="401" y="525" width="144" height="20" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="40ec4c2b-9e86-4526-85cd-0be7011e678f"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
@@ -193,7 +193,7 @@
 				<textFieldExpression><![CDATA[Double.valueOf(((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("est-clicks-on-ctr", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-5",$P{sections})).getFields())).getValue())]]></textFieldExpression>
 			</textField>
 			<textField pattern="">
-				<reportElement x="96" y="120" width="35" height="23" isPrintWhenDetailOverflows="true" uuid="1c7e685b-5ef5-4247-b1ae-c3f00f739e7b"/>
+				<reportElement x="96" y="120" width="35" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="1c7e685b-5ef5-4247-b1ae-c3f00f739e7b"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
@@ -201,7 +201,7 @@
 				<textFieldExpression><![CDATA["RM "]]></textFieldExpression>
 			</textField>
 			<textField pattern="">
-				<reportElement x="96" y="203" width="35" height="23" isPrintWhenDetailOverflows="true" uuid="5ababb2c-d9fd-4e1a-95bc-49192daa9187"/>
+				<reportElement x="96" y="203" width="35" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="5ababb2c-d9fd-4e1a-95bc-49192daa9187"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>

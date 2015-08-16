@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_5" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d678d0b9-ab96-4489-adb0-502e4744b263">
-	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="328"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<parameter name="sections" class="java.util.List"/>
 	<parameter name="pageNumber" class="java.lang.Integer"/>
@@ -18,14 +18,14 @@
 	<summary>
 		<band height="842" splitType="Stretch">
 			<staticText>
-				<reportElement x="15" y="68" width="565" height="37" uuid="a644fd58-9e39-4c71-a44e-3d18f37f2f43"/>
+				<reportElement x="15" y="68" width="565" height="37" forecolor="#7F7F7F" uuid="a644fd58-9e39-4c71-a44e-3d18f37f2f43"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
 				<text><![CDATA[Based on your previous advertising performance and your keyword(s) list, we will suggest you to explore the below channel(s):]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="15" y="328" width="565" height="24" uuid="a19e468e-b1d1-460c-98ea-1cf82f472fad"/>
+				<reportElement x="15" y="328" width="565" height="24" forecolor="#7F7F7F" uuid="a19e468e-b1d1-460c-98ea-1cf82f472fad"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="11"/>
 				</textElement>
@@ -49,7 +49,7 @@
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "/page_5_2_subreport.jasper"]]></subreportExpression>
 			</subreport>
 			<staticText>
-				<reportElement x="209" y="12" width="252" height="50" uuid="7cf122f1-7c9d-4133-9949-f05fa652af3f"/>
+				<reportElement x="209" y="12" width="252" height="50" forecolor="#7F7F7F" uuid="7cf122f1-7c9d-4133-9949-f05fa652af3f"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="18" isBold="false"/>
 				</textElement>
@@ -90,7 +90,7 @@
 					<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 				</reportElement>
 				<staticText>
-					<reportElement x="2" y="0" width="51" height="20" uuid="e01274d9-8604-416c-baaf-05c77cf92fb6">
+					<reportElement x="2" y="0" width="51" height="20" forecolor="#7F7F7F" uuid="e01274d9-8604-416c-baaf-05c77cf92fb6">
 						<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0 && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -106,7 +106,7 @@
 					<text><![CDATA[Option A]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="53" y="0" width="134" height="20" uuid="30be060b-ac46-4504-9200-eff26b64e441">
+					<reportElement x="53" y="0" width="134" height="20" forecolor="#7F7F7F" uuid="30be060b-ac46-4504-9200-eff26b64e441">
 						<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0 && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -123,7 +123,7 @@
 				</staticText>
 				<elementGroup>
 					<staticText>
-						<reportElement mode="Opaque" x="2" y="20" width="166" height="20" backcolor="#FFCCCC" uuid="66ed3fef-8baf-4c89-b553-216bc510e480"/>
+						<reportElement mode="Opaque" x="2" y="20" width="166" height="20" forecolor="#595959" backcolor="#FFCCCC" uuid="66ed3fef-8baf-4c89-b553-216bc510e480"/>
 						<box>
 							<pen lineWidth="0.75"/>
 							<topPen lineWidth="0.75"/>
@@ -137,7 +137,7 @@
 						<text><![CDATA[Channel]]></text>
 					</staticText>
 					<staticText>
-						<reportElement mode="Opaque" x="168" y="20" width="96" height="20" backcolor="#FFCCCC" uuid="8d5cdf6d-9e7f-490c-9be9-db5a87695540"/>
+						<reportElement mode="Opaque" x="168" y="20" width="96" height="20" forecolor="#595959" backcolor="#FFCCCC" uuid="8d5cdf6d-9e7f-490c-9be9-db5a87695540"/>
 						<box>
 							<pen lineWidth="0.75"/>
 							<topPen lineWidth="0.75"/>
@@ -170,7 +170,7 @@
 ]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="40" width="23" height="20" uuid="88f050e2-0479-4f95-9237-8a6277744b26">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="40" width="23" height="20" forecolor="#7F7F7F" uuid="88f050e2-0479-4f95-9237-8a6277744b26">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("panpages-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("panpages-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -179,7 +179,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="40" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="0321e62b-0184-4f4f-9859-306f9704b681"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="40" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="0321e62b-0184-4f4f-9859-306f9704b681"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -195,7 +195,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="60" width="166" height="20" uuid="03d9a445-fb20-4a9d-96dd-f372d0ca6cd0">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="60" width="166" height="20" forecolor="#7F7F7F" uuid="03d9a445-fb20-4a9d-96dd-f372d0ca6cd0">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-search-mobile-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-search-mobile-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -211,7 +211,7 @@
 						<text><![CDATA[Google Search & Mobile]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="60" width="23" height="20" uuid="8b8edb7e-6d90-478f-a8d8-0145a0f84c3e">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="60" width="23" height="20" forecolor="#7F7F7F" uuid="8b8edb7e-6d90-478f-a8d8-0145a0f84c3e">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-search-mobile-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-search-mobile-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -220,7 +220,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="60" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="7ed7eda2-a989-4c8b-a946-fc09690f4510"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="60" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="7ed7eda2-a989-4c8b-a946-fc09690f4510"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -236,7 +236,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="80" width="166" height="20" uuid="d6896bab-1082-4e55-9f27-87752c96d64d">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="80" width="166" height="20" forecolor="#7F7F7F" uuid="d6896bab-1082-4e55-9f27-87752c96d64d">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-display-network-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-display-network-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -252,7 +252,7 @@
 						<text><![CDATA[Google Display Network]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="80" width="23" height="20" isRemoveLineWhenBlank="true" uuid="c2c0ad6c-150a-48a3-9170-6b785babca7c">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="80" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="c2c0ad6c-150a-48a3-9170-6b785babca7c">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-display-network-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-display-network-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -261,7 +261,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="80" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="b4c9fc27-1dfd-46c5-a2da-59b49f11ad22"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="80" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="b4c9fc27-1dfd-46c5-a2da-59b49f11ad22"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -277,7 +277,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="100" width="166" height="20" uuid="e4d1f078-575e-4ce2-90fe-157422845198">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="100" width="166" height="20" forecolor="#7F7F7F" uuid="e4d1f078-575e-4ce2-90fe-157422845198">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-search-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-search-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -293,7 +293,7 @@
 						<text><![CDATA[Yahoo! Search]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="100" width="23" height="20" isRemoveLineWhenBlank="true" uuid="8178f69d-149c-4cc1-8e56-c756a3d0323d">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="100" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="8178f69d-149c-4cc1-8e56-c756a3d0323d">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-search-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-search-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -302,7 +302,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="100" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="903fc569-3526-4ca3-a7e8-003bac24419c"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="100" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="903fc569-3526-4ca3-a7e8-003bac24419c"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -318,7 +318,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="120" width="166" height="20" uuid="d1fe731a-96ad-41c4-8b26-8b802fee1398">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="120" width="166" height="20" forecolor="#7F7F7F" uuid="d1fe731a-96ad-41c4-8b26-8b802fee1398">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-display-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-display-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -334,7 +334,7 @@
 						<text><![CDATA[Yahoo! Display]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="120" width="23" height="20" isRemoveLineWhenBlank="true" uuid="dd64820a-f438-4174-9413-68d60c5b83af">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="120" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="dd64820a-f438-4174-9413-68d60c5b83af">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-display-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-display-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -343,7 +343,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="120" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="6b923dcf-8ec3-463b-9d1e-828b9532432e"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="120" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="6b923dcf-8ec3-463b-9d1e-828b9532432e"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -359,7 +359,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="140" width="166" height="20" isRemoveLineWhenBlank="true" uuid="8b182854-ee69-4cf2-98f8-2701312eab14">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="140" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="8b182854-ee69-4cf2-98f8-2701312eab14">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("youtube-ads-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("youtube-ads-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -375,7 +375,7 @@
 						<text><![CDATA[YouTube Ads]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="140" width="23" height="20" isRemoveLineWhenBlank="true" uuid="9cbeb0a8-579b-44a0-89f6-6abd8c811add">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="140" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="9cbeb0a8-579b-44a0-89f6-6abd8c811add">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("youtube-ads-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("youtube-ads-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -384,7 +384,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="140" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="8c7096e9-ea30-4b91-a134-54d39d6deb7c"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="140" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="8c7096e9-ea30-4b91-a134-54d39d6deb7c"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -400,7 +400,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="160" width="166" height="20" isRemoveLineWhenBlank="true" uuid="055e3f3c-1c86-4801-98e8-db72b48eb3fb">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="160" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="055e3f3c-1c86-4801-98e8-db72b48eb3fb">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-ads-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-ads-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -416,7 +416,7 @@
 						<text><![CDATA[Facebook Ads]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="160" width="23" height="20" isRemoveLineWhenBlank="true" uuid="0d3ea642-21cb-41e1-a89a-befc21ccd5cc">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="160" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="0d3ea642-21cb-41e1-a89a-befc21ccd5cc">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-ads-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-ads-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -425,7 +425,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="160" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="436a05ed-d887-45ce-a82e-a489c2c5da45"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="160" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="436a05ed-d887-45ce-a82e-a489c2c5da45"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -441,7 +441,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="180" width="166" height="20" isRemoveLineWhenBlank="true" uuid="dce3581b-40b7-42f9-9424-2d8a9ea26cc9">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="180" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="dce3581b-40b7-42f9-9424-2d8a9ea26cc9">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-marketing-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-marketing-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -457,7 +457,7 @@
 						<text><![CDATA[Facebook Marketing]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="180" width="23" height="20" isRemoveLineWhenBlank="true" uuid="5ea86b4c-77ed-4bc6-8f7a-6ba1fedcdee7">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="180" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="5ea86b4c-77ed-4bc6-8f7a-6ba1fedcdee7">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-marketing-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-marketing-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -466,7 +466,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="180" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="2a71f797-a42c-4b44-b59f-db6065c9c4c8"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="180" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="2a71f797-a42c-4b44-b59f-db6065c9c4c8"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -482,7 +482,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="200" width="166" height="20" isRemoveLineWhenBlank="true" uuid="6e7e29cd-841c-4e97-90c0-fe96349f8eeb">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="200" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="6e7e29cd-841c-4e97-90c0-fe96349f8eeb">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("pan-360-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("pan-360-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -498,7 +498,7 @@
 						<text><![CDATA[Pan 360°]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="200" width="23" height="20" isRemoveLineWhenBlank="true" uuid="113cb3e1-f60e-44a5-b86d-e7762d4432d4">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="200" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="113cb3e1-f60e-44a5-b86d-e7762d4432d4">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("pan-360-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("pan-360-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -507,7 +507,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="200" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="2b56be1b-5a5c-4723-b205-8f3a600d8f32"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="200" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="2b56be1b-5a5c-4723-b205-8f3a600d8f32"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -523,7 +523,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="220" width="166" height="20" isRemoveLineWhenBlank="true" uuid="09329db8-9dbe-4dd4-85b9-bf05a45d1ea1">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="220" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="09329db8-9dbe-4dd4-85b9-bf05a45d1ea1">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("alibaba-com-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("alibaba-com-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -539,7 +539,7 @@
 						<text><![CDATA[Alibaba.com ]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="220" width="23" height="20" isRemoveLineWhenBlank="true" uuid="78c57b9f-c22d-4e67-bc33-5a4ef06b9321">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="220" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="78c57b9f-c22d-4e67-bc33-5a4ef06b9321">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("alibaba-com-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("alibaba-com-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -548,7 +548,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="220" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="1ec9808c-03b4-4b03-9830-d5263dfc8883"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="220" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="1ec9808c-03b4-4b03-9830-d5263dfc8883"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -564,7 +564,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="240" width="166" height="20" isRemoveLineWhenBlank="true" uuid="b3ef00e2-8307-4e9d-a990-ea6e883f57bc">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="240" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="b3ef00e2-8307-4e9d-a990-ea6e883f57bc">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("super-pages-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("super-pages-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -580,7 +580,7 @@
 						<text><![CDATA[Super Pages]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="240" width="23" height="20" isRemoveLineWhenBlank="true" uuid="ab3bab94-abe7-4903-a9ab-c9a1c14f89a1">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="240" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="ab3bab94-abe7-4903-a9ab-c9a1c14f89a1">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("super-pages-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("super-pages-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -589,7 +589,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="240" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="f3dd4f28-a088-4b8b-ad1f-106f1413dde9"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="240" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="f3dd4f28-a088-4b8b-ad1f-106f1413dde9"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -605,7 +605,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="260" width="166" height="20" isRemoveLineWhenBlank="true" uuid="e3cea1e4-95f7-459b-8d3f-bc2074969487">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="260" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="e3cea1e4-95f7-459b-8d3f-bc2074969487">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("others-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("others-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -621,7 +621,7 @@
 						<text><![CDATA[Others]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="260" width="23" height="20" isRemoveLineWhenBlank="true" uuid="e63fe277-0b60-4242-a852-4faf440ed668">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="260" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="e63fe277-0b60-4242-a852-4faf440ed668">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("others-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("others-option-a-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -630,7 +630,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="260" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="72cbd447-eb14-4c41-817a-8dde34e2e9cf"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="260" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="72cbd447-eb14-4c41-817a-8dde34e2e9cf"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -646,7 +646,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="280" width="166" height="20" isRemoveLineWhenBlank="true" uuid="400c0314-ed49-4972-92fb-133efbffa6ef">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="280" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="400c0314-ed49-4972-92fb-133efbffa6ef">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("management-fee-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("management-fee-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box rightPadding="6">
@@ -662,7 +662,7 @@
 						<text><![CDATA[Management Fee]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="280" width="23" height="20" isRemoveLineWhenBlank="true" uuid="9a800af3-a032-45dd-8785-873076d1a70f">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="280" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="9a800af3-a032-45dd-8785-873076d1a70f">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("management-fee-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("management-fee-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -671,7 +671,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="280" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="5efbbd31-96a3-4eae-a68d-e116413c6dbb"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="280" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="5efbbd31-96a3-4eae-a68d-e116413c6dbb"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -687,7 +687,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="300" width="166" height="20" isRemoveLineWhenBlank="true" uuid="2617dcb9-b085-4289-ae37-6d6c604c4bc1">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="300" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="2617dcb9-b085-4289-ae37-6d6c604c4bc1">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("subtotal-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("subtotal-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box rightPadding="6">
@@ -703,7 +703,7 @@
 						<text><![CDATA[Subtotal]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="300" width="23" height="20" isRemoveLineWhenBlank="true" uuid="7b62f912-cf2a-4634-92f3-101c286e6227">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="300" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="7b62f912-cf2a-4634-92f3-101c286e6227">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("subtotal-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("subtotal-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -712,7 +712,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="300" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="56e0689d-ea10-4217-a0a9-21d8f86bfc41"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="300" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="56e0689d-ea10-4217-a0a9-21d8f86bfc41"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -728,7 +728,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="320" width="166" height="20" isRemoveLineWhenBlank="true" uuid="91d3d10a-d67d-48e2-9acb-3ac2b302d980">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="320" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="91d3d10a-d67d-48e2-9acb-3ac2b302d980">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("gov-tax-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("gov-tax-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box rightPadding="6">
@@ -744,7 +744,7 @@
 						<text><![CDATA[6% Gov. Tax]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="320" width="23" height="20" isRemoveLineWhenBlank="true" uuid="e622d9ce-5394-4804-b30c-801ad2898bdd">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="320" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="e622d9ce-5394-4804-b30c-801ad2898bdd">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("gov-tax-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("gov-tax-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -753,7 +753,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="320" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="3a6a1235-f086-4835-a686-68db5eec1002"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="320" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="3a6a1235-f086-4835-a686-68db5eec1002"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -769,7 +769,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="340" width="166" height="20" isRemoveLineWhenBlank="true" uuid="6213743b-35b2-40ce-a40d-cd8abffd3087">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="2" y="340" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="6213743b-35b2-40ce-a40d-cd8abffd3087">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box rightPadding="6">
@@ -785,7 +785,7 @@
 						<text><![CDATA[Grand Total]]></text>
 					</staticText>
 					<staticText>
-						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="340" width="23" height="20" isRemoveLineWhenBlank="true" uuid="169110a2-c40a-4870-b4a0-50abd27fec4d">
+						<reportElement positionType="Float" isPrintRepeatedValues="false" x="168" y="340" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="169110a2-c40a-4870-b4a0-50abd27fec4d">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -794,7 +794,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="340" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="80ad160e-434f-4992-be90-b7184bdbd62f"/>
+						<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="168" y="340" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="80ad160e-434f-4992-be90-b7184bdbd62f"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -814,7 +814,7 @@
 					<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 				</reportElement>
 				<staticText>
-					<reportElement x="0" y="0" width="80" height="20" uuid="6095aac4-bce4-4114-a45e-604d8b4a3272">
+					<reportElement x="0" y="0" width="80" height="20" forecolor="#7F7F7F" uuid="6095aac4-bce4-4114-a45e-604d8b4a3272">
 						<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0 && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -831,7 +831,7 @@
 				</staticText>
 				<elementGroup>
 					<staticText>
-						<reportElement mode="Opaque" x="0" y="20" width="166" height="20" backcolor="#FFCCCC" uuid="c4602145-4528-4af8-afee-0234d58115f4"/>
+						<reportElement mode="Opaque" x="0" y="20" width="166" height="20" forecolor="#595959" backcolor="#FFCCCC" uuid="c4602145-4528-4af8-afee-0234d58115f4"/>
 						<box>
 							<pen lineWidth="0.75"/>
 							<topPen lineWidth="0.75"/>
@@ -845,7 +845,7 @@
 						<text><![CDATA[Channel]]></text>
 					</staticText>
 					<staticText>
-						<reportElement mode="Opaque" x="166" y="20" width="96" height="20" backcolor="#FFCCCC" uuid="55c8cec4-d2b8-4630-a33d-07fb1c630e8f"/>
+						<reportElement mode="Opaque" x="166" y="20" width="96" height="20" forecolor="#595959" backcolor="#FFCCCC" uuid="55c8cec4-d2b8-4630-a33d-07fb1c630e8f"/>
 						<box>
 							<pen lineWidth="0.75"/>
 							<topPen lineWidth="0.75"/>
@@ -861,7 +861,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="40" width="166" height="20" isRemoveLineWhenBlank="true" backcolor="#99FFFF" uuid="ec45843e-27cd-4ef5-a7e8-62da0e4ae20a">
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="40" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#99FFFF" uuid="ec45843e-27cd-4ef5-a7e8-62da0e4ae20a">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("panpages-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("panpages-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -877,7 +877,7 @@
 						<text><![CDATA[PanPages]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="40" width="23" height="20" isRemoveLineWhenBlank="true" uuid="8ca1c038-9f54-4f6e-8bc7-b49df98f96de">
+						<reportElement isPrintRepeatedValues="false" x="166" y="40" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="8ca1c038-9f54-4f6e-8bc7-b49df98f96de">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("panpages-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("panpages-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -886,7 +886,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="40" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="133a7490-3bbc-4890-9e94-8ccc0c3e9dc3"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="40" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="133a7490-3bbc-4890-9e94-8ccc0c3e9dc3"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -902,7 +902,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="0" y="60" width="166" height="20" isRemoveLineWhenBlank="true" uuid="0764cd28-facf-4aa8-b921-e3a662d159bd">
+						<reportElement isPrintRepeatedValues="false" x="0" y="60" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="0764cd28-facf-4aa8-b921-e3a662d159bd">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-search-mobile-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-search-mobile-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -918,7 +918,7 @@
 						<text><![CDATA[Google Search & Mobile]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="60" width="23" height="20" isRemoveLineWhenBlank="true" uuid="c063af9a-3adb-4134-a7cd-4897823a2946">
+						<reportElement isPrintRepeatedValues="false" x="166" y="60" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="c063af9a-3adb-4134-a7cd-4897823a2946">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-search-mobile-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-search-mobile-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -927,7 +927,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="60" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="77b2cfde-ed59-425d-9f4d-cdbf770d1df7"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="60" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="77b2cfde-ed59-425d-9f4d-cdbf770d1df7"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -943,7 +943,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="80" width="166" height="20" isRemoveLineWhenBlank="true" backcolor="#99CCFF" uuid="835db81e-987d-4504-bbec-974fd31ffcb3">
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="80" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#99CCFF" uuid="835db81e-987d-4504-bbec-974fd31ffcb3">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-display-network-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-display-network-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -959,7 +959,7 @@
 						<text><![CDATA[Google Display Network]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="80" width="23" height="20" isRemoveLineWhenBlank="true" uuid="355c6b1f-d1db-4aa3-8238-048567728be7">
+						<reportElement isPrintRepeatedValues="false" x="166" y="80" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="355c6b1f-d1db-4aa3-8238-048567728be7">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-display-network-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("google-display-network-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -968,7 +968,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="80" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="75b30d50-7852-46ec-9aeb-77247d22f748"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="80" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="75b30d50-7852-46ec-9aeb-77247d22f748"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -984,7 +984,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="100" width="166" height="20" isRemoveLineWhenBlank="true" backcolor="#9999FF" uuid="944cee1a-af68-485f-950c-7ee13e2457c1">
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="100" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#9999FF" uuid="944cee1a-af68-485f-950c-7ee13e2457c1">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-search-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-search-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -1000,7 +1000,7 @@
 						<text><![CDATA[Yahoo! Search]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="100" width="23" height="20" isRemoveLineWhenBlank="true" uuid="3f85a9dd-5cac-45c3-b938-f279bc0e648f">
+						<reportElement isPrintRepeatedValues="false" x="166" y="100" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="3f85a9dd-5cac-45c3-b938-f279bc0e648f">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-search-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-search-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1009,7 +1009,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="100" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="acaa65f9-2934-43ed-a688-34d3d35e8022"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="100" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="acaa65f9-2934-43ed-a688-34d3d35e8022"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1025,7 +1025,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="120" width="166" height="20" isRemoveLineWhenBlank="true" backcolor="#CCCCFF" uuid="1afe98b7-8ef7-499f-9367-2f15aae3e49a">
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="120" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#CCCCFF" uuid="1afe98b7-8ef7-499f-9367-2f15aae3e49a">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-display-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-display-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -1041,7 +1041,7 @@
 						<text><![CDATA[Yahoo! Display]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="120" width="23" height="20" isRemoveLineWhenBlank="true" uuid="e141da2d-26e6-42ca-bd4f-9e7a74f8e4f1">
+						<reportElement isPrintRepeatedValues="false" x="166" y="120" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="e141da2d-26e6-42ca-bd4f-9e7a74f8e4f1">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-display-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("yahoo-display-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1050,7 +1050,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="120" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="e4924011-ed76-4848-9515-475d7502519f"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="120" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="e4924011-ed76-4848-9515-475d7502519f"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1066,7 +1066,7 @@
 				</elementGroup>
 				<elementGroup>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="140" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="6e11a525-d825-4252-bfcf-e1428aff9900"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="140" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="6e11a525-d825-4252-bfcf-e1428aff9900"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1080,7 +1080,7 @@
 						<textFieldExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("youtube-ads-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue()]]></textFieldExpression>
 					</textField>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="140" width="23" height="20" isRemoveLineWhenBlank="true" uuid="355c6b1f-d1db-4aa3-8238-048567728be7">
+						<reportElement isPrintRepeatedValues="false" x="166" y="140" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="355c6b1f-d1db-4aa3-8238-048567728be7">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("youtube-ads-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("youtube-ads-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1089,7 +1089,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="140" width="166" height="20" isRemoveLineWhenBlank="true" backcolor="#9999FF" uuid="944cee1a-af68-485f-950c-7ee13e2457c1">
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="140" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#9999FF" uuid="944cee1a-af68-485f-950c-7ee13e2457c1">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("youtube-ads-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("youtube-ads-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -1107,7 +1107,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="160" width="166" height="20" isRemoveLineWhenBlank="true" backcolor="#66FFCC" uuid="088b21cf-3107-4212-a16e-fe3e0b353d4f">
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="160" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#66FFCC" uuid="088b21cf-3107-4212-a16e-fe3e0b353d4f">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-ads-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-ads-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -1123,7 +1123,7 @@
 						<text><![CDATA[Facebook Ads]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="160" width="23" height="20" isRemoveLineWhenBlank="true" uuid="46e38b33-8c5d-41a9-b6de-c4ec57e95b1d">
+						<reportElement isPrintRepeatedValues="false" x="166" y="160" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="46e38b33-8c5d-41a9-b6de-c4ec57e95b1d">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-ads-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-ads-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1132,7 +1132,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="160" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="753151e1-54c6-4f78-8fc5-31db19a4e84d"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="160" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="753151e1-54c6-4f78-8fc5-31db19a4e84d"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1148,7 +1148,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="180" width="166" height="20" isRemoveLineWhenBlank="true" backcolor="#006666" uuid="94d7efdb-f80a-4a61-bcbd-4ed8b3e2e4d6">
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="180" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#006666" uuid="94d7efdb-f80a-4a61-bcbd-4ed8b3e2e4d6">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-marketing-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-marketing-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -1164,7 +1164,7 @@
 						<text><![CDATA[Facebook Marketing]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="180" width="23" height="20" isRemoveLineWhenBlank="true" uuid="e17fdf6a-fdda-44e3-b0cc-bacc8d1c3f37">
+						<reportElement isPrintRepeatedValues="false" x="166" y="180" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="e17fdf6a-fdda-44e3-b0cc-bacc8d1c3f37">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-marketing-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("facebook-marketing-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1173,7 +1173,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="180" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="e86ce1c0-0450-427c-9bed-4fb00a73f4df"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="180" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="e86ce1c0-0450-427c-9bed-4fb00a73f4df"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1189,7 +1189,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="200" width="166" height="20" isRemoveLineWhenBlank="true" backcolor="#006666" uuid="7633027a-2c18-4d81-ab70-d94404bafd81">
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="200" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#006666" uuid="7633027a-2c18-4d81-ab70-d94404bafd81">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("pan-360-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("pan-360-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -1205,7 +1205,7 @@
 						<text><![CDATA[Pan 360°]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="200" width="23" height="20" isRemoveLineWhenBlank="true" uuid="661defc3-d4bc-4b3a-be37-99fc7a99b91c">
+						<reportElement isPrintRepeatedValues="false" x="166" y="200" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="661defc3-d4bc-4b3a-be37-99fc7a99b91c">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("pan-360-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("pan-360-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1214,7 +1214,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="200" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="bb942056-8c4c-4642-886c-df44f2e7aa82"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="200" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="bb942056-8c4c-4642-886c-df44f2e7aa82"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1230,7 +1230,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="0" y="220" width="166" height="20" isRemoveLineWhenBlank="true" uuid="365fb595-1422-4591-ac32-c5db0492bdac">
+						<reportElement isPrintRepeatedValues="false" x="0" y="220" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="365fb595-1422-4591-ac32-c5db0492bdac">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("alibaba-com-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("alibaba-com-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -1246,7 +1246,7 @@
 						<text><![CDATA[Alibaba.com ]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="220" width="23" height="20" isRemoveLineWhenBlank="true" uuid="4781f8d3-40eb-4f8f-a8ca-6f52568ef044">
+						<reportElement isPrintRepeatedValues="false" x="166" y="220" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="4781f8d3-40eb-4f8f-a8ca-6f52568ef044">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("alibaba-com-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("alibaba-com-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1255,7 +1255,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="220" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="c2f7bb19-d361-421c-8521-ed095a75c854"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="220" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="c2f7bb19-d361-421c-8521-ed095a75c854"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1271,7 +1271,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="0" y="240" width="166" height="20" isRemoveLineWhenBlank="true" uuid="343267ec-ec87-4450-894e-ddb36ea746d2">
+						<reportElement isPrintRepeatedValues="false" x="0" y="240" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="343267ec-ec87-4450-894e-ddb36ea746d2">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("super-pages-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("super-pages-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -1287,7 +1287,7 @@
 						<text><![CDATA[Super Pages]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="240" width="23" height="20" isRemoveLineWhenBlank="true" uuid="ca3028f1-421a-4d9a-b551-5ad2f34bddd4">
+						<reportElement isPrintRepeatedValues="false" x="166" y="240" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="ca3028f1-421a-4d9a-b551-5ad2f34bddd4">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("super-pages-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("super-pages-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1296,7 +1296,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="240" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="6b5ab497-8b5c-4895-837e-abf556508c8d"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="240" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="6b5ab497-8b5c-4895-837e-abf556508c8d"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1312,7 +1312,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="0" y="260" width="166" height="20" isRemoveLineWhenBlank="true" uuid="9f1bb2b2-38a8-49e3-9d62-8686c53ac583">
+						<reportElement isPrintRepeatedValues="false" x="0" y="260" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="9f1bb2b2-38a8-49e3-9d62-8686c53ac583">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("others-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("others-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box leftPadding="10">
@@ -1328,7 +1328,7 @@
 						<text><![CDATA[Others]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="260" width="23" height="20" isRemoveLineWhenBlank="true" uuid="42f7284b-2c80-4e5d-81bf-9290c3f638e9">
+						<reportElement isPrintRepeatedValues="false" x="166" y="260" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="42f7284b-2c80-4e5d-81bf-9290c3f638e9">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("others-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("others-option-b-input", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1337,7 +1337,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="260" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="72734da3-a770-4253-ad68-9f287503968b"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="260" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="72734da3-a770-4253-ad68-9f287503968b"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1353,7 +1353,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="0" y="280" width="166" height="20" isRemoveLineWhenBlank="true" uuid="dcfaa464-0b7b-4ec8-8f5f-a927ecc115f9">
+						<reportElement isPrintRepeatedValues="false" x="0" y="280" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="dcfaa464-0b7b-4ec8-8f5f-a927ecc115f9">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("management-fee-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("management-fee-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box rightPadding="6">
@@ -1369,7 +1369,7 @@
 						<text><![CDATA[Management Fee]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="280" width="23" height="20" isRemoveLineWhenBlank="true" uuid="87ebb5d8-4c32-44a0-a857-45f261bad433">
+						<reportElement isPrintRepeatedValues="false" x="166" y="280" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="87ebb5d8-4c32-44a0-a857-45f261bad433">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("management-fee-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("management-fee-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1378,7 +1378,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="280" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="2f5be6ed-ab5b-4a71-9e2e-76bc422f8c60"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="280" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="2f5be6ed-ab5b-4a71-9e2e-76bc422f8c60"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1394,7 +1394,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="0" y="300" width="166" height="20" isRemoveLineWhenBlank="true" uuid="f7789f8e-392e-4c0a-8005-ea950e9ac59f">
+						<reportElement isPrintRepeatedValues="false" x="0" y="300" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="f7789f8e-392e-4c0a-8005-ea950e9ac59f">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("subtotal-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("subtotal-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box rightPadding="6">
@@ -1410,7 +1410,7 @@
 						<text><![CDATA[Subtotal]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="300" width="23" height="20" isRemoveLineWhenBlank="true" uuid="d8909302-b2a0-4f68-8e86-ce729b241c38">
+						<reportElement isPrintRepeatedValues="false" x="166" y="300" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="d8909302-b2a0-4f68-8e86-ce729b241c38">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("subtotal-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("subtotal-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1419,7 +1419,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="300" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="2558d43a-04dd-4dc6-ab07-d4c42aadafeb"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="300" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="2558d43a-04dd-4dc6-ab07-d4c42aadafeb"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1435,7 +1435,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="0" y="320" width="166" height="20" isRemoveLineWhenBlank="true" uuid="af931280-70fb-4ab2-9790-f74ecfafe92e">
+						<reportElement isPrintRepeatedValues="false" x="0" y="320" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="af931280-70fb-4ab2-9790-f74ecfafe92e">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("gov-tax-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("gov-tax-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box rightPadding="6">
@@ -1451,7 +1451,7 @@
 						<text><![CDATA[6% Gov. Tax]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="320" width="23" height="20" isRemoveLineWhenBlank="true" uuid="90b2400a-c23a-497c-8fc7-94b0b1023c63">
+						<reportElement isPrintRepeatedValues="false" x="166" y="320" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="90b2400a-c23a-497c-8fc7-94b0b1023c63">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("gov-tax-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("gov-tax-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1460,7 +1460,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="320" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="c37336f2-e646-4e5a-9973-e4c76ebc30e2"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="320" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="c37336f2-e646-4e5a-9973-e4c76ebc30e2"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
@@ -1476,7 +1476,7 @@
 				</elementGroup>
 				<elementGroup>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="0" y="340" width="166" height="20" isRemoveLineWhenBlank="true" uuid="25445905-5e67-4816-98e7-0baf7bd32f5f">
+						<reportElement isPrintRepeatedValues="false" x="0" y="340" width="166" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="25445905-5e67-4816-98e7-0baf7bd32f5f">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<box rightPadding="6">
@@ -1492,7 +1492,7 @@
 						<text><![CDATA[Grand Total]]></text>
 					</staticText>
 					<staticText>
-						<reportElement isPrintRepeatedValues="false" x="166" y="340" width="23" height="20" isRemoveLineWhenBlank="true" uuid="c00c00a3-9202-48c5-94df-22a154bce163">
+						<reportElement isPrintRepeatedValues="false" x="166" y="340" width="23" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" uuid="c00c00a3-9202-48c5-94df-22a154bce163">
 							<printWhenExpression><![CDATA[((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue() != null && ((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("grand-total-option-b", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-10",$P{sections})).getFields())).getValue().trim().length() > 0]]></printWhenExpression>
 						</reportElement>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1501,7 +1501,7 @@
 						<text><![CDATA[RM]]></text>
 					</staticText>
 					<textField isBlankWhenNull="true">
-						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="340" width="96" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFF99" uuid="fa98b031-e7c8-4267-9a6a-bdc691f2ea76"/>
+						<reportElement isPrintRepeatedValues="false" mode="Transparent" x="166" y="340" width="96" height="20" isRemoveLineWhenBlank="true" forecolor="#7F7F7F" backcolor="#FFFF99" uuid="fa98b031-e7c8-4267-9a6a-bdc691f2ea76"/>
 						<box rightPadding="6">
 							<pen lineWidth="1.0"/>
 							<topPen lineWidth="1.0"/>
