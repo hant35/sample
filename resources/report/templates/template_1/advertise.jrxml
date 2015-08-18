@@ -16,9 +16,9 @@
 	<detail>
 		<band height="30">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="5" width="497" height="20" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="fda49c67-f2d6-457d-a36c-75fb7eb68474"/>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="5" width="497" height="20" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" forecolor="#585858" uuid="fda49c67-f2d6-457d-a36c-75fb7eb68474"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Open Sans" size="11" isBold="true"/>
+					<font fontName="SansSerif" size="12" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{_THIS}.joinFields(",")]]></textFieldExpression>
 			</textField>

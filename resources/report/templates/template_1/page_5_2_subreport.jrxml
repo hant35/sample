@@ -90,21 +90,21 @@ We have given you all the reasons why you should advertise now! I have taken the
 				<text><![CDATA[Terms & Conditions:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="15" y="360" width="155" height="20" forecolor="#7F7F7F" uuid="28e99357-b07b-4969-bbdd-49222daf81ec"/>
+				<reportElement x="15" y="360" width="155" height="20" forecolor="#585858" uuid="28e99357-b07b-4969-bbdd-49222daf81ec"/>
 				<textElement>
 					<font fontName="Open Sans" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Business Associates Service]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="14" y="401" width="156" height="20" forecolor="#7F7F7F" uuid="e175d6a8-7d26-4bdd-a8fc-93113f8f423f"/>
+				<reportElement x="14" y="401" width="156" height="20" forecolor="#585858" uuid="e175d6a8-7d26-4bdd-a8fc-93113f8f423f"/>
 				<textElement>
 					<font fontName="Open Sans" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[User Friendly Personal Log In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="15" y="444" width="163" height="20" forecolor="#7F7F7F" uuid="487ab496-0f67-4736-95ff-ed735a3858d6"/>
+				<reportElement x="15" y="444" width="163" height="20" forecolor="#585858" uuid="487ab496-0f67-4736-95ff-ed735a3858d6"/>
 				<textElement>
 					<font fontName="Open Sans" size="11" isBold="true"/>
 				</textElement>

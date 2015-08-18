@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="page_4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90167ed5-0c7a-4203-aa33-cf24b0c47bbb">
 	<property name="ireport.zoom" value="1.1000000000000012"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="403"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["H:\\workspace\\BOW\\report\\templates\\template_3\\"]]></defaultValueExpression>
 	</parameter>
@@ -48,7 +48,7 @@
 				<text><![CDATA[Your expected revenue increased via your advertising plan is:]]></text>
 			</staticText>
 			<textField pattern="#,##0">
-				<reportElement x="131" y="120" width="139" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="b2d861bd-5b6d-42ed-a62c-1e6beb7d8259"/>
+				<reportElement x="131" y="120" width="139" height="23" isPrintWhenDetailOverflows="true" forecolor="#585858" uuid="b2d861bd-5b6d-42ed-a62c-1e6beb7d8259"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
@@ -56,7 +56,7 @@
 				<textFieldExpression><![CDATA[Double.valueOf(((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("step-5-a", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-5",$P{sections})).getFields())).getValue())]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
-				<reportElement x="131" y="203" width="139" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="14374eb3-8f44-437f-8760-38f09b7e6163"/>
+				<reportElement x="131" y="203" width="139" height="23" isPrintWhenDetailOverflows="true" forecolor="#585858" uuid="14374eb3-8f44-437f-8760-38f09b7e6163"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
@@ -72,7 +72,7 @@
 ]]></text>
 			</staticText>
 			<textField pattern="#,##0">
-				<reportElement x="96" y="287" width="174" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="d21a315b-2a22-4343-bba6-8b6a51e3235c"/>
+				<reportElement x="96" y="287" width="174" height="23" isPrintWhenDetailOverflows="true" forecolor="#585858" uuid="d21a315b-2a22-4343-bba6-8b6a51e3235c"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
@@ -88,7 +88,7 @@
 ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="96" y="371" width="174" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="f882871d-bb43-454f-ac6b-27c51a6ecbdd"/>
+				<reportElement x="96" y="371" width="174" height="23" isPrintWhenDetailOverflows="true" forecolor="#585858" uuid="f882871d-bb43-454f-ac6b-27c51a6ecbdd"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
@@ -193,7 +193,7 @@
 				<textFieldExpression><![CDATA[Double.valueOf(((com.panpages.bow.model.Field)com.panpages.bow.model.utils.SurveyUtils.findFieldWithFieldTemplateSlugName("est-clicks-on-ctr", (java.util.List)((com.panpages.bow.model.Section)com.panpages.bow.model.utils.SurveyUtils.findSectionWithSectionTemplateSlugName("section-5",$P{sections})).getFields())).getValue())]]></textFieldExpression>
 			</textField>
 			<textField pattern="">
-				<reportElement x="96" y="120" width="35" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="1c7e685b-5ef5-4247-b1ae-c3f00f739e7b"/>
+				<reportElement x="96" y="120" width="35" height="23" isPrintWhenDetailOverflows="true" forecolor="#585858" uuid="1c7e685b-5ef5-4247-b1ae-c3f00f739e7b"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>
@@ -201,7 +201,7 @@
 				<textFieldExpression><![CDATA["RM "]]></textFieldExpression>
 			</textField>
 			<textField pattern="">
-				<reportElement x="96" y="203" width="35" height="23" isPrintWhenDetailOverflows="true" forecolor="#7F7F7F" uuid="5ababb2c-d9fd-4e1a-95bc-49192daa9187"/>
+				<reportElement x="96" y="203" width="35" height="23" isPrintWhenDetailOverflows="true" forecolor="#585858" uuid="5ababb2c-d9fd-4e1a-95bc-49192daa9187"/>
 				<box rightPadding="0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans" size="12" isBold="true"/>

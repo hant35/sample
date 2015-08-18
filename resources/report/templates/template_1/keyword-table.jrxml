@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PROPOSED KEYWORDS" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="10" bottomMargin="0" uuid="14c4eb3b-0b8d-4fbe-b849-cf639ae67fb0">
-	<property name="ireport.zoom" value="1.3636363636363638"/>
+	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<style name="Zebra" mode="Transparent">
 		<conditionalStyle>
 			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 1]]></conditionExpression>
-			<style backcolor="#CAC5BB" fill="Solid"/>
+			<style backcolor="#E7E7E7" fill="Solid"/>
 		</conditionalStyle>
 	</style>
 	<queryString>
@@ -24,38 +24,35 @@
 	<columnHeader>
 		<band height="24" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="201" y="1" width="180" height="20" forecolor="#FFFFFF" backcolor="#C0504D" uuid="fd66e846-b887-44f9-b271-2a19848aa7c8"/>
+				<reportElement mode="Opaque" x="201" y="4" width="180" height="20" forecolor="#FFFFFF" backcolor="#C0504D" uuid="fd66e846-b887-44f9-b271-2a19848aa7c8"/>
 				<textElement textAlignment="Center">
 					<font fontName="Open Sans" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Avg. Monthly Searches]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="25" y="1" width="176" height="20" forecolor="#FFFFFF" backcolor="#C0504D" uuid="981f6d4e-a7cd-4604-bf96-f7010a3e226f"/>
+				<reportElement mode="Opaque" x="25" y="4" width="176" height="20" forecolor="#FFFFFF" backcolor="#C0504D" uuid="981f6d4e-a7cd-4604-bf96-f7010a3e226f"/>
 				<textElement textAlignment="Center">
 					<font fontName="Open Sans" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Keyword]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="381" y="1" width="189" height="20" forecolor="#FFFFFF" backcolor="#C0504D" uuid="07bed20f-bcaa-4445-8aa5-4b508c9f20c1"/>
+				<reportElement mode="Opaque" x="381" y="4" width="189" height="20" forecolor="#FFFFFF" backcolor="#C0504D" uuid="07bed20f-bcaa-4445-8aa5-4b508c9f20c1"/>
 				<textElement textAlignment="Center">
 					<font fontName="Open Sans" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Estimated Cost Per Click]]></text>
 			</staticText>
 			<line>
-				<reportElement x="25" y="1" width="545" height="1" uuid="c1a208c6-349b-4482-a80d-4368ce676510"/>
-			</line>
-			<line>
-				<reportElement x="25" y="21" width="545" height="1" uuid="6130d7a7-4acd-4ba4-a00a-4652da9c6719"/>
+				<reportElement x="25" y="4" width="545" height="1" uuid="c1a208c6-349b-4482-a80d-4368ce676510"/>
 			</line>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="22" splitType="Stretch">
 			<textField>
-				<reportElement style="Zebra" isPrintRepeatedValues="false" mode="Opaque" x="25" y="1" width="176" height="20" forecolor="#7F7F7F" uuid="d8aeb376-8611-4f24-8bef-de57ebc67dc8"/>
+				<reportElement style="Zebra" isPrintRepeatedValues="false" mode="Opaque" x="25" y="1" width="176" height="20" forecolor="#000000" uuid="d8aeb376-8611-4f24-8bef-de57ebc67dc8"/>
 				<box leftPadding="10" bottomPadding="1"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Open Sans"/>
@@ -63,7 +60,7 @@
 				<textFieldExpression><![CDATA[$F{value}.split(",")[0]]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Zebra" mode="Opaque" x="201" y="1" width="180" height="20" forecolor="#7F7F7F" uuid="e438ef22-d189-4ea9-b443-15a13d8cfb4a"/>
+				<reportElement style="Zebra" mode="Opaque" x="201" y="1" width="180" height="20" forecolor="#000000" uuid="e438ef22-d189-4ea9-b443-15a13d8cfb4a"/>
 				<box rightPadding="10"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Open Sans"/>
@@ -71,13 +68,16 @@
 				<textFieldExpression><![CDATA[$F{value}.split(",")[1]]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Zebra" mode="Opaque" x="381" y="1" width="189" height="20" forecolor="#7F7F7F" uuid="4249b27f-6f2e-49dd-9c64-8b87a4006984"/>
+				<reportElement style="Zebra" mode="Opaque" x="381" y="1" width="189" height="20" forecolor="#000000" uuid="4249b27f-6f2e-49dd-9c64-8b87a4006984"/>
 				<box rightPadding="10"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Open Sans"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{value}.split(",").length > 2? $F{value}.split(",")[2] : "0"]]></textFieldExpression>
 			</textField>
+			<line>
+				<reportElement x="25" y="0" width="545" height="1" uuid="6130d7a7-4acd-4ba4-a00a-4652da9c6719"/>
+			</line>
 		</band>
 	</detail>
 	<lastPageFooter>
